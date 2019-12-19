@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/categoryTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:background="@drawable/background_category_first"
+    android:fontFamily="@font/iransans"
+    android:orientation="vertical"
+    android:paddingLeft="13dp"
+    android:paddingTop="7dp"
+    android:paddingRight="13dp"
+    android:paddingBottom="7dp"
+    android:text="کالای دیجیتال"
+    android:textColor="#fff"
+    android:textSize="16sp"
+    android:textStyle="normal" />
