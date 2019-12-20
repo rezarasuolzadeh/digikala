@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">دیجیکالا</string>
+    <string name="applicationName">دیجیکالا</string>
+    <string name="sortFirstTypeTitle">پر بازدید ترین</string>
+    <string name="sortSecondTypeTitle">پر فروش ترین</string>
+    <string name="sortThirdTypeTitle">قیمت از زیاد به کم</string>
+    <string name="sortFourthTypeTitle">قیمت از کم به زیاد</string>
+    <string name="sortFifthTypeTitle">جدید ترین</string>
+
 </resources>

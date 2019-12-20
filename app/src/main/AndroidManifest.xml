@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/digikala"
-        android:label="@string/app_name"
+        android:label="@string/applicationName"
         android:roundIcon="@mipmap/digikala"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">

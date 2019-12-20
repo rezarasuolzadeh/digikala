@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/WHITE"
+    android:layout_height="wrap_content">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/WHITE"
+        android:layoutDirection="rtl"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iransans"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:text="@string/sortFirstTypeTitle" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iransans"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp"
+            android:checked="true"
+            android:buttonTint="@color/GREEN"
+            android:textStyle="normal"
+            android:text="@string/sortSecondTypeTitle" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iransans"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:text="@string/sortThirdTypeTitle" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/iransans"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:text="@string/sortFourthTypeTitle" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iransans"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:text="@string/sortFifthTypeTitle" />
+
+    </RadioGroup>
+
+</LinearLayout>

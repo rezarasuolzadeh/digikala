@@ -1,41 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="5dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    android:background="@color/WHITE">
+    android:background="@color/WHITE"
+    app:cardCornerRadius="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/WHITE"
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
             tools:src="@drawable/phone" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
             android:fontFamily="@font/iransans"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:text="گوشی موبایل سامسونگ"
             android:textColor="@color/BLACK"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            tools:text="گوشی موبایل سامسونگ" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/iransans"
+            android:textColor="@color/GRAY"
             android:textSize="12sp"
-            android:textStyle="normal" />
+            android:textStyle="normal"
+            tools:text="حافظه داخلی 64 گیگ" />
 
         <view
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:background="@color/GRAY" />
 
         <LinearLayout
@@ -51,9 +63,9 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/line"
                 android:fontFamily="@font/iransans"
-                android:text="۲۵۰۰۰۰۰۰ تومان"
                 android:textColor="@color/RED"
-                android:textStyle="normal" />
+                android:textStyle="normal"
+                tools:text="۲۵۰۰۰۰۰۰ تومان" />
 
         </LinearLayout>
 
@@ -67,13 +79,21 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
                 android:fontFamily="@font/iransans"
-                android:text="۲۵۰۰۰۰۰۰ تومان"
                 android:textColor="@color/GREEN"
-                android:textStyle="normal" />
+                android:textStyle="normal"
+                tools:text="۲۵۰۰۰۰۰۰ تومان" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|right"
+                android:orientation="horizontal"
+                android:padding="8dp" />
 
         </LinearLayout>
 
     </LinearLayout>
-</>
+
+</androidx.cardview.widget.CardView>
