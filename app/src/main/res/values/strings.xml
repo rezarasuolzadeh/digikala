@@ -1,5 +1,5 @@
 <resources>
-    <string name="applicationName">دیجیکالا</string>
+    <string name="app_name">دیجیکالا</string>
     <string name="sortFirstTypeTitle">پر بازدید ترین</string>
     <string name="sortSecondTypeTitle">پر فروش ترین</string>
     <string name="sortThirdTypeTitle">قیمت از زیاد به کم</string>

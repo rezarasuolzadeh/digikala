@@ -8,7 +8,10 @@ import android.widget.Toast
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import com.smarteist.autoimageslider.IndicatorAnimations
+import com.smarteist.autoimageslider.SliderAnimations
 import ir.rezarasoulzadeh.digikala.R
+import ir.rezarasoulzadeh.digikala.service.adapter.SliderAdapterExample
 import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -29,6 +32,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         splashDigikala.visibility = View.GONE
 
         drawerView.setNavigationItemSelectedListener(this)
+
+        imageSlider.sliderAdapter = SliderAdapterExample(this)
+        imageSlider.startAutoCycle()
+        imageSlider.setIndicatorAnimation(IndicatorAnimations.WORM)
+        imageSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
 
     }
 
@@ -75,7 +83,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 drawerLayout.closeDrawer(GravityCompat.END)
             }
         }
-        return true
+        return false
     }
 
 }
