@@ -5,5 +5,8 @@
     <string name="sortThirdTypeTitle">قیمت از زیاد به کم</string>
     <string name="sortFourthTypeTitle">قیمت از کم به زیاد</string>
     <string name="sortFifthTypeTitle">جدید ترین</string>
+    <string name="titleFirstText">محصولات پرفروش</string>
+    <string name="allListText">لیست کامل</string>
+    <string name="titleSecondText">جدیدترین محصولات</string>
 
 </resources>

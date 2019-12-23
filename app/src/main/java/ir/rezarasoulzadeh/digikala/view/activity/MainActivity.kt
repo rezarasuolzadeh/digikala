@@ -1,5 +1,6 @@
 package ir.rezarasoulzadeh.digikala.view.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -12,7 +13,10 @@ import com.smarteist.autoimageslider.IndicatorAnimations
 import com.smarteist.autoimageslider.SliderAnimations
 import ir.rezarasoulzadeh.digikala.R
 import ir.rezarasoulzadeh.digikala.service.adapter.SliderAdapterExample
+import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
 import kotlinx.android.synthetic.main.content_main.*
+import kotlinx.android.synthetic.main.layout_toolbar.*
+import kotlinx.android.synthetic.main.layout_toolbar.view.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -26,6 +30,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // for hide the action bar when use the navigation drawer
         // we want to go styles.xml and set .NoActionBar
 
+        CustomToolbar(this, basket = true, search = true, title = false, digikala = true, back = false, menu = true)
+
         drawerView = findViewById(R.id.nav_view)
         drawerLayout = findViewById(R.id.drawer_layout)
 
@@ -38,49 +44,33 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         imageSlider.setIndicatorAnimation(IndicatorAnimations.WORM)
         imageSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
 
+        customToolbar.menuButton.setOnClickListener {
+            drawerLayout.openDrawer(drawerView)
+        }
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.menuHome -> {
-                Toast.makeText(this, "خانه", Toast.LENGTH_SHORT).show()
                 drawerLayout.closeDrawer(GravityCompat.END)
             }
             R.id.menuCategory -> {
-                Toast.makeText(this, "لیست دسته بندی محصولات", Toast.LENGTH_SHORT).show()
-                drawerLayout.closeDrawer(GravityCompat.END)
-            }
-            R.id.menuBasket -> {
-                Toast.makeText(this, "سبد خرید", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, CategoryActivity::class.java)
+                startActivity(intent)
                 drawerLayout.closeDrawer(GravityCompat.END)
             }
             R.id.menuMostSell -> {
                 Toast.makeText(this, "پر فروش ترین ها", Toast.LENGTH_SHORT).show()
-                drawerLayout.closeDrawer(GravityCompat.END)
             }
             R.id.menuOffer -> {
                 Toast.makeText(this, "پیشنهاد ویژه دیجیکالا", Toast.LENGTH_SHORT).show()
-                drawerLayout.closeDrawer(GravityCompat.END)
             }
             R.id.menuMostView -> {
                 Toast.makeText(this, "پر بازدید ترین ها", Toast.LENGTH_SHORT).show()
-                drawerLayout.closeDrawer(GravityCompat.END)
             }
             R.id.menuNews -> {
                 Toast.makeText(this, "جدید ترین ها", Toast.LENGTH_SHORT).show()
-                drawerLayout.closeDrawer(GravityCompat.END)
-            }
-            R.id.menuSetting -> {
-                Toast.makeText(this, "تنظیمات", Toast.LENGTH_SHORT).show()
-                drawerLayout.closeDrawer(GravityCompat.END)
-            }
-            R.id.menuQuestion -> {
-                Toast.makeText(this, "سئوالات متداول", Toast.LENGTH_SHORT).show()
-                drawerLayout.closeDrawer(GravityCompat.END)
-            }
-            R.id.menuAboutUs -> {
-                Toast.makeText(this, "درباره ما", Toast.LENGTH_SHORT).show()
-                drawerLayout.closeDrawer(GravityCompat.END)
             }
         }
         return false

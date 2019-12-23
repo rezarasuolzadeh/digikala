@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".view.activity.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,23 +34,181 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.smarteist.autoimageslider.SliderView
-        android:id="@+id/imageSlider"
+    <include
+        android:id="@+id/homeToolBar"
+        layout="@layout/layout_toolbar" />
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:sliderAnimationDuration="600"
-        app:sliderAutoCycleDirection="back_and_forth"
-        app:sliderAutoCycleEnabled="false"
-        app:sliderCircularHandlerEnabled="true"
-        app:sliderIndicatorAnimationDuration="10"
-        app:sliderIndicatorGravity="center_horizontal|bottom"
-        app:sliderIndicatorMargin="18dp"
-        app:sliderIndicatorOrientation="horizontal"
-        app:sliderIndicatorPadding="2dp"
-        app:sliderIndicatorRadius="1.33dp"
-        app:sliderIndicatorSelectedColor="#fff"
-        app:sliderIndicatorUnselectedColor="#48FFFFFF"
-        app:sliderScrollTimeInSec="1"
-        app:sliderStartAutoCycle="true" />
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColour"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/backgroundColour"
+            android:orientation="vertical">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="false"
+                app:sliderCircularHandlerEnabled="true"
+                app:sliderIndicatorAnimationDuration="10"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="18dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="2dp"
+                app:sliderIndicatorRadius="1.33dp"
+                app:sliderIndicatorSelectedColor="@color/WHITE"
+                app:sliderIndicatorUnselectedColor="@color/indicatorColour"
+                app:sliderScrollTimeInSec="1"
+                app:sliderStartAutoCycle="true" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/special"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/iransans"
+                    android:text="@string/titleFirstText"
+                    android:textColor="#616060"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/iransans"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="@string/allListText"
+                    android:textColor="@color/BLUE"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/iransans"
+                    android:text="@string/titleSecondText"
+                    android:textColor="#616060"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/iransans"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="@string/allListText"
+                    android:textColor="@color/BLUE"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/iransans"
+                android:gravity="right"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="#616060"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="لوازم جانبی گوشی موبایل" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/iransans"
+                android:gravity="right"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="#616060"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="گوشی موبایل" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/iransans"
+                android:gravity="right"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="#616060"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="تبلت" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/iransans"
+                android:gravity="right"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="#616060"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="کالای دیجیتال" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

@@ -9,6 +9,8 @@
     <color name="BLACK">#000</color>
     <color name="GRAY">#BBBBBB</color>
     <color name="DARK">#505050</color>
-    <color name="BLUE">#2069EB</color>
+    <color name="BLUE">#2093EB</color>
+    <color name="backgroundColour">#E2E1E1</color>
+    <color name="indicatorColour">#48FFFFFF</color>
 
 </resources>
