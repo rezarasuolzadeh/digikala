@@ -123,10 +123,12 @@
             <ImageView
                 android:id="@+id/digikalaImage"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginRight="60dp"
                 android:src="@drawable/ic_digikala_logo"
                 android:tint="@color/WHITE"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent"

@@ -76,12 +76,84 @@
                 android:paddingRight="15dp">
 
                 <ImageView
-                    android:layout_width="150dp"
+                    android:layout_width="155dp"
                     android:layout_height="match_parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/special"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    android:src="@drawable/special"/>
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/dayCounterTextView"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:text="12"
+                    android:textSize="23sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/WHITE"
+                    android:background="@drawable/background_timer"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/firstDot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text=":"
+                    android:textColor="#383838"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/dayCounterTextView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/hourCounterTextView"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:text="34"
+                    android:gravity="center"
+                    android:textSize="23sp"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/WHITE"
+                    android:background="@drawable/background_timer"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/firstDot"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/secondDot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text=":"
+                    android:textColor="#383838"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/hourCounterTextView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/secondCounterTextView"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:text="56"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="23sp"
+                    android:textColor="@color/WHITE"
+                    android:background="@drawable/background_timer"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/secondDot"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
