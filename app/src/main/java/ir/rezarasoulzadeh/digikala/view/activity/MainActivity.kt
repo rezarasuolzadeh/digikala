@@ -5,21 +5,24 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.navigation.NavigationView
 import com.smarteist.autoimageslider.IndicatorAnimations
 import com.smarteist.autoimageslider.SliderAnimations
 import ir.rezarasoulzadeh.digikala.R
 import ir.rezarasoulzadeh.digikala.service.adapter.SliderAdapterExample
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
+import ir.rezarasoulzadeh.digikala.viewmodel.ServiceViewModel
 import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
 import kotlinx.android.synthetic.main.layout_toolbar.view.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
+    private lateinit var viewModel: ServiceViewModel
     lateinit var drawerView: NavigationView
     lateinit var drawerLayout: DrawerLayout
 
@@ -39,7 +42,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         drawerView.setNavigationItemSelectedListener(this)
 
-        imageSlider.sliderAdapter = SliderAdapterExample(this)
+        viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application)
+            .create(ServiceViewModel::class.java)
+
+        viewModel.provideSlider()
+
+        viewModel.sliderLiveData.observe(this, Observer {
+            val slider = it.data
+            imageSlider.sliderAdapter = SliderAdapterExample(slider)
+        })
+
         imageSlider.startAutoCycle()
         imageSlider.setIndicatorAnimation(IndicatorAnimations.WORM)
         imageSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
@@ -59,18 +71,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 val intent = Intent(this, CategoryActivity::class.java)
                 startActivity(intent)
                 drawerLayout.closeDrawer(GravityCompat.END)
-            }
-            R.id.menuMostSell -> {
-                Toast.makeText(this, "پر فروش ترین ها", Toast.LENGTH_SHORT).show()
-            }
-            R.id.menuOffer -> {
-                Toast.makeText(this, "پیشنهاد ویژه دیجیکالا", Toast.LENGTH_SHORT).show()
-            }
-            R.id.menuMostView -> {
-                Toast.makeText(this, "پر بازدید ترین ها", Toast.LENGTH_SHORT).show()
-            }
-            R.id.menuNews -> {
-                Toast.makeText(this, "جدید ترین ها", Toast.LENGTH_SHORT).show()
             }
         }
         return false

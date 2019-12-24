@@ -8,8 +8,9 @@ import android.view.ViewGroup
 import com.facebook.drawee.view.SimpleDraweeView
 import com.smarteist.autoimageslider.SliderViewAdapter
 import ir.rezarasoulzadeh.digikala.R
+import ir.rezarasoulzadeh.digikala.model.attribute.Data
 
-class SliderAdapterExample(private val context: Context) :
+class SliderAdapterExample(private val slider:List<Data>) :
     SliderViewAdapter<SliderAdapterExample.SliderAdapterVH>() {
 
     override fun onCreateViewHolder(parent: ViewGroup): SliderAdapterVH {
@@ -19,12 +20,12 @@ class SliderAdapterExample(private val context: Context) :
     }
 
     override fun onBindViewHolder(viewHolder: SliderAdapterVH, position: Int) {
-        val imageUri: Uri = Uri.parse("https://picsum.photos/seed/picsum/200/300")
+        val imageUri: Uri = Uri.parse(slider[position].bannerPathMobile)
         viewHolder.imageViewBackground.setImageURI(imageUri)
     }
 
-    override fun getCount(): Int { //slider view count could be dynamic size
-        return 4
+    override fun getCount(): Int {
+        return slider.size
     }
 
     inner class SliderAdapterVH(itemView: View) : ViewHolder(itemView) {

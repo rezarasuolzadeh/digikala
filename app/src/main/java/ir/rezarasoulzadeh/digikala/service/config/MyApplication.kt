@@ -1,4 +1,4 @@
-package ir.rezarasoulzadeh.digikala.config
+package ir.rezarasoulzadeh.digikala.service.config
 
 import android.app.Application
 import com.facebook.drawee.backends.pipeline.Fresco
