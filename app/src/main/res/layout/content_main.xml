@@ -69,14 +69,23 @@
                 app:sliderScrollTimeInSec="1"
                 app:sliderStartAutoCycle="true" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoryFirstRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp">
 
                 <ImageView
-                    android:layout_width="155dp"
+                    android:layout_width="160dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/special"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -87,12 +96,12 @@
                     android:id="@+id/dayCounterTextView"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:text="12"
-                    android:textSize="23sp"
-                    android:gravity="center"
-                    android:fontFamily="@font/roboto"
-                    android:textColor="@color/WHITE"
                     android:background="@drawable/background_timer"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="12"
+                    android:textColor="@color/WHITE"
+                    android:textSize="23sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -116,12 +125,12 @@
                     android:id="@+id/hourCounterTextView"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:text="34"
-                    android:gravity="center"
-                    android:textSize="23sp"
-                    android:fontFamily="@font/roboto"
-                    android:textColor="@color/WHITE"
                     android:background="@drawable/background_timer"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="34"
+                    android:textColor="@color/WHITE"
+                    android:textSize="23sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/firstDot"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -145,12 +154,12 @@
                     android:id="@+id/secondCounterTextView"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:text="56"
-                    android:gravity="center"
-                    android:fontFamily="@font/roboto"
-                    android:textSize="23sp"
-                    android:textColor="@color/WHITE"
                     android:background="@drawable/background_timer"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="56"
+                    android:textColor="@color/WHITE"
+                    android:textSize="23sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/secondDot"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -192,10 +201,16 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp">
 
@@ -227,57 +242,88 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
+            <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/iransans"
-                android:gravity="right"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:textColor="#616060"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                tools:text="لوازم جانبی گوشی موبایل" />
+                android:layout_height="38dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
                 android:fontFamily="@font/iransans"
                 android:gravity="right"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
+                android:text="لوازم جانبی گوشی موبایل"
                 android:textColor="#616060"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:text="گوشی موبایل" />
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
                 android:fontFamily="@font/iransans"
                 android:gravity="right"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
+                android:text="گوشی موبایل"
                 android:textColor="#616060"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:text="تبلت" />
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
                 android:fontFamily="@font/iransans"
                 android:gravity="right"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
+                android:text="تبلت"
                 android:textColor="#616060"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:text="کالای دیجیتال" />
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/iransans"
+                android:gravity="right"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="کالای دیجیتال"
+                android:textColor="#616060"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
 
         </LinearLayout>
 

@@ -9,6 +9,8 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
 import com.smarteist.autoimageslider.IndicatorAnimations
 import com.smarteist.autoimageslider.SliderAnimations
@@ -17,13 +19,15 @@ import ir.rezarasoulzadeh.digikala.model.CategoryData
 import ir.rezarasoulzadeh.digikala.model.OfferData
 import ir.rezarasoulzadeh.digikala.model.Responses
 import ir.rezarasoulzadeh.digikala.model.attribute.Data
-import ir.rezarasoulzadeh.digikala.service.adapter.SliderAdapter
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
+import ir.rezarasoulzadeh.digikala.view.adapter.CategoryFirstAdapter
+import ir.rezarasoulzadeh.digikala.view.adapter.SliderAdapter
 import ir.rezarasoulzadeh.digikala.viewmodel.SearchViewModel
 import ir.rezarasoulzadeh.digikala.viewmodel.ServiceViewModel
 import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
 import kotlinx.android.synthetic.main.layout_toolbar.view.*
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -71,31 +75,36 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             slider = it.data
             imageSlider.sliderAdapter = SliderAdapter(slider)
         })
-
-        serviceViewModel.provideBanner()
-        serviceViewModel.bannerLiveData.observe(this, Observer {
-            banner = it.data
-        })
-
-        serviceViewModel.provideAdvertisement()
-        serviceViewModel.advertisementLiveData.observe(this, Observer {
-            advertisement = it.data
-        })
-
-        serviceViewModel.provideOffer()
-        serviceViewModel.offerLiveData.observe(this, Observer {
-            offer = it.data
-        })
+//
+//        serviceViewModel.provideBanner()
+//        serviceViewModel.bannerLiveData.observe(this, Observer {
+//            banner = it.data
+//        })
+//
+//        serviceViewModel.provideAdvertisement()
+//        serviceViewModel.advertisementLiveData.observe(this, Observer {
+//            advertisement = it.data
+//        })
+//
+//        serviceViewModel.provideOffer()
+//        serviceViewModel.offerLiveData.observe(this, Observer {
+//            offer = it.data
+//        })
 
         serviceViewModel.provideCategory()
         serviceViewModel.categoryLiveData.observe(this, Observer {
             category = it.data
+            val categoryFirstAdapter = CategoryFirstAdapter(category)
+            val categoryFirstRecyclerView = findViewById<RecyclerView>(R.id.categoryFirstRecyclerView)
+            val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            categoryFirstRecyclerView.layoutManager = horizontal
+            categoryFirstRecyclerView.adapter = categoryFirstAdapter
         })
 
-        searchViewModel.provideTop()
-        searchViewModel.topLiveData.observe(this, Observer {
-            top = it.responses
-        })
+//        searchViewModel.provideTop()
+//        searchViewModel.topLiveData.observe(this, Observer {
+//            top = it.responses
+//        })
 
         imageSlider.startAutoCycle()
         imageSlider.setIndicatorAnimation(IndicatorAnimations.WORM)
