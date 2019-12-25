@@ -13,7 +13,8 @@ import com.google.android.material.navigation.NavigationView
 import com.smarteist.autoimageslider.IndicatorAnimations
 import com.smarteist.autoimageslider.SliderAnimations
 import ir.rezarasoulzadeh.digikala.R
-import ir.rezarasoulzadeh.digikala.service.adapter.SliderAdapterExample
+import ir.rezarasoulzadeh.digikala.model.attribute.Data
+import ir.rezarasoulzadeh.digikala.service.adapter.SliderAdapter
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
 import ir.rezarasoulzadeh.digikala.viewmodel.ServiceViewModel
 import kotlinx.android.synthetic.main.content_main.*
@@ -25,13 +26,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private lateinit var viewModel: ServiceViewModel
     lateinit var drawerView: NavigationView
     lateinit var drawerLayout: DrawerLayout
+    lateinit var slider: List<Data>
+    lateinit var banner: List<Data>
+    lateinit var advertisement: List<Data>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        // for hide the action bar when use the navigation drawer
-        // we want to go styles.xml and set .NoActionBar
 
         CustomToolbar(this, basket = true, search = true, title = false, digikala = true, back = false, menu = true)
 
@@ -46,10 +47,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             .create(ServiceViewModel::class.java)
 
         viewModel.provideSlider()
-
         viewModel.sliderLiveData.observe(this, Observer {
-            val slider = it.data
-            imageSlider.sliderAdapter = SliderAdapterExample(slider)
+            slider = it.data
+            imageSlider.sliderAdapter = SliderAdapter(slider)
+        })
+
+        viewModel.provideBanner()
+        viewModel.bannerLiveData.observe(this, Observer {
+            banner = it.data
+        })
+
+        viewModel.provideAdvertisment()
+        viewModel.advertisementLiveData.observe(this, Observer {
+            advertisement = it.data
         })
 
         imageSlider.startAutoCycle()

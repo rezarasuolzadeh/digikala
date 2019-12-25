@@ -1,6 +1,5 @@
 package ir.rezarasoulzadeh.digikala.service.adapter
 
-import android.content.Context
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
@@ -8,10 +7,9 @@ import android.view.ViewGroup
 import com.facebook.drawee.view.SimpleDraweeView
 import com.smarteist.autoimageslider.SliderViewAdapter
 import ir.rezarasoulzadeh.digikala.R
-import ir.rezarasoulzadeh.digikala.model.attribute.Data
 
-class SliderAdapterExample(private val slider:List<Data>) :
-    SliderViewAdapter<SliderAdapterExample.SliderAdapterVH>() {
+class SliderAdapter(private val slider:List<SliderData>) :
+    SliderViewAdapter<SliderAdapter.SliderAdapterVH>() {
 
     override fun onCreateViewHolder(parent: ViewGroup): SliderAdapterVH {
         val inflate: View = LayoutInflater.from(parent.context)
