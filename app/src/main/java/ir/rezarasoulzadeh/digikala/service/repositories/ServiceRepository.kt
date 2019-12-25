@@ -1,11 +1,7 @@
 package ir.rezarasoulzadeh.digikala.service.repositories
 
-import ir.rezarasoulzadeh.digikala.interfaces.AdvertisementDao
-import ir.rezarasoulzadeh.digikala.interfaces.BannerDao
-import ir.rezarasoulzadeh.digikala.interfaces.SliderDao
-import ir.rezarasoulzadeh.digikala.model.Advertisement
-import ir.rezarasoulzadeh.digikala.model.Banner
-import ir.rezarasoulzadeh.digikala.model.Slider
+import ir.rezarasoulzadeh.digikala.interfaces.*
+import ir.rezarasoulzadeh.digikala.model.*
 import ir.rezarasoulzadeh.digikala.service.config.ServiceRetrofitConfig
 import kotlinx.coroutines.runBlocking
 import retrofit2.Response
@@ -44,6 +40,32 @@ class ServiceRepository {
             try {
                 response = ServiceRetrofitConfig.retrofit().create(AdvertisementDao::class.java)
                     .getAdvertisement("Advertisement", "null")
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+        return response!!.body()
+    }
+
+    fun provideOffer(): Offer? {
+        var response: Response<Offer>? = null
+        runBlocking {
+            try {
+                response = ServiceRetrofitConfig.retrofit().create(OfferDao::class.java)
+                    .getOffer()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+        return response!!.body()
+    }
+
+    fun provideCategory(): Category? {
+        var response: Response<Category>? = null
+        runBlocking {
+            try {
+                response = ServiceRetrofitConfig.retrofit().create(CategoryDao::class.java)
+                    .getCategory()
             } catch (e: Exception) {
                 e.printStackTrace()
             }

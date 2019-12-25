@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 object SearchRetrofitConfig {
-    private const val digikalaUrl = "https://search.digikala.com/api2/Data/"
+    private const val digikalaUrl = "https://search.digikala.com/api2/"
 
     fun retrofit() : Retrofit {
         val okHttpClient = OkHttpClient.Builder()
