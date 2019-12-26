@@ -17,4 +17,4 @@
     tools:text="کالای دیجیتال"
     android:textColor="#fff"
     android:textSize="13sp"
-    android:textStyle="bold" />
+    android:textStyle="normal" />

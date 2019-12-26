@@ -21,6 +21,7 @@ import ir.rezarasoulzadeh.digikala.model.Responses
 import ir.rezarasoulzadeh.digikala.model.attribute.Data
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
 import ir.rezarasoulzadeh.digikala.view.adapter.CategoryFirstAdapter
+import ir.rezarasoulzadeh.digikala.view.adapter.OfferAdapter
 import ir.rezarasoulzadeh.digikala.view.adapter.SliderAdapter
 import ir.rezarasoulzadeh.digikala.viewmodel.SearchViewModel
 import ir.rezarasoulzadeh.digikala.viewmodel.ServiceViewModel
@@ -85,11 +86,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //        serviceViewModel.advertisementLiveData.observe(this, Observer {
 //            advertisement = it.data
 //        })
-//
-//        serviceViewModel.provideOffer()
-//        serviceViewModel.offerLiveData.observe(this, Observer {
-//            offer = it.data
-//        })
+
+        serviceViewModel.provideOffer()
+        serviceViewModel.offerLiveData.observe(this, Observer {
+            offer = it.data
+            val offerAdapter = OfferAdapter(offer)
+            val offerRecyclerView = findViewById<RecyclerView>(R.id.offerRecyclerView)
+            val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            offerRecyclerView.layoutManager = horizontal
+            offerRecyclerView.adapter = offerAdapter
+        })
 
         serviceViewModel.provideCategory()
         serviceViewModel.categoryLiveData.observe(this, Observer {
@@ -109,6 +115,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         imageSlider.startAutoCycle()
         imageSlider.setIndicatorAnimation(IndicatorAnimations.WORM)
         imageSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
+
+        splashDigikala.visibility = View.GONE
 
         customToolbar.menuButton.setOnClickListener {
             drawerLayout.openDrawer(drawerView)
