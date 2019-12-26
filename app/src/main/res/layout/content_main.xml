@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/RED"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="match_parent"
@@ -73,9 +73,9 @@
                 android:id="@+id/categoryFirstRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
-                android:layoutDirection="rtl"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
+                android:layoutDirection="rtl"
                 android:orientation="horizontal" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -171,10 +171,148 @@
                 android:id="@+id/offerRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layoutDirection="rtl"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
+                android:layoutDirection="rtl"
                 android:orientation="horizontal" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/advertisementTop"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                app:placeholderImageScaleType="center" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="3dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/bannerFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    app:placeholderImageScaleType="center" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="3dp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/bannerSecond"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        app:placeholderImageScaleType="center" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="3dp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/bannerThird"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        app:placeholderImageScaleType="center" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="3dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/bannerFourth"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    app:placeholderImageScaleType="center" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="3dp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/bannerFifth"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        app:placeholderImageScaleType="center" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="3dp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/bannerSixth"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        app:placeholderImageScaleType="center" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/advertisementBottom"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                app:placeholderImageScaleType="center" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -215,9 +353,9 @@
                 android:id="@+id/mostSellRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layoutDirection="rtl"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
+                android:layoutDirection="rtl"
                 android:orientation="horizontal" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -259,17 +397,17 @@
                 android:id="@+id/newsRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layoutDirection="rtl"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
+                android:layoutDirection="rtl"
                 android:orientation="horizontal" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/iransans"
                 android:gravity="right"
-                android:layout_marginTop="20dp"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:text="کالای دیجیتال"
@@ -281,17 +419,17 @@
                 android:id="@+id/digitalRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layoutDirection="rtl"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
+                android:layoutDirection="rtl"
                 android:orientation="horizontal" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/iransans"
                 android:gravity="right"
-                android:layout_marginTop="20dp"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:text="آرایشی، بهداشتی و سلامت"
@@ -303,17 +441,17 @@
                 android:id="@+id/makeupRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layoutDirection="rtl"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
+                android:layoutDirection="rtl"
                 android:orientation="horizontal" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/iransans"
                 android:gravity="right"
-                android:layout_marginTop="20dp"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:text="خانه و آشپزخانه"
@@ -325,19 +463,19 @@
                 android:id="@+id/kitchenRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layoutDirection="rtl"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
+                android:layoutDirection="rtl"
                 android:orientation="horizontal" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/iransans"
                 android:gravity="right"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
-                android:layout_marginTop="20dp"
                 android:text="مد و پوشاک"
                 android:textColor="#616060"
                 android:textSize="14sp"
@@ -347,9 +485,9 @@
                 android:id="@+id/fashionRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layoutDirection="rtl"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
+                android:layoutDirection="rtl"
                 android:orientation="horizontal" />
 
         </LinearLayout>

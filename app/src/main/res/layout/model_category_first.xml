@@ -16,5 +16,5 @@
     android:gravity="center"
     tools:text="کالای دیجیتال"
     android:textColor="#fff"
-    android:textSize="13sp"
+    android:textSize="12sp"
     android:textStyle="normal" />

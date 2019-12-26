@@ -1,6 +1,7 @@
 package ir.rezarasoulzadeh.digikala.view.activity
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
@@ -78,15 +79,22 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             imageSlider.sliderAdapter = SliderAdapter(slider)
         })
 
-//        serviceViewModel.provideBanner()
-//        serviceViewModel.bannerLiveData.observe(this, Observer {
-//            banner = it.data
-//        })
-//
-//        serviceViewModel.provideAdvertisement()
-//        serviceViewModel.advertisementLiveData.observe(this, Observer {
-//            advertisement = it.data
-//        })
+        serviceViewModel.provideBanner()
+        serviceViewModel.bannerLiveData.observe(this, Observer {
+            bannerFirst.setImageURI(Uri.parse(it.data[1][0].bannerPathMobile))
+            bannerSecond.setImageURI(Uri.parse(it.data[0][0].bannerPathMobile))
+            bannerThird.setImageURI(Uri.parse(it.data[0][1].bannerPathMobile))
+            bannerFourth.setImageURI(Uri.parse(it.data[1][1].bannerPathMobile))
+            bannerFifth.setImageURI(Uri.parse(it.data[0][2].bannerPathMobile))
+            bannerSixth.setImageURI(Uri.parse(it.data[0][3].bannerPathMobile))
+        })
+
+        serviceViewModel.provideAdvertisement()
+        serviceViewModel.advertisementLiveData.observe(this, Observer {
+            advertisement = it.data
+            advertisementTop.setImageURI(Uri.parse(advertisement[0].bannerPathMobile))
+            advertisementBottom.setImageURI(Uri.parse(advertisement[1].bannerPathMobile))
+        })
 
         serviceViewModel.provideOffer()
         serviceViewModel.offerLiveData.observe(this, Observer {

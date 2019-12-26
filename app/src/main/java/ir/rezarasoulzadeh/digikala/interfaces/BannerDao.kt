@@ -9,11 +9,11 @@ import retrofit2.http.Query
 interface BannerDao {
 
     @Headers(
+        "ApplicationType: AppAndroid",
         "ApplicationVersion: 1.9.6-CB",
         "Mobile-Agent: MobileApp/Android/v-47/503eaa6d3af99023"
     )
-
     @GET("Banner/GetMobileBanner")
-    suspend fun getBanner(@Query("categoryId") categoryId: Int, @Query("ip") ip: Int): Response<Banner>
+    suspend fun getBanner(): Response<Banner>
 
 }

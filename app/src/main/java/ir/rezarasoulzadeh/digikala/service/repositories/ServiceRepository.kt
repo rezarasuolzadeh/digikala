@@ -26,7 +26,7 @@ class ServiceRepository {
         runBlocking {
             try {
                 response = ServiceRetrofitConfig.retrofit().create(BannerDao::class.java)
-                    .getBanner(0, 0)
+                    .getBanner(/*0*//*, 0*/)
             } catch (e: Exception) {
                 e.printStackTrace()
             }
