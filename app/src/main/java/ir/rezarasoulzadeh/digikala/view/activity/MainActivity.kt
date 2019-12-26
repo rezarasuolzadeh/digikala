@@ -15,9 +15,7 @@ import com.google.android.material.navigation.NavigationView
 import com.smarteist.autoimageslider.IndicatorAnimations
 import com.smarteist.autoimageslider.SliderAnimations
 import ir.rezarasoulzadeh.digikala.R
-import ir.rezarasoulzadeh.digikala.model.CategoryData
-import ir.rezarasoulzadeh.digikala.model.OfferData
-import ir.rezarasoulzadeh.digikala.model.Responses
+import ir.rezarasoulzadeh.digikala.model.*
 import ir.rezarasoulzadeh.digikala.model.attribute.Data
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
 import ir.rezarasoulzadeh.digikala.view.adapter.*
@@ -41,6 +39,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     lateinit var offer: List<OfferData>
     lateinit var category: List<CategoryData>
     lateinit var top: List<Responses>
+    lateinit var digital: List<BottomHit>
+    lateinit var fashion: List<BottomHit>
+    lateinit var kitchen: List<BottomHit>
+    lateinit var makeup: List<BottomHit>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,7 +77,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             slider = it.data
             imageSlider.sliderAdapter = SliderAdapter(slider)
         })
-//
+
 //        serviceViewModel.provideBanner()
 //        serviceViewModel.bannerLiveData.observe(this, Observer {
 //            banner = it.data
@@ -125,7 +127,50 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             newsRecyclerView.adapter = newsAdapter
         })
 
-        splashDigikala.visibility = View.GONE
+        searchViewModel.provideDigital()
+        searchViewModel.digitalLiveData.observe(this, Observer {
+            digital = it.hits.hits
+
+            val digitalAdapter = DigitalAdapter(digital)
+            val digitalRecyclerView = findViewById<RecyclerView>(R.id.digitalRecyclerView)
+            val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            digitalRecyclerView.layoutManager = horizontal
+            digitalRecyclerView.adapter = digitalAdapter
+        })
+
+        searchViewModel.provideFashion()
+        searchViewModel.fashionLiveData.observe(this, Observer {
+            fashion = it.hits.hits
+
+            val fashionAdapter = FashionAdapter(fashion)
+            val fashionRecyclerView = findViewById<RecyclerView>(R.id.fashionRecyclerView)
+            val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            fashionRecyclerView.layoutManager = horizontal
+            fashionRecyclerView.adapter = fashionAdapter
+        })
+
+        searchViewModel.provideKitchen()
+        searchViewModel.kitchenLiveData.observe(this, Observer {
+            kitchen = it.hits.hits
+
+            val kitchenAdapter = KitchenAdapter(kitchen)
+            val kitchenRecyclerView = findViewById<RecyclerView>(R.id.kitchenRecyclerView)
+            val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            kitchenRecyclerView.layoutManager = horizontal
+            kitchenRecyclerView.adapter = kitchenAdapter
+        })
+
+        searchViewModel.provideMakeup()
+        searchViewModel.makeupLiveData.observe(this, Observer {
+            makeup = it.hits.hits
+
+            val makeupAdapter = MakeupAdapter(makeup)
+            val makeupRecyclerView = findViewById<RecyclerView>(R.id.makeupRecyclerView)
+            val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            makeupRecyclerView.layoutManager = horizontal
+            makeupRecyclerView.adapter = makeupAdapter
+            splashDigikala.visibility = View.GONE
+        })
 
         imageSlider.startAutoCycle()
         imageSlider.setIndicatorAnimation(IndicatorAnimations.WORM)
