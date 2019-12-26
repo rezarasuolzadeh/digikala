@@ -20,9 +20,7 @@ import ir.rezarasoulzadeh.digikala.model.OfferData
 import ir.rezarasoulzadeh.digikala.model.Responses
 import ir.rezarasoulzadeh.digikala.model.attribute.Data
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
-import ir.rezarasoulzadeh.digikala.view.adapter.CategoryFirstAdapter
-import ir.rezarasoulzadeh.digikala.view.adapter.OfferAdapter
-import ir.rezarasoulzadeh.digikala.view.adapter.SliderAdapter
+import ir.rezarasoulzadeh.digikala.view.adapter.*
 import ir.rezarasoulzadeh.digikala.viewmodel.SearchViewModel
 import ir.rezarasoulzadeh.digikala.viewmodel.ServiceViewModel
 import kotlinx.android.synthetic.main.content_main.*
@@ -71,6 +69,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         searchViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application)
             .create(SearchViewModel::class.java)
 
+
         serviceViewModel.provideSlider()
         serviceViewModel.sliderLiveData.observe(this, Observer {
             slider = it.data
@@ -101,22 +100,36 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         serviceViewModel.categoryLiveData.observe(this, Observer {
             category = it.data
             val categoryFirstAdapter = CategoryFirstAdapter(category)
-            val categoryFirstRecyclerView = findViewById<RecyclerView>(R.id.categoryFirstRecyclerView)
+            val categoryFirstRecyclerView =
+                findViewById<RecyclerView>(R.id.categoryFirstRecyclerView)
             val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
             categoryFirstRecyclerView.layoutManager = horizontal
             categoryFirstRecyclerView.adapter = categoryFirstAdapter
         })
 
-//        searchViewModel.provideTop()
-//        searchViewModel.topLiveData.observe(this, Observer {
-//            top = it.responses
-//        })
+        searchViewModel.provideTop()
+        searchViewModel.topLiveData.observe(this, Observer {
+            top = it.responses
+
+            val mostSellAdapter = MostSellAdapter(top)
+            val mostSellRecyclerView = findViewById<RecyclerView>(R.id.mostSellRecyclerView)
+            val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            mostSellRecyclerView.layoutManager = horizontal
+            mostSellRecyclerView.adapter = mostSellAdapter
+
+            val newsAdapter = NewsAdapter(top)
+            val newsRecyclerView = findViewById<RecyclerView>(R.id.newsRecyclerView)
+            val newshorizontal =
+                LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            newsRecyclerView.layoutManager = newshorizontal
+            newsRecyclerView.adapter = newsAdapter
+        })
+
+        splashDigikala.visibility = View.GONE
 
         imageSlider.startAutoCycle()
         imageSlider.setIndicatorAnimation(IndicatorAnimations.WORM)
         imageSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
-
-        splashDigikala.visibility = View.GONE
 
         customToolbar.menuButton.setOnClickListener {
             drawerLayout.openDrawer(drawerView)

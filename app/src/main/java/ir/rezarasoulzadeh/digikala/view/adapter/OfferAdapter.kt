@@ -7,9 +7,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ir.rezarasoulzadeh.digikala.R
 import ir.rezarasoulzadeh.digikala.model.OfferData
+import ir.rezarasoulzadeh.digikala.service.utils.Format
 import kotlinx.android.synthetic.main.model_offer.view.*
-import java.text.NumberFormat
-import java.util.*
 
 class OfferAdapter(private val offer: List<OfferData>) : RecyclerView.Adapter<OfferAdapter.OfferViewHolder>() {
 
@@ -28,10 +27,11 @@ class OfferAdapter(private val offer: List<OfferData>) : RecyclerView.Adapter<Of
 
     inner class OfferViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(offer: OfferData) {
+            val format = Format()
             itemView.offerImage.setImageURI(Uri.parse(offer.imagePaths.original))
             itemView.offerTitle.text = offer.title
-            itemView.offerMaxPrice.text = NumberFormat.getNumberInstance(Locale.US).format(offer.price/10).toString().plus(" تومان")
-            itemView.offerMinPrice.text = NumberFormat.getNumberInstance(Locale.US).format((offer.price - offer.discount)/10).toString().plus(" تومان")
+            itemView.offerMaxPrice.text = format.priceFormat(offer.price)
+            itemView.offerMinPrice.text = format.priceFormat(offer.price - offer.discount)
         }
     }
 
