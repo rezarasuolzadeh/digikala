@@ -94,7 +94,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/dayCounterTextView"
+                    android:id="@+id/hourCounterTextView"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:background="@drawable/background_timer"
@@ -119,11 +119,11 @@
                     android:textSize="15sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/dayCounterTextView"
+                    app:layout_constraintLeft_toRightOf="@id/hourCounterTextView"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/hourCounterTextView"
+                    android:id="@+id/minuteCounterTextView"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:background="@drawable/background_timer"
@@ -148,7 +148,7 @@
                     android:textSize="15sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/hourCounterTextView"
+                    app:layout_constraintLeft_toRightOf="@id/minuteCounterTextView"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView

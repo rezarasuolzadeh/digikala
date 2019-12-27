@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
+    android:layout_margin="5dp"
     android:background="@color/WHITE"
     app:cardCornerRadius="5dp">
 
@@ -15,10 +15,9 @@
 
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/offerImage"
-            android:layout_width="160dp"
-            android:layout_height="170dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="15dp"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:padding="5dp"
             app:placeholderImage="@drawable/ic_holder"
             app:placeholderImageScaleType="center" />
 
@@ -30,41 +29,46 @@
             android:lines="2"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            tools:text="گوشی موبایل سامسونگ"
             android:textColor="@color/BLACK"
             android:textSize="12sp"
-            android:textStyle="normal" />
+            android:textStyle="normal"
+            tools:text="گوشی موبایل سامسونگ" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
             android:background="@color/GRAY" />
 
         <TextView
             android:id="@+id/offerMaxPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
             android:layout_marginLeft="5dp"
+            android:layout_gravity="left"
             android:background="@drawable/line"
             android:fontFamily="@font/vazir"
-            tools:text="۲۵۰۰۰۰۰۰ تومان"
+            android:gravity="left"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
             android:textColor="@color/RED"
-            android:textStyle="normal" />
+            android:textStyle="normal"
+            tools:text="۲۵۰۰۰۰۰۰ تومان" />
 
         <TextView
             android:id="@+id/offerMinPrice"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="5dp"
-            android:layout_gravity="left"
             android:fontFamily="@font/vazir"
-            tools:text="۲۵۰۰۰۰۰۰ تومان"
+            android:gravity="left"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
             android:textColor="@color/GREEN"
-            android:textStyle="normal" />
+            android:textStyle="normal"
+            tools:text="۲۵۰۰۰۰۰۰ تومان" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

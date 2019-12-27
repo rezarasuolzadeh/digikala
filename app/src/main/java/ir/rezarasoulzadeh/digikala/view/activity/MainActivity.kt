@@ -16,34 +16,39 @@ import com.google.android.material.navigation.NavigationView
 import com.smarteist.autoimageslider.IndicatorAnimations
 import com.smarteist.autoimageslider.SliderAnimations
 import ir.rezarasoulzadeh.digikala.R
-import ir.rezarasoulzadeh.digikala.model.*
+import ir.rezarasoulzadeh.digikala.model.CategoryData
+import ir.rezarasoulzadeh.digikala.model.OfferData
+import ir.rezarasoulzadeh.digikala.model.Responses
 import ir.rezarasoulzadeh.digikala.model.attribute.Data
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
 import ir.rezarasoulzadeh.digikala.view.adapter.*
 import ir.rezarasoulzadeh.digikala.viewmodel.SearchViewModel
 import ir.rezarasoulzadeh.digikala.viewmodel.ServiceViewModel
+import ir.rezarasoulzadeh.digikala.viewmodel.TopViewModel
 import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
 import kotlinx.android.synthetic.main.layout_toolbar.view.*
-
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var serviceViewModel: ServiceViewModel
     private lateinit var searchViewModel: SearchViewModel
+    private lateinit var topViewModel: TopViewModel
 
     lateinit var drawerView: NavigationView
     lateinit var drawerLayout: DrawerLayout
     lateinit var slider: List<Data>
-    lateinit var banner: List<Data>
     lateinit var advertisement: List<Data>
     lateinit var offer: List<OfferData>
     lateinit var category: List<CategoryData>
     lateinit var top: List<Responses>
-    lateinit var digital: List<BottomHit>
-    lateinit var fashion: List<BottomHit>
-    lateinit var kitchen: List<BottomHit>
-    lateinit var makeup: List<BottomHit>
+    lateinit var digital: List<Responses>
+    lateinit var fashion: List<Responses>
+    lateinit var kitchen: List<Responses>
+    lateinit var makeup: List<Responses>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,6 +64,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             menu = true
         )
 
+        val time = remainTime(remainTime())
+
+        hourCounterTextView.text = time[0]
+        minuteCounterTextView.text = time[1]
+        secondCounterTextView.text = time[2]
+
         drawerView = findViewById(R.id.nav_view)
         drawerLayout = findViewById(R.id.drawer_layout)
 
@@ -72,6 +83,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         searchViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application)
             .create(SearchViewModel::class.java)
 
+        topViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application)
+            .create(TopViewModel::class.java)
 
         serviceViewModel.provideSlider()
         serviceViewModel.sliderLiveData.observe(this, Observer {
@@ -135,9 +148,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             newsRecyclerView.adapter = newsAdapter
         })
 
-        searchViewModel.provideDigital()
-        searchViewModel.digitalLiveData.observe(this, Observer {
-            digital = it.hits.hits
+        // کالای دیجیتال
+        topViewModel.provideDigital()
+        topViewModel.digitalLiveData.observe(this, Observer {
+            digital = it.responses
 
             val digitalAdapter = DigitalAdapter(digital)
             val digitalRecyclerView = findViewById<RecyclerView>(R.id.digitalRecyclerView)
@@ -146,33 +160,36 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             digitalRecyclerView.adapter = digitalAdapter
         })
 
-        searchViewModel.provideFashion()
-        searchViewModel.fashionLiveData.observe(this, Observer {
-            fashion = it.hits.hits
+        // مد و پوشاک
+        topViewModel.provideFashion()
+        topViewModel.fashionLiveData.observe(this, Observer {
+            fashion = it.responses
 
-            val fashionAdapter = FashionAdapter(fashion)
+            val fashionAdapter = DigitalAdapter(fashion)
             val fashionRecyclerView = findViewById<RecyclerView>(R.id.fashionRecyclerView)
             val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
             fashionRecyclerView.layoutManager = horizontal
             fashionRecyclerView.adapter = fashionAdapter
         })
 
-        searchViewModel.provideKitchen()
-        searchViewModel.kitchenLiveData.observe(this, Observer {
-            kitchen = it.hits.hits
+        // خانه و آشپزخانه
+        topViewModel.provideKitchen()
+        topViewModel.kitchenLiveData.observe(this, Observer {
+            kitchen = it.responses
 
-            val kitchenAdapter = KitchenAdapter(kitchen)
+            val kitchenAdapter = DigitalAdapter(kitchen)
             val kitchenRecyclerView = findViewById<RecyclerView>(R.id.kitchenRecyclerView)
             val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
             kitchenRecyclerView.layoutManager = horizontal
             kitchenRecyclerView.adapter = kitchenAdapter
         })
 
-        searchViewModel.provideMakeup()
-        searchViewModel.makeupLiveData.observe(this, Observer {
-            makeup = it.hits.hits
+        // آرایشی و بهداشتی
+        topViewModel.provideMakeup()
+        topViewModel.makeupLiveData.observe(this, Observer {
+            makeup = it.responses
 
-            val makeupAdapter = MakeupAdapter(makeup)
+            val makeupAdapter = DigitalAdapter(makeup)
             val makeupRecyclerView = findViewById<RecyclerView>(R.id.makeupRecyclerView)
             val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
             makeupRecyclerView.layoutManager = horizontal
@@ -200,8 +217,63 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(intent)
                 drawerLayout.closeDrawer(GravityCompat.END)
             }
+            R.id.menuMostSell -> {
+                val intent = Intent(this, ListActivity::class.java)
+                intent.putExtra("title", "پر فروش ترین ها")
+                startActivity(intent)
+                drawerLayout.closeDrawer(GravityCompat.END)
+            }
+            R.id.menuOffer -> {
+                val intent = Intent(this, ListActivity::class.java)
+                intent.putExtra("title", "پیشنهاد ویژه دیجیکالا")
+                startActivity(intent)
+                drawerLayout.closeDrawer(GravityCompat.END)
+            }
+            R.id.menuMostView -> {
+                val intent = Intent(this, ListActivity::class.java)
+                intent.putExtra("title", "پر بازدید ترین ها")
+                startActivity(intent)
+                drawerLayout.closeDrawer(GravityCompat.END)
+            }
+            R.id.menuNews -> {
+                val intent = Intent(this, ListActivity::class.java)
+                intent.putExtra("title", "جدید ترین ها")
+                startActivity(intent)
+                drawerLayout.closeDrawer(GravityCompat.END)
+            }
         }
         return false
+    }
+
+    private fun remainTime(): ArrayList<Int> {
+        val sdf = SimpleDateFormat("HH:mm:ss")
+        val currentDate = sdf.format(Date())
+        val time = currentDate.split(":").toTypedArray()
+        val timeArray = ArrayList<Int>()
+        val remainHour = 23 - time[0].toInt()
+        val remainMinute = 60 - time[1].toInt()
+        val remainSecond = 60 - time[2].toInt()
+        timeArray.add(remainHour)
+        timeArray.add(remainMinute)
+        timeArray.add(remainSecond)
+        return timeArray
+    }
+
+    private fun remainTime(timeArray: ArrayList<Int>): ArrayList<String> {
+        var remainHour = timeArray[0].toString()
+        var remainMinute = timeArray[1].toString()
+        var remainSecond = timeArray[2].toString()
+        if(remainHour.length == 1)
+            remainHour = "0".plus(remainHour)
+        if(remainMinute.length == 1)
+            remainMinute = "0".plus(remainMinute)
+        if(remainSecond.length == 1)
+            remainSecond = "0".plus(remainSecond)
+        val time = ArrayList<String>()
+        time.add(remainHour)
+        time.add(remainMinute)
+        time.add(remainSecond)
+        return time
     }
 
 }

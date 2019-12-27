@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
     app:cardCornerRadius="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
         android:background="@color/WHITE"
-        android:layoutDirection="rtl">
+        android:layoutDirection="rtl"
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="150dp"
             android:layout_height="160dp"
             android:layout_gravity="center"
-            tools:src="@drawable/phone"/>
+            android:layout_margin="5dp"
+            tools:src="@drawable/phone" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,21 +30,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                tools:text="گوشی موبایل سامسونگ"
                 android:fontFamily="@font/iransans"
+                android:lines="1"
                 android:textColor="@color/BLACK"
+                android:textSize="15sp"
                 android:textStyle="normal"
-                android:textSize="15sp"/>
+                tools:text="گوشی موبایل سامسونگ" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                tools:text="حافظه داخلی 64 گیگ"
                 android:fontFamily="@font/iransans"
+                android:lines="1"
                 android:textColor="@color/GRAY"
+                android:textSize="12sp"
                 android:textStyle="normal"
-                android:textSize="12sp"/>
+                tools:text="حافظه داخلی 64 گیگ" />
 
             <view
                 android:layout_width="match_parent"
@@ -52,42 +55,26 @@
                 android:layout_marginBottom="10dp"
                 android:background="@color/GRAY" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layoutDirection="ltr"
-                android:orientation="horizontal"
-                android:visibility="visible">
+                android:layout_gravity="left"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/line"
+                android:fontFamily="@font/iransans"
+                android:text="۲۵۰۰۰۰۰۰ تومان"
+                android:textColor="@color/RED"
+                android:textStyle="normal" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/line"
-                    android:fontFamily="@font/iransans"
-                    android:text="۲۵۰۰۰۰۰۰ تومان"
-                    android:textColor="@color/RED"
-                    android:textStyle="normal" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layoutDirection="ltr"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/iransans"
-                    android:text="۲۵۰۰۰۰۰۰ تومان"
-                    android:textColor="@color/GREEN"
-                    android:textStyle="normal" />
-
-            </LinearLayout>
+                android:layout_gravity="left"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/iransans"
+                android:text="۲۵۰۰۰۰۰۰ تومان"
+                android:textColor="@color/GREEN"
+                android:textStyle="normal" />
 
         </LinearLayout>
 

@@ -1,21 +1,19 @@
 package ir.rezarasoulzadeh.digikala.service.repositories
 
 import ir.rezarasoulzadeh.digikala.interfaces.BottomDao
-import ir.rezarasoulzadeh.digikala.interfaces.TopDao
-import ir.rezarasoulzadeh.digikala.model.Bottom
 import ir.rezarasoulzadeh.digikala.model.Top
-import ir.rezarasoulzadeh.digikala.service.config.SearchRetrofitConfig
+import ir.rezarasoulzadeh.digikala.service.config.TopRetrofitConfig
 import kotlinx.coroutines.runBlocking
 import retrofit2.Response
 
-class SearchRepository {
+class TopRepository {
 
-    fun provideTop(): Top? {
+    fun provideTop(category: Int): Top? {
         var response: Response<Top>? = null
         runBlocking {
             try {
-                response = SearchRetrofitConfig.retrofit().create(TopDao::class.java)
-                    .getTop(2)
+                response = TopRetrofitConfig.retrofit().create(BottomDao::class.java)
+                    .getTop("c${category}")
             } catch (e: Exception) {
                 e.printStackTrace()
             }
@@ -25,8 +23,8 @@ class SearchRepository {
 
     companion object {
         @JvmStatic
-        fun getInstance(): SearchRepository {
-            return SearchRepository()
+        fun getInstance(): TopRepository {
+            return TopRepository()
         }
     }
 

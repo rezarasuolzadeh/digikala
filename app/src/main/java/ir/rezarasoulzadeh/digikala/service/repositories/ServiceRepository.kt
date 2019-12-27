@@ -34,6 +34,19 @@ class ServiceRepository {
         return response!!.body()
     }
 
+    fun provideTop(category: Int): Top? {
+        var response: Response<Top>? = null
+        runBlocking {
+            try {
+                response = ServiceRetrofitConfig.retrofit().create(BottomDao::class.java)
+                    .getTop("c${category}")
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+        return response!!.body()
+    }
+
     fun provideAdvertisement(): Advertisement? {
         var response: Response<Advertisement>? = null
         runBlocking {

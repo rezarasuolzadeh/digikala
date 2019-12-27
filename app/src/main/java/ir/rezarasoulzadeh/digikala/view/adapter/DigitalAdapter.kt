@@ -10,7 +10,7 @@ import ir.rezarasoulzadeh.digikala.model.*
 import ir.rezarasoulzadeh.digikala.service.utils.Format
 import kotlinx.android.synthetic.main.model_most_sell.view.*
 
-class DigitalAdapter(private val digital: List<BottomHit>) : RecyclerView.Adapter<DigitalAdapter.DigitalViewHolder>() {
+class DigitalAdapter(private val digital: List<Responses>) : RecyclerView.Adapter<DigitalAdapter.DigitalViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DigitalViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.model_most_sell, parent, false)
@@ -18,15 +18,15 @@ class DigitalAdapter(private val digital: List<BottomHit>) : RecyclerView.Adapte
     }
 
     override fun getItemCount(): Int {
-        return digital.size
+        return digital[1].hits.hits.size
     }
 
     override fun onBindViewHolder(holder: DigitalViewHolder, position: Int) {
-        holder.bind(digital[position].source)
+        holder.bind(digital[1].hits.hits[position].source)
     }
 
     inner class DigitalViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(digital: BottomSource) {
+        fun bind(digital: Source) {
             val format = Format()
             itemView.mostSellImage.setImageURI(Uri.parse(digital.imagePath))
             itemView.mostSellTitle.text = digital.faTitle

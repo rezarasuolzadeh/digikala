@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import ir.rezarasoulzadeh.digikala.model.*
+import ir.rezarasoulzadeh.digikala.service.repositories.SearchRepository
 import ir.rezarasoulzadeh.digikala.service.repositories.ServiceRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -16,6 +17,10 @@ class ServiceViewModel(application: Application) : AndroidViewModel(application)
     var advertisementLiveData = MutableLiveData<Advertisement>()
     var offerLiveData = MutableLiveData<Offer>()
     var categoryLiveData = MutableLiveData<Category>()
+    var digitalLiveData = MutableLiveData<Top>()
+    var fashionLiveData = MutableLiveData<Top>()
+    var kitchenLiveData = MutableLiveData<Top>()
+    var makeupLiveData = MutableLiveData<Top>()
 
     fun provideSlider() {
         CoroutineScope(Dispatchers.IO).launch {
@@ -44,6 +49,30 @@ class ServiceViewModel(application: Application) : AndroidViewModel(application)
     fun provideCategory() {
         CoroutineScope(Dispatchers.IO).launch {
             categoryLiveData.postValue(ServiceRepository.getInstance().provideCategory())
+        }
+    }
+
+    fun provideDigital() {
+        CoroutineScope(Dispatchers.IO).launch {
+            digitalLiveData.postValue(ServiceRepository.getInstance().provideTop(5966))
+        }
+    }
+
+    fun provideFashion() {
+        CoroutineScope(Dispatchers.IO).launch {
+            fashionLiveData.postValue(ServiceRepository.getInstance().provideTop(8749))
+        }
+    }
+
+    fun provideKitchen() {
+        CoroutineScope(Dispatchers.IO).launch {
+            kitchenLiveData.postValue(ServiceRepository.getInstance().provideTop(5967))
+        }
+    }
+
+    fun provideMakeup() {
+        CoroutineScope(Dispatchers.IO).launch {
+            makeupLiveData.postValue(ServiceRepository.getInstance().provideTop(5968))
         }
     }
 
