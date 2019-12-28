@@ -144,11 +144,13 @@
             android:foreground="?android:attr/selectableItemBackground">
 
             <ImageView
+                android:id="@+id/arrangeImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="11dp"
-                android:src="@drawable/ic_arrange_second"
-                android:tint="#3D3D3D" />
+                android:layoutDirection="rtl"
+                android:src="@drawable/ic_arrange_first"
+                android:tint="#5A5A5A" />
 
         </androidx.cardview.widget.CardView>
 

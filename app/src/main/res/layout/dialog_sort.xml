@@ -1,70 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@color/WHITE"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/WHITE">
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         android:background="@color/WHITE"
+        android:paddingLeft="20dp"
         android:layoutDirection="rtl"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingRight="20dp">
 
         <RadioButton
+            android:id="@+id/mostViewRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/iransans"
             android:layout_marginTop="15dp"
-            android:textColor="@color/BLACK"
-            android:textSize="14sp"
-            android:textStyle="normal"
-            android:text="@string/sortFirstTypeTitle" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/iransans"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/BLACK"
-            android:textSize="14sp"
-            android:checked="true"
             android:buttonTint="@color/GREEN"
-            android:textStyle="normal"
-            android:text="@string/sortSecondTypeTitle" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:fontFamily="@font/iransans"
-            android:layout_marginTop="10dp"
+            android:text="@string/sortFirstTypeTitle"
             android:textColor="@color/BLACK"
-            android:textSize="14sp"
-            android:textStyle="normal"
-            android:text="@string/sortThirdTypeTitle" />
+            android:textSize="13sp"
+            android:textStyle="normal" />
 
         <RadioButton
+            android:id="@+id/mostSellRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:buttonTint="@color/GREEN"
             android:fontFamily="@font/iransans"
+            android:text="@string/sortSecondTypeTitle"
             android:textColor="@color/BLACK"
-            android:textSize="14sp"
-            android:textStyle="normal"
-            android:text="@string/sortFourthTypeTitle" />
+            android:textSize="13sp"
+            android:textStyle="normal" />
 
         <RadioButton
+            android:id="@+id/maxPriceRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/GREEN"
             android:fontFamily="@font/iransans"
+            android:text="@string/sortThirdTypeTitle"
+            android:textColor="@color/BLACK"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <RadioButton
+            android:id="@+id/minPriceRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/GREEN"
+            android:fontFamily="@font/iransans"
+            android:text="@string/sortFourthTypeTitle"
+            android:textColor="@color/BLACK"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <RadioButton
+            android:id="@+id/newsRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="15dp"
+            android:buttonTint="@color/GREEN"
+            android:fontFamily="@font/iransans"
+            android:text="@string/sortFifthTypeTitle"
             android:textColor="@color/BLACK"
-            android:textSize="14sp"
-            android:textStyle="normal"
-            android:text="@string/sortFifthTypeTitle" />
+            android:textSize="13sp"
+            android:textStyle="normal" />
 
     </RadioGroup>
 
