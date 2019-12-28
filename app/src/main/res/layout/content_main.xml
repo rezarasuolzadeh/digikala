@@ -9,8 +9,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/splashDigikala"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:background="@color/RED"
         android:visibility="gone">
 
@@ -51,7 +51,7 @@
             android:orientation="vertical">
 
             <com.smarteist.autoimageslider.SliderView
-                android:id="@+id/imageSlider"
+                android:id="@+id/mainSlider"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 app:sliderAnimationDuration="600"
@@ -182,7 +182,8 @@
                 android:layout_height="120dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"
-                app:placeholderImageScaleType="center" />
+                app:placeholderImage="@drawable/placeholder"
+                app:placeholderImageScaleType="centerCrop" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -197,7 +198,8 @@
                     android:id="@+id/bannerFirst"
                     android:layout_width="match_parent"
                     android:layout_height="110dp"
-                    app:placeholderImageScaleType="center" />
+                    app:placeholderImage="@drawable/placeholder"
+                    app:placeholderImageScaleType="centerCrop" />
 
             </androidx.cardview.widget.CardView>
 
@@ -221,7 +223,8 @@
                         android:id="@+id/bannerSecond"
                         android:layout_width="match_parent"
                         android:layout_height="110dp"
-                        app:placeholderImageScaleType="center" />
+                        app:placeholderImage="@drawable/placeholder"
+                        app:placeholderImageScaleType="centerCrop" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -239,7 +242,8 @@
                         android:id="@+id/bannerThird"
                         android:layout_width="match_parent"
                         android:layout_height="110dp"
-                        app:placeholderImageScaleType="center" />
+                        app:placeholderImage="@drawable/placeholder"
+                        app:placeholderImageScaleType="centerCrop" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -258,7 +262,8 @@
                     android:id="@+id/bannerFourth"
                     android:layout_width="match_parent"
                     android:layout_height="110dp"
-                    app:placeholderImageScaleType="center" />
+                    app:placeholderImage="@drawable/placeholder"
+                    app:placeholderImageScaleType="centerCrop" />
 
             </androidx.cardview.widget.CardView>
 
@@ -282,7 +287,8 @@
                         android:id="@+id/bannerFifth"
                         android:layout_width="match_parent"
                         android:layout_height="110dp"
-                        app:placeholderImageScaleType="center" />
+                        app:placeholderImage="@drawable/placeholder"
+                        app:placeholderImageScaleType="centerCrop" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -300,7 +306,8 @@
                         android:id="@+id/bannerSixth"
                         android:layout_width="match_parent"
                         android:layout_height="110dp"
-                        app:placeholderImageScaleType="center" />
+                        app:placeholderImage="@drawable/placeholder"
+                        app:placeholderImageScaleType="centerCrop" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -312,7 +319,8 @@
                 android:layout_height="120dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"
-                app:placeholderImageScaleType="center" />
+                app:placeholderImage="@drawable/placeholder"
+                app:placeholderImageScaleType="centerCrop" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

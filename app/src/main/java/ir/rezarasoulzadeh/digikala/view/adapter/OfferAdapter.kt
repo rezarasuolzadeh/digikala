@@ -1,5 +1,6 @@
 package ir.rezarasoulzadeh.digikala.view.adapter
 
+import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import ir.rezarasoulzadeh.digikala.R
 import ir.rezarasoulzadeh.digikala.model.OfferData
 import ir.rezarasoulzadeh.digikala.service.utils.Format
+import ir.rezarasoulzadeh.digikala.view.activity.ProductActivity
 import kotlinx.android.synthetic.main.model_offer.view.*
 
 class OfferAdapter(private val offer: List<OfferData>) : RecyclerView.Adapter<OfferAdapter.OfferViewHolder>() {
@@ -32,6 +34,10 @@ class OfferAdapter(private val offer: List<OfferData>) : RecyclerView.Adapter<Of
             itemView.offerTitle.text = offer.title
             itemView.offerMaxPrice.text = format.priceFormat(offer.price)
             itemView.offerMinPrice.text = format.priceFormat(offer.price - offer.discount)
+            itemView.setOnClickListener {
+                val intent = Intent(itemView.context, ProductActivity::class.java)
+                itemView.context.startActivity(intent)
+            }
         }
     }
 

@@ -3,6 +3,7 @@ package ir.rezarasoulzadeh.digikala.view.activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -28,9 +29,8 @@ import ir.rezarasoulzadeh.digikala.viewmodel.TopViewModel
 import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
 import kotlinx.android.synthetic.main.layout_toolbar.view.*
-import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.collections.ArrayList
+import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -64,16 +64,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             menu = true
         )
 
-        val time = remainTime(remainTime())
-
-        hourCounterTextView.text = time[0]
-        minuteCounterTextView.text = time[1]
-        secondCounterTextView.text = time[2]
+        handleCountDownTimer()
 
         drawerView = findViewById(R.id.nav_view)
         drawerLayout = findViewById(R.id.drawer_layout)
-
-        splashDigikala.visibility = View.GONE
 
         drawerView.setNavigationItemSelectedListener(this)
 
@@ -89,7 +83,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         serviceViewModel.provideSlider()
         serviceViewModel.sliderLiveData.observe(this, Observer {
             slider = it.data
-            imageSlider.sliderAdapter = SliderAdapter(slider)
+            mainSlider.sliderAdapter = MainSliderAdapter(slider)
         })
 
         serviceViewModel.provideBanner()
@@ -194,12 +188,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
             makeupRecyclerView.layoutManager = horizontal
             makeupRecyclerView.adapter = makeupAdapter
-            splashDigikala.visibility = View.GONE
         })
 
-        imageSlider.startAutoCycle()
-        imageSlider.setIndicatorAnimation(IndicatorAnimations.WORM)
-        imageSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
+        mainSlider.startAutoCycle()
+        mainSlider.setIndicatorAnimation(IndicatorAnimations.WORM)
+        mainSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
+
+        splashDigikala.visibility = View.GONE
 
         customToolbar.menuButton.setOnClickListener {
             drawerLayout.openDrawer(drawerView)
@@ -249,35 +244,49 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return false
     }
 
-    private fun remainTime(): ArrayList<Int> {
-        val sdf = SimpleDateFormat("HH:mm:ss")
-        val currentDate = sdf.format(Date())
-        val time = currentDate.split(":").toTypedArray()
-        val timeArray = ArrayList<Int>()
-        val remainHour = 23 - time[0].toInt()
-        val remainMinute = 60 - time[1].toInt()
-        val remainSecond = 60 - time[2].toInt()
-        timeArray.add(remainHour)
-        timeArray.add(remainMinute)
-        timeArray.add(remainSecond)
-        return timeArray
+    private fun handleCountDownTimer() {
+        val current = Calendar.getInstance(TimeZone.getDefault())
+        val nextDate = getNextDay()
+        object : CountDownTimer(nextDate.timeInMillis - current.timeInMillis, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                var hours = TimeUnit.MILLISECONDS.toHours(millisUntilFinished)
+                //if 24:00:00 occurs?
+                if (hours > 24) {
+                    hours %= 24
+                }
+                hourCounterTextView.text = String.format("%02d", hours)
+                minuteCounterTextView.text = String.format(
+                    "%02d",
+                    TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(
+                        TimeUnit.MILLISECONDS.toHours(millisUntilFinished)
+                    )
+                )
+                secondCounterTextView.text = String.format(
+                    "%02d",
+                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(
+                        TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)
+                    )
+                )
+            }
+
+            override fun onFinish() {
+
+            }
+        }.start()
     }
 
-    private fun remainTime(timeArray: ArrayList<Int>): ArrayList<String> {
-        var remainHour = timeArray[0].toString()
-        var remainMinute = timeArray[1].toString()
-        var remainSecond = timeArray[2].toString()
-        if(remainHour.length == 1)
-            remainHour = "0".plus(remainHour)
-        if(remainMinute.length == 1)
-            remainMinute = "0".plus(remainMinute)
-        if(remainSecond.length == 1)
-            remainSecond = "0".plus(remainSecond)
-        val time = ArrayList<String>()
-        time.add(remainHour)
-        time.add(remainMinute)
-        time.add(remainSecond)
-        return time
+    private fun getNextDay(): Calendar {
+        return Calendar.getInstance(TimeZone.getDefault()).apply {
+            add(Calendar.DAY_OF_MONTH, 1)
+            set(
+                get(Calendar.YEAR),
+                get(Calendar.MONTH),
+                get(Calendar.DATE),
+                0,
+                0,
+                0
+            )
+        }
     }
 
 }

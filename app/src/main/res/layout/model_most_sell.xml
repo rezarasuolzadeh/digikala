@@ -18,8 +18,8 @@
             android:layout_width="140dp"
             android:layout_height="150dp"
             android:padding="5dp"
-            app:placeholderImage="@drawable/ic_holder"
-            app:placeholderImageScaleType="center" />
+            app:placeholderImage="@drawable/placeholder"
+            app:placeholderImageScaleType="centerCrop" />
 
         <TextView
             android:id="@+id/mostSellTitle"

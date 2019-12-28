@@ -9,11 +9,11 @@ import com.smarteist.autoimageslider.SliderViewAdapter
 import ir.rezarasoulzadeh.digikala.R
 import ir.rezarasoulzadeh.digikala.model.attribute.Data
 
-class SliderAdapter(private val slider:List<Data>) :
-    SliderViewAdapter<SliderAdapter.SliderAdapterVH>() {
+class MainSliderAdapter(private val slider:List<Data>) :
+    SliderViewAdapter<MainSliderAdapter.SliderAdapterVH>() {
 
     override fun onCreateViewHolder(parent: ViewGroup): SliderAdapterVH {
-        val inflate: View = LayoutInflater.from(parent.context).inflate(R.layout.model_simage_slider, null)
+        val inflate: View = LayoutInflater.from(parent.context).inflate(R.layout.model_image_slider, null)
         return SliderAdapterVH(inflate)
     }
 
@@ -27,7 +27,7 @@ class SliderAdapter(private val slider:List<Data>) :
     }
 
     inner class SliderAdapterVH(itemView: View) : ViewHolder(itemView) {
-        var imageViewBackground: SimpleDraweeView = itemView.findViewById(R.id.iv_auto_image_slider)
+        var imageViewBackground: SimpleDraweeView = itemView.findViewById(R.id.sliderImage)
     }
 
 }
