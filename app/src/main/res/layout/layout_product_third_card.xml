@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/iransans"
+                android:padding="5dp"
+                android:text="رنگ"
+                android:textColor="@color/BLACK"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/iransans"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="۲ رنگ"
+                android:textColor="#868686"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layoutDirection="rtl" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layoutDirection="ltr"
+                android:padding="8dp"
+                android:src="@drawable/ic_shield"
+                android:tint="#BBBABA" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/iransans"
+                android:text="گارانتی اصالت و سلامت فیزیکی"
+                android:textColor="#BBBABA"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="#BBBABA" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layoutDirection="ltr"
+                android:padding="8dp"
+                android:src="@drawable/dk" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/iransans"
+                android:text="فروش توسط دیجیکالا"
+                android:textColor="#BBBABA"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layoutDirection="ltr"
+                android:padding="8dp"
+                android:src="@drawable/ic_store"
+                android:tint="#474747" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/iransans"
+                android:text="فروش توسط لایبریکا | رضایت خرید: ۸۲٪"
+                android:textColor="#BBBABA"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layoutDirection="rtl"
+                android:padding="8dp"
+                android:src="@drawable/ic_truck"
+                android:tint="#474747" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/iransans"
+                android:text="آماده ارسال از انبار دیجیکالا"
+                android:textColor="#BBBABA"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="#BBBABA" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:layoutDirection="ltr">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="۲۵۰۰ تومان"
+                android:textStyle="normal"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textColor="@color/GREEN"
+                android:fontFamily="@font/vazir"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="۲۵۰۰ تومان"
+                android:textStyle="normal"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"
+                android:background="@drawable/line"
+                android:textColor="@color/RED"
+                android:fontFamily="@font/vazir"/>
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/GREEN"
+                android:gravity="center"
+                android:layoutDirection="rtl"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layoutDirection="ltr"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_cart"
+                    android:tint="@color/WHITE" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/iransans"
+                    android:text="افزودن به سبد خرید"
+                    android:textColor="@color/WHITE"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="5dp"
+            android:background="#BBBABA" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layoutDirection="ltr"
+                android:padding="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_store"
+                android:tint="#474747" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:lines="1"
+                android:fontFamily="@font/iransans"
+                android:text="۶ فروشنده و گارانتی برای این کالا وجود دارد"
+                android:textColor="@color/BLUE"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layoutDirection="ltr"
+                android:padding="12dp"
+                android:src="@drawable/ic_arrow"
+                android:tint="#474747" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

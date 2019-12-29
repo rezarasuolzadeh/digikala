@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:src="@drawable/ic_info"
+            android:tint="@color/GREEN" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/iransans"
+            android:padding="10dp"
+            android:text="هشدار سامانه همتا: حتما در زمان تحویل دستکاه به کمک کد "
+            android:textColor="@color/GREEN"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
