@@ -11,6 +11,8 @@
     android:orientation="vertical"
     android:paddingLeft="13dp"
     android:paddingTop="5dp"
+    android:clickable="true"
+    android:focusable="true"
     android:paddingRight="13dp"
     android:paddingBottom="3dp"
     android:gravity="center"

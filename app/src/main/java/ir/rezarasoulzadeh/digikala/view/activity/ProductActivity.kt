@@ -9,6 +9,7 @@ import ir.rezarasoulzadeh.digikala.R
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
 import ir.rezarasoulzadeh.digikala.view.adapter.ProductSliderAdapter
 import kotlinx.android.synthetic.main.activity_product.*
+import kotlinx.android.synthetic.main.layout_product_first_card.view.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
 import kotlinx.android.synthetic.main.layout_toolbar.view.*
 import java.util.*
@@ -37,11 +38,11 @@ class ProductActivity : AppCompatActivity() {
             "https://dkstatics-public.digikala.com/digikala-adservice-banners/1000016989.jpg"
         )
 
-        productSlider.sliderAdapter = ProductSliderAdapter(images)
+        productFirstCardInclude.productSlider.sliderAdapter = ProductSliderAdapter(images)
 
-        productSlider.startAutoCycle()
-        productSlider.setIndicatorAnimation(IndicatorAnimations.WORM)
-        productSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
+        productFirstCardInclude.productSlider.startAutoCycle()
+        productFirstCardInclude.productSlider.setIndicatorAnimation(IndicatorAnimations.WORM)
+        productFirstCardInclude.productSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
 
     }
 
@@ -55,14 +56,14 @@ class ProductActivity : AppCompatActivity() {
                 if (hours > 24) {
                     hours %= 24
                 }
-                productHourCounterTextView.text = String.format("%02d", hours)
-                productMinuteCounterTextView.text = String.format(
+                productFirstCardInclude.productHourCounterTextView.text = String.format("%02d", hours)
+                productFirstCardInclude.productMinuteCounterTextView.text = String.format(
                     "%02d",
                     TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(
                         TimeUnit.MILLISECONDS.toHours(millisUntilFinished)
                     )
                 )
-                productSecondCounterTextView.text = String.format(
+                productFirstCardInclude.productSecondCounterTextView.text = String.format(
                     "%02d",
                     TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(
                         TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)

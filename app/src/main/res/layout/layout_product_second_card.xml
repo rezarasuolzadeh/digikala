@@ -11,12 +11,15 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
         app:cardCornerRadius="3dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ECECEC"
+            android:background="#F3F3F3"
             android:gravity="center"
             android:layoutDirection="rtl"
             android:orientation="horizontal"
@@ -53,8 +56,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ECECEC"
+            android:background="#F3F3F3"
             android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
             android:layoutDirection="rtl"
             android:orientation="horizontal"
             android:padding="4dp">

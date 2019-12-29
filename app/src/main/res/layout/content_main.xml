@@ -100,7 +100,7 @@
                     android:background="@drawable/background_timer"
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
-                    android:text="12"
+                    tools:text="12"
                     android:textColor="@color/WHITE"
                     android:textSize="23sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -129,7 +129,7 @@
                     android:background="@drawable/background_timer"
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
-                    android:text="34"
+                    tools:text="34"
                     android:textColor="@color/WHITE"
                     android:textSize="23sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -158,7 +158,7 @@
                     android:background="@drawable/background_timer"
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
-                    android:text="56"
+                    tools:text="56"
                     android:textColor="@color/WHITE"
                     android:textSize="23sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -181,9 +181,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@color/WHITE"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
                 android:layout_marginBottom="15dp"
                 app:placeholderImage="@drawable/placeholder"
-                app:placeholderImageScaleType="centerCrop" />
+                app:placeholderImageScaleType="centerInside" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -198,8 +202,12 @@
                     android:id="@+id/bannerFirst"
                     android:layout_width="match_parent"
                     android:layout_height="110dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@color/WHITE"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
                     app:placeholderImage="@drawable/placeholder"
-                    app:placeholderImageScaleType="centerCrop" />
+                    app:placeholderImageScaleType="centerInside" />
 
             </androidx.cardview.widget.CardView>
 
@@ -223,6 +231,9 @@
                         android:id="@+id/bannerSecond"
                         android:layout_width="match_parent"
                         android:layout_height="110dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
                         app:placeholderImage="@drawable/placeholder"
                         app:placeholderImageScaleType="centerCrop" />
 
@@ -242,6 +253,9 @@
                         android:id="@+id/bannerThird"
                         android:layout_width="match_parent"
                         android:layout_height="110dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
                         app:placeholderImage="@drawable/placeholder"
                         app:placeholderImageScaleType="centerCrop" />
 
@@ -261,9 +275,13 @@
                 <com.facebook.drawee.view.SimpleDraweeView
                     android:id="@+id/bannerFourth"
                     android:layout_width="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@color/WHITE"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
                     android:layout_height="110dp"
                     app:placeholderImage="@drawable/placeholder"
-                    app:placeholderImageScaleType="centerCrop" />
+                    app:placeholderImageScaleType="centerInside" />
 
             </androidx.cardview.widget.CardView>
 
@@ -287,6 +305,9 @@
                         android:id="@+id/bannerFifth"
                         android:layout_width="match_parent"
                         android:layout_height="110dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
                         app:placeholderImage="@drawable/placeholder"
                         app:placeholderImageScaleType="centerCrop" />
 
@@ -306,6 +327,9 @@
                         android:id="@+id/bannerSixth"
                         android:layout_width="match_parent"
                         android:layout_height="110dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
                         app:placeholderImage="@drawable/placeholder"
                         app:placeholderImageScaleType="centerCrop" />
 
@@ -318,6 +342,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
                 android:layout_marginBottom="15dp"
                 app:placeholderImage="@drawable/placeholder"
                 app:placeholderImageScaleType="centerCrop" />

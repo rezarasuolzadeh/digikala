@@ -14,11 +14,13 @@
         android:background="@color/WHITE"
         android:orientation="vertical">
 
-        <ImageView
+        <com.facebook.drawee.view.SimpleDraweeView
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:layout_margin="5dp"
-            tools:src="@drawable/phone" />
+            android:background="@color/WHITE"
+            app:placeholderImage="@drawable/placeholder"
+            app:placeholderImageScaleType="centerInside" />
 
         <TextView
             android:layout_width="match_parent"

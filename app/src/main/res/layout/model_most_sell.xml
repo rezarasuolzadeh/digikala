@@ -6,6 +6,9 @@
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     android:background="@color/WHITE"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackgroundBorderless"
     app:cardCornerRadius="5dp">
 
     <LinearLayout
@@ -29,10 +32,10 @@
             android:lines="2"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            tools:text="گوشی موبایل سامسونگ"
             android:textColor="@color/BLACK"
             android:textSize="12sp"
-            android:textStyle="normal" />
+            android:textStyle="normal"
+            tools:text="گوشی موبایل سامسونگ" />
 
         <View
             android:layout_width="match_parent"
@@ -44,13 +47,13 @@
             android:id="@+id/mostSellPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="left"
-            android:padding="5dp"
             android:layout_gravity="left"
             android:fontFamily="@font/vazir"
-            tools:text="۲۵۰۰۰۰۰۰ تومان"
+            android:gravity="left"
+            android:padding="5dp"
             android:textColor="@color/GREEN"
-            android:textStyle="normal" />
+            android:textStyle="normal"
+            tools:text="۲۵۰۰۰۰۰۰ تومان" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

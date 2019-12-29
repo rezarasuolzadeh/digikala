@@ -29,6 +29,27 @@
                 android:id="@+id/productSecondCardInclude"
                 layout="@layout/layout_product_second_card" />
 
+            <include
+                android:id="@+id/productThirdCardInclude"
+                layout="@layout/layout_product_third_card"/>
+
+            <include
+                android:id="@+id/productForthCardInclude"
+                layout="@layout/layout_product_fourth_card"/>
+
+            <include
+                android:id="@+id/productFifthCardInclude"
+                layout="@layout/layout_product_fifth_card"/>
+
+            <include
+                android:id="@+id/productSixthCardInclude" />
+
+            <include
+                android:id="@+id/productSubCategoryInclude" />
+
+            <include
+                android:id="@+id/productSimilarProductInclude" />
+
         </LinearLayout>
 
     </ScrollView>

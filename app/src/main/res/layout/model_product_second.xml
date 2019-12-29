@@ -14,12 +14,14 @@
         android:layoutDirection="rtl"
         android:orientation="horizontal">
 
-        <ImageView
+        <com.facebook.drawee.view.SimpleDraweeView
             android:layout_width="150dp"
             android:layout_height="160dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-            tools:src="@drawable/phone" />
+            android:background="@color/WHITE"
+            app:placeholderImage="@drawable/placeholder"
+            app:placeholderImageScaleType="centerCrop" />
 
         <LinearLayout
             android:layout_width="match_parent"
