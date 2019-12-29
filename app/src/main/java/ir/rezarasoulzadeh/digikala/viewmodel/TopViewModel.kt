@@ -18,19 +18,19 @@ class TopViewModel(application: Application) : AndroidViewModel(application) {
 
     fun provideDigital() {
         CoroutineScope(Dispatchers.IO).launch {
-            digitalLiveData.postValue(TopRepository.getInstance().provideTop(5966))
+            digitalLiveData.postValue(TopRepository.getInstance().provideTop(4))
         }
     }
 
     fun provideFashion() {
         CoroutineScope(Dispatchers.IO).launch {
-            fashionLiveData.postValue(TopRepository.getInstance().provideTop(5967))
+            fashionLiveData.postValue(TopRepository.getInstance().provideTop(8752))
         }
     }
 
     fun provideKitchen() {
         CoroutineScope(Dispatchers.IO).launch {
-            kitchenLiveData.postValue(TopRepository.getInstance().provideTop(5966))
+            kitchenLiveData.postValue(TopRepository.getInstance().provideTop(6226))
         }
     }
 
