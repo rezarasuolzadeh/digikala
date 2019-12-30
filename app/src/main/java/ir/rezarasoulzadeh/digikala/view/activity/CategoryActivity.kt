@@ -3,6 +3,7 @@ package ir.rezarasoulzadeh.digikala.view.activity
 import android.animation.ObjectAnimator
 import android.animation.StateListAnimator
 import android.os.Bundle
+import android.os.Parcelable
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -12,6 +13,7 @@ import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.tabs.TabLayout
 import ir.rezarasoulzadeh.digikala.R
 import ir.rezarasoulzadeh.digikala.model.CategoryData
+import ir.rezarasoulzadeh.digikala.model.keys.SubCategoryKey
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
 import ir.rezarasoulzadeh.digikala.view.adapter.ViewPagerAdapter
 import ir.rezarasoulzadeh.digikala.view.fragment.FragmentOne
@@ -29,7 +31,15 @@ class CategoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category)
 
-        CustomToolbar(this, basket = false, search = false, title = true, digikala = false, back = true, menu = false)
+        CustomToolbar(
+            this,
+            basket = false,
+            search = false,
+            title = true,
+            digikala = false,
+            back = true,
+            menu = false
+        )
 
         customToolbar.titleTextView.text = "دسته بندی محصولات"
 
@@ -50,8 +60,15 @@ class CategoryActivity : AppCompatActivity() {
         serviceViewModel.provideCategories()
         serviceViewModel.categoriesLiveData.observe(this, Observer {
             categories = it.data
-            for(i in categories.indices) {
-                adapter.addFragment(FragmentOne(), categories[i].category.title)
+            for (i in categories.indices) {
+                val fragment = FragmentOne()
+                val bundle = Bundle()
+                bundle.putParcelableArrayList(
+                    SubCategoryKey.KEY,
+                    categories[i].subCategory as ArrayList<out Parcelable>
+                )
+                fragment.arguments = bundle
+                adapter.addFragment(fragment, categories[i].category.title)
             }
             viewPager.adapter = adapter
 

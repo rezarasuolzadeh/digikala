@@ -1,5 +1,7 @@
 package ir.rezarasoulzadeh.digikala.model
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
 
 data class Category(
@@ -33,6 +35,7 @@ data class CategoryX(
     val urlCode: String = "" // dk-ds-gift-card
 )
 
+@Parcelize
 data class SubCategory(
     @SerializedName("HasMainPage")
     val hasMainPage: Boolean = false, // false
@@ -46,4 +49,4 @@ data class SubCategory(
     val title: String = "", // کارت هدیه دیجی کالا
     @SerializedName("UrlCode")
     val urlCode: String = "" // digikala-gift-card
-)
+):Parcelable
