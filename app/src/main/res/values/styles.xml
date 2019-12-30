@@ -28,4 +28,9 @@
         <item name="listPreferredItemPaddingRight">8dp</item>
     </style>
 
+    <!-- Tab layout theme. -->
+    <style name="TabLayoutStyle" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/iransans</item>
+    </style>
+
 </resources>

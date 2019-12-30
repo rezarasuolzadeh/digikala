@@ -17,6 +17,7 @@ class ServiceViewModel(application: Application) : AndroidViewModel(application)
     var advertisementLiveData = MutableLiveData<Advertisement>()
     var offerLiveData = MutableLiveData<Offer>()
     var categoryLiveData = MutableLiveData<Category>()
+    var categoriesLiveData = MutableLiveData<Category>()
     var digitalLiveData = MutableLiveData<Top>()
     var fashionLiveData = MutableLiveData<Top>()
     var kitchenLiveData = MutableLiveData<Top>()
@@ -49,6 +50,12 @@ class ServiceViewModel(application: Application) : AndroidViewModel(application)
     fun provideCategory() {
         CoroutineScope(Dispatchers.IO).launch {
             categoryLiveData.postValue(ServiceRepository.getInstance().provideCategory())
+        }
+    }
+
+    fun provideCategories() {
+        CoroutineScope(Dispatchers.IO).launch {
+            categoriesLiveData.postValue(ServiceRepository.getInstance().provideCategory())
         }
     }
 

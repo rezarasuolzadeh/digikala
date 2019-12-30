@@ -2,25 +2,28 @@ package ir.rezarasoulzadeh.digikala.view.activity
 
 import android.animation.ObjectAnimator
 import android.animation.StateListAnimator
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.tabs.TabLayout
 import ir.rezarasoulzadeh.digikala.R
+import ir.rezarasoulzadeh.digikala.model.CategoryData
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
+import ir.rezarasoulzadeh.digikala.view.adapter.ViewPagerAdapter
 import ir.rezarasoulzadeh.digikala.view.fragment.FragmentOne
-import kotlinx.android.synthetic.main.activity_category.*
+import ir.rezarasoulzadeh.digikala.viewmodel.ServiceViewModel
 import kotlinx.android.synthetic.main.layout_toolbar.*
 import kotlinx.android.synthetic.main.layout_toolbar.view.*
 
-
 class CategoryActivity : AppCompatActivity() {
+
+    private lateinit var serviceViewModel: ServiceViewModel
+
+    lateinit var categories: List<CategoryData>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,59 +37,28 @@ class CategoryActivity : AppCompatActivity() {
             super.onBackPressed()
         }
 
-//        (activity.customToolbar.parent as AppBarLayout).targetElevation = 0f
-
         val stateListAnimator = StateListAnimator()
         stateListAnimator.addState(IntArray(0), ObjectAnimator.ofFloat(0f))
         (this.customToolbar.parent as AppBarLayout).stateListAnimator = stateListAnimator
 
+        serviceViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application)
+            .create(ServiceViewModel::class.java)
+
         val viewPager = findViewById<ViewPager>(R.id.pager)
         val adapter = ViewPagerAdapter(supportFragmentManager)
 
-        // Add Fragments to adapter one by one
-        // Add Fragments to adapter one by one
-        adapter.addFragment(FragmentOne(), "FRAG1")
-        adapter.addFragment(FragmentOne(), "FRAG2")
-        adapter.addFragment(FragmentOne(), "FRAG3")
-        adapter.addFragment(FragmentOne(), "FRAG3")
-        adapter.addFragment(FragmentOne(), "FRAG3")
-        adapter.addFragment(FragmentOne(), "FRAG3")
-        adapter.addFragment(FragmentOne(), "FRAG3")
-        adapter.addFragment(FragmentOne(), "FRAG3")
-        adapter.addFragment(FragmentOne(), "FRAG3")
-        adapter.addFragment(FragmentOne(), "FRAG3")
-        adapter.addFragment(FragmentOne(), "FRAG3")
-        adapter.addFragment(FragmentOne(), "FRAG3")
-        adapter.addFragment(FragmentOne(), "FRAG3")
-        adapter.addFragment(FragmentOne(), "FRAG3")
-        adapter.addFragment(FragmentOne(), "FRAG3")
+        serviceViewModel.provideCategories()
+        serviceViewModel.categoriesLiveData.observe(this, Observer {
+            categories = it.data
+            for(i in categories.indices) {
+                adapter.addFragment(FragmentOne(), categories[i].category.title)
+            }
+            viewPager.adapter = adapter
 
-        viewPager.adapter = adapter
+            val tabLayout = findViewById<View>(R.id.tabs) as TabLayout
+            tabLayout.setupWithViewPager(viewPager)
+        })
 
-        val tabLayout = findViewById<View>(R.id.tabs) as TabLayout
-        tabLayout.setupWithViewPager(viewPager)
-
-    }
-
-    internal class ViewPagerAdapter(manager: FragmentManager) : FragmentPagerAdapter(manager) {
-        private val mFragmentList: MutableList<Fragment> = ArrayList()
-        private val mFragmentTitleList: MutableList<String> = ArrayList()
-        override fun getItem(position: Int): Fragment {
-            return mFragmentList[position]
-        }
-
-        override fun getCount(): Int {
-            return mFragmentList.size
-        }
-
-        fun addFragment(fragment: Fragment, title: String) {
-            mFragmentList.add(fragment)
-            mFragmentTitleList.add(title)
-        }
-
-        override fun getPageTitle(position: Int): CharSequence? {
-            return mFragmentTitleList[position]
-        }
     }
 
 }
