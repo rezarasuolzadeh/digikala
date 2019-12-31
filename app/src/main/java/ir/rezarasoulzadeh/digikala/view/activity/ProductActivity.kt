@@ -3,11 +3,15 @@ package ir.rezarasoulzadeh.digikala.view.activity
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.smarteist.autoimageslider.IndicatorAnimations
 import com.smarteist.autoimageslider.SliderAnimations
 import ir.rezarasoulzadeh.digikala.R
+import ir.rezarasoulzadeh.digikala.model.ProductAlbumData
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
 import ir.rezarasoulzadeh.digikala.view.adapter.ProductSliderAdapter
+import ir.rezarasoulzadeh.digikala.viewmodel.ServiceViewModel
 import kotlinx.android.synthetic.main.activity_product.*
 import kotlinx.android.synthetic.main.layout_product_first_card.view.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
@@ -16,6 +20,10 @@ import java.util.*
 import java.util.concurrent.TimeUnit
 
 class ProductActivity : AppCompatActivity() {
+
+    private lateinit var serviceViewModel: ServiceViewModel
+
+    lateinit var productAlbum: List<ProductAlbumData>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,14 +39,16 @@ class ProductActivity : AppCompatActivity() {
             super.onBackPressed()
         }
 
-        val images = arrayListOf(
-            "https://dkstatics-public.digikala.com/digikala-adservice-banners/1000016199.jpg",
-            "https://dkstatics-public.digikala.com/digikala-adservice-banners/1000016985.jpg",
-            "https://dkstatics-public.digikala.com/digikala-adservice-banners/1000017051.jpg",
-            "https://dkstatics-public.digikala.com/digikala-adservice-banners/1000016989.jpg"
-        )
+        val productId = intent.getIntExtra("productId", -1)
 
-        productFirstCardInclude.productSlider.sliderAdapter = ProductSliderAdapter(images)
+        serviceViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application)
+            .create(ServiceViewModel::class.java)
+
+        serviceViewModel.provideProductAlbum(164983)
+        serviceViewModel.productAlbumLiveData.observe(this, Observer {
+            productAlbum = it.data
+            productFirstCardInclude.productSlider.sliderAdapter = ProductSliderAdapter(productAlbum)
+        })
 
         productFirstCardInclude.productSlider.startAutoCycle()
         productFirstCardInclude.productSlider.setIndicatorAnimation(IndicatorAnimations.WORM)

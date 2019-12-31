@@ -116,7 +116,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         serviceViewModel.provideCategory()
         serviceViewModel.categoryLiveData.observe(this, Observer {
             category = it.data
-            val categoryFirstAdapter = CategoryFirstAdapter(category)
+            val categoryFirstAdapter = CategoryFirstAdapter(this, category)
             val categoryFirstRecyclerView =
                 findViewById<RecyclerView>(R.id.categoryFirstRecyclerView)
             val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)

@@ -18,7 +18,7 @@ class ServiceViewModel(application: Application) : AndroidViewModel(application)
     var offerLiveData = MutableLiveData<Offer>()
     var categoryLiveData = MutableLiveData<Category>()
     var categoriesLiveData = MutableLiveData<Category>()
-    var digitalLiveData = MutableLiveData<Top>()
+    var productAlbumLiveData = MutableLiveData<ProductAlbum>()
     var fashionLiveData = MutableLiveData<Top>()
     var kitchenLiveData = MutableLiveData<Top>()
     var makeupLiveData = MutableLiveData<Top>()
@@ -59,27 +59,9 @@ class ServiceViewModel(application: Application) : AndroidViewModel(application)
         }
     }
 
-    fun provideDigital() {
+    fun provideProductAlbum(productId : Int) {
         CoroutineScope(Dispatchers.IO).launch {
-            digitalLiveData.postValue(ServiceRepository.getInstance().provideTop(5966))
-        }
-    }
-
-    fun provideFashion() {
-        CoroutineScope(Dispatchers.IO).launch {
-            fashionLiveData.postValue(ServiceRepository.getInstance().provideTop(8749))
-        }
-    }
-
-    fun provideKitchen() {
-        CoroutineScope(Dispatchers.IO).launch {
-            kitchenLiveData.postValue(ServiceRepository.getInstance().provideTop(5967))
-        }
-    }
-
-    fun provideMakeup() {
-        CoroutineScope(Dispatchers.IO).launch {
-            makeupLiveData.postValue(ServiceRepository.getInstance().provideTop(5968))
+            productAlbumLiveData.postValue(ServiceRepository.getInstance().provideProductAlbum(productId))
         }
     }
 

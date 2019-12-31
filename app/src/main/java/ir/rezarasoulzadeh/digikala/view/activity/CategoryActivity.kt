@@ -21,6 +21,7 @@ import ir.rezarasoulzadeh.digikala.viewmodel.ServiceViewModel
 import kotlinx.android.synthetic.main.layout_toolbar.*
 import kotlinx.android.synthetic.main.layout_toolbar.view.*
 
+
 class CategoryActivity : AppCompatActivity() {
 
     private lateinit var serviceViewModel: ServiceViewModel
@@ -47,6 +48,8 @@ class CategoryActivity : AppCompatActivity() {
             super.onBackPressed()
         }
 
+        val position = intent.getIntExtra("position", -1)
+
         val stateListAnimator = StateListAnimator()
         stateListAnimator.addState(IntArray(0), ObjectAnimator.ofFloat(0f))
         (this.customToolbar.parent as AppBarLayout).stateListAnimator = stateListAnimator
@@ -56,6 +59,8 @@ class CategoryActivity : AppCompatActivity() {
 
         val viewPager = findViewById<ViewPager>(R.id.pager)
         val adapter = ViewPagerAdapter(supportFragmentManager)
+
+        val tabLayout = findViewById<View>(R.id.tabs) as TabLayout
 
         serviceViewModel.provideCategories()
         serviceViewModel.categoriesLiveData.observe(this, Observer {
@@ -72,8 +77,11 @@ class CategoryActivity : AppCompatActivity() {
             }
             viewPager.adapter = adapter
 
-            val tabLayout = findViewById<View>(R.id.tabs) as TabLayout
             tabLayout.setupWithViewPager(viewPager)
+            if (position != -1) {
+                val tab = tabLayout.getTabAt(position)
+                tab!!.select()
+            }
         })
 
     }
