@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@color/WHITE"
+    app:cardCornerRadius="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/WHITE"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/listThirdImageView"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:background="@color/WHITE"
+            app:placeholderImage="@drawable/placeholder"
+            app:placeholderImageScaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/listThirdFaTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iransans"
+            android:lines="1"
+            android:padding="5dp"
+            android:textColor="@color/BLACK"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            tools:text="گوشی موبایل سامسونگ" />
+
+        <TextView
+            android:id="@+id/listThirdEnTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iransans"
+            android:lines="1"
+            android:gravity="right"
+            android:padding="5dp"
+            android:textColor="@color/GRAY"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            tools:text="Samsung A50 model 35095" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/GRAY" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layoutDirection="ltr"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/listThirdMaxPriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line"
+                android:fontFamily="@font/vazir"
+                android:textColor="@color/RED"
+                android:textStyle="normal"
+                android:visibility="gone"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="۲۵۰۰۰۰۰۰ تومان" />
+
+            <TextView
+                android:id="@+id/listThirdOfferTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/background_offer"
+                android:fontFamily="@font/iransans"
+                android:padding="1dp"
+                android:visibility="gone"
+                android:text="پیشنهاد ویژه"
+                android:textColor="@color/WHITE"
+                android:textSize="10sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layoutDirection="ltr"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/listThirdMinPriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/vazir"
+                android:textColor="@color/GREEN"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                tools:text="۲۵۰۰۰۰۰۰ تومان" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|right"
+                android:orientation="horizontal"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

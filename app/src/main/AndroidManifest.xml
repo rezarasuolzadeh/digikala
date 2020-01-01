@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.activity.CategoryActivity" />
-        <activity android:name=".view.activity.ListActivity" />
+        <activity android:name=".view.activity.ListsActivity" />
         <activity android:name=".view.activity.ProductActivity" />
     </application>
 

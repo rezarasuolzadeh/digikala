@@ -10,7 +10,7 @@
     android:foreground="?android:attr/selectableItemBackgroundBorderless"
     android:layout_marginRight="5dp"
     android:layout_marginLeft="5dp"
-    app:cardCornerRadius="5dp">
+    app:cardCornerRadius="3dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,8 +21,8 @@
 
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/listFirstImageView"
-            android:layout_width="150dp"
-            android:layout_height="160dp"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
             android:background="@color/WHITE"
@@ -43,15 +43,16 @@
                 android:fontFamily="@font/iransans"
                 android:lines="1"
                 android:textColor="@color/BLACK"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:textStyle="normal"
                 tools:text="گوشی موبایل سامسونگ" />
 
             <TextView
-                android:id="@+id/listFirstEnTitle"
+                android:id="@+id/listFirstEnTitleTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:gravity="right"
                 android:fontFamily="@font/iransans"
                 android:lines="1"
                 android:textColor="@color/GRAY"
@@ -71,11 +72,12 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/listFirstMaxPrice"
+                    android:id="@+id/listFirstMaxPriceTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_marginLeft="5dp"
+                    android:visibility="gone"
                     android:background="@drawable/line"
                     android:fontFamily="@font/vazir"
                     android:text="۲۵۰۰۰۰۰۰ تومان"
@@ -87,7 +89,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/listOfferTag"
+                    android:id="@+id/listFirstOfferTag"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
@@ -95,6 +97,7 @@
                     android:background="@drawable/background_offer"
                     android:fontFamily="@font/iransans"
                     android:padding="1dp"
+                    android:visibility="gone"
                     android:text="پیشنهاد ویژه"
                     android:textColor="@color/WHITE"
                     android:textSize="10sp"
@@ -106,7 +109,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/listFirstMinPrice"
+                android:id="@+id/listFirstMinPriceTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"

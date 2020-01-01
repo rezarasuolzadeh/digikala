@@ -213,28 +213,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 drawerLayout.closeDrawer(GravityCompat.END)
             }
             R.id.menuMostSell -> {
-                val intent = Intent(this, ListActivity::class.java)
+                val intent = Intent(this, ListsActivity::class.java)
                 intent.putExtra("title", "پر فروش ترین ها")
                 intent.putExtra("sortTitle", "پر فروش ترین")
                 startActivity(intent)
                 drawerLayout.closeDrawer(GravityCompat.END)
             }
             R.id.menuOffer -> {
-                val intent = Intent(this, ListActivity::class.java)
+                val intent = Intent(this, ListsActivity::class.java)
                 intent.putExtra("title", "پیشنهاد ویژه دیجیکالا")
                 intent.putExtra("sortTitle", "پر بازدید ترین")
                 startActivity(intent)
                 drawerLayout.closeDrawer(GravityCompat.END)
             }
             R.id.menuMostView -> {
-                val intent = Intent(this, ListActivity::class.java)
+                val intent = Intent(this, ListsActivity::class.java)
                 intent.putExtra("title", "پر بازدید ترین ها")
                 intent.putExtra("sortTitle", "پر بازدید ترین")
                 startActivity(intent)
                 drawerLayout.closeDrawer(GravityCompat.END)
             }
             R.id.menuNews -> {
-                val intent = Intent(this, ListActivity::class.java)
+                val intent = Intent(this, ListsActivity::class.java)
                 intent.putExtra("title", "جدید ترین ها")
                 intent.putExtra("sortTitle", "جدید ترین")
                 startActivity(intent)
