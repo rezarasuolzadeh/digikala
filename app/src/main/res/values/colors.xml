@@ -10,7 +10,7 @@
     <color name="GRAY">#BBBBBB</color>
     <color name="DARK">#505050</color>
     <color name="BLUE">#2093EB</color>
-    <color name="backgroundColour">#E2E1E1</color>
+    <color name="backgroundColour">#EBEAEA</color>
     <color name="indicatorColour">#48FFFFFF</color>
 
 </resources>

@@ -4,7 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
+    android:layout_marginTop="10dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+    android:layout_marginRight="5dp"
+    android:layout_marginLeft="5dp"
     app:cardCornerRadius="5dp">
 
     <LinearLayout
@@ -15,20 +20,23 @@
         android:orientation="horizontal">
 
         <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/listFirstImageView"
             android:layout_width="150dp"
             android:layout_height="160dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
             android:background="@color/WHITE"
             app:placeholderImage="@drawable/placeholder"
-            app:placeholderImageScaleType="centerCrop" />
+            app:placeholderImageScaleType="centerInside" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/listFirstFaTitleTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -40,6 +48,7 @@
                 tools:text="گوشی موبایل سامسونگ" />
 
             <TextView
+                android:id="@+id/listFirstEnTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -50,30 +59,60 @@
                 android:textStyle="normal"
                 tools:text="حافظه داخلی 64 گیگ" />
 
-            <view
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:background="@color/GRAY" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginLeft="5dp"
-                android:background="@drawable/line"
-                android:fontFamily="@font/iransans"
-                android:text="۲۵۰۰۰۰۰۰ تومان"
-                android:textColor="@color/RED"
-                android:textStyle="normal" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/listFirstMaxPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/line"
+                    android:fontFamily="@font/vazir"
+                    android:text="۲۵۰۰۰۰۰۰ تومان"
+                    android:textColor="@color/RED"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/listOfferTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/background_offer"
+                    android:fontFamily="@font/iransans"
+                    android:padding="1dp"
+                    android:text="پیشنهاد ویژه"
+                    android:textColor="@color/WHITE"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
+                android:id="@+id/listFirstMinPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginLeft="5dp"
-                android:fontFamily="@font/iransans"
+                android:textSize="12sp"
+                android:fontFamily="@font/vazir"
                 android:text="۲۵۰۰۰۰۰۰ تومان"
                 android:textColor="@color/GREEN"
                 android:textStyle="normal" />

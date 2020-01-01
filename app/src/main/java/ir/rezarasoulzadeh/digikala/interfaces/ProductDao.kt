@@ -11,14 +11,14 @@ interface ProductDao {
 
     @Headers(
         "ApplicationVersion: 1.9.6-CB",
-        "Mobile-Agent: MobileApp/Android/v-47/503eaa6d3af99023"
+        "Mobile-Agent:MobileApp/Android/v-47/503eaa6d3af99023"
     )
 
     @GET("ProductCache/GetAlbumByProductId/{productId}")
     suspend fun getProductAlbum(@Path("productId") productId: Int): Response<ProductAlbum>
 
-    @GET("ProductCache/GetProductById/")
-    suspend fun getProducInfo(@Query("") productId: Int): Response<ProductInfo>
+    @GET("ProductCache/GetProductById/{productId}")
+    suspend fun getProductInfo(@Path("productId") productId: Int): Response<ProductInfo>
 
     @GET("ProductCache/GetProductDefaultConfigById")
     suspend fun getProductConfig(@Query("id") productId: Int): Response<ProductConfig>

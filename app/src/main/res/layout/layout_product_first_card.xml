@@ -98,6 +98,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/productFaTitleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/iransans"
@@ -110,6 +111,7 @@
             android:textStyle="normal" />
 
         <TextView
+            android:id="@+id/productEnTitleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"

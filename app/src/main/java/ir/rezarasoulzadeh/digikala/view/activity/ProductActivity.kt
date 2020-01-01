@@ -9,10 +9,13 @@ import com.smarteist.autoimageslider.IndicatorAnimations
 import com.smarteist.autoimageslider.SliderAnimations
 import ir.rezarasoulzadeh.digikala.R
 import ir.rezarasoulzadeh.digikala.model.ProductAlbumData
+import ir.rezarasoulzadeh.digikala.model.ProductInfo
+import ir.rezarasoulzadeh.digikala.model.ProductInfoData
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
 import ir.rezarasoulzadeh.digikala.view.adapter.ProductSliderAdapter
 import ir.rezarasoulzadeh.digikala.viewmodel.ServiceViewModel
 import kotlinx.android.synthetic.main.activity_product.*
+import kotlinx.android.synthetic.main.layout_product_first_card.*
 import kotlinx.android.synthetic.main.layout_product_first_card.view.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
 import kotlinx.android.synthetic.main.layout_toolbar.view.*
@@ -24,6 +27,7 @@ class ProductActivity : AppCompatActivity() {
     private lateinit var serviceViewModel: ServiceViewModel
 
     lateinit var productAlbum: List<ProductAlbumData>
+    lateinit var productInfo: ProductInfoData
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +53,13 @@ class ProductActivity : AppCompatActivity() {
             productAlbum = it.data
             productFirstCardInclude.productSlider.sliderAdapter = ProductSliderAdapter(productAlbum)
         })
+
+//        serviceViewModel.provideProductInfo(164983)
+//        serviceViewModel.productInfoLiveData.observe(this, Observer {
+//            productInfo = it.data
+//            productFaTitleTextView.text = productInfo.faTitle
+//            productEnTitleTextView.text = productInfo.enTitle
+//        })
 
         productFirstCardInclude.productSlider.startAutoCycle()
         productFirstCardInclude.productSlider.setIndicatorAnimation(IndicatorAnimations.WORM)

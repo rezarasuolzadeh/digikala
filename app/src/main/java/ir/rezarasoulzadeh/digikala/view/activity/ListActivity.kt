@@ -4,8 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import ir.rezarasoulzadeh.digikala.R
+import ir.rezarasoulzadeh.digikala.model.OfferData
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
+import ir.rezarasoulzadeh.digikala.view.adapter.ListOfferAdapter
+import ir.rezarasoulzadeh.digikala.viewmodel.SearchViewModel
+import ir.rezarasoulzadeh.digikala.viewmodel.ServiceViewModel
 import kotlinx.android.synthetic.main.activity_list.*
 import kotlinx.android.synthetic.main.dialog_sort.view.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
@@ -14,6 +22,10 @@ import kotlinx.android.synthetic.main.layout_toolbar.view.*
 class ListActivity : AppCompatActivity() {
 
     private var arrange = 0
+    private lateinit var serviceViewModel: ServiceViewModel
+    private lateinit var searchViewModel: SearchViewModel
+
+    lateinit var offer: List<OfferData>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +35,22 @@ class ListActivity : AppCompatActivity() {
 
         customToolbar.titleTextView.text = intent.getStringExtra("title")
         sortTitle.text = intent.getStringExtra("sortTitle")
+
+        serviceViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application)
+            .create(ServiceViewModel::class.java)
+
+        searchViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application)
+            .create(SearchViewModel::class.java)
+
+        serviceViewModel.provideOffer()
+        serviceViewModel.offerLiveData.observe(this, Observer {
+            offer = it.data
+            val listOfferAdapter = ListOfferAdapter(offer)
+            val listRecyclerView = findViewById<RecyclerView>(R.id.listRecyclerView)
+            val horizontal = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+            listRecyclerView.layoutManager = horizontal
+            listRecyclerView.adapter = listOfferAdapter
+        })
 
         arrangeCard.setOnClickListener {
             arrange++
