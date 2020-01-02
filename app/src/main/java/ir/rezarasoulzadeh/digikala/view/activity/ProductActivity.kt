@@ -54,12 +54,12 @@ class ProductActivity : AppCompatActivity() {
             productFirstCardInclude.productSlider.sliderAdapter = ProductSliderAdapter(productAlbum)
         })
 
-//        serviceViewModel.provideProductInfo(164983)
-//        serviceViewModel.productInfoLiveData.observe(this, Observer {
-//            productInfo = it.data
-//            productFaTitleTextView.text = productInfo.faTitle
-//            productEnTitleTextView.text = productInfo.enTitle
-//        })
+        serviceViewModel.provideProductInfo(164983)
+        serviceViewModel.productInfoLiveData.observe(this, Observer {
+            productInfo = it.data
+            productFaTitleTextView.text = productInfo.faTitle
+            productEnTitleTextView.text = productInfo.enTitle
+        })
 
         productFirstCardInclude.productSlider.startAutoCycle()
         productFirstCardInclude.productSlider.setIndicatorAnimation(IndicatorAnimations.WORM)

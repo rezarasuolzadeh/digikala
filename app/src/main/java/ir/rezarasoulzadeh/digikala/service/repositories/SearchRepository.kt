@@ -23,12 +23,12 @@ class SearchRepository {
         return response!!.body()
     }
 
-    fun provideLists(sort: Int, page: Int): Lists? {
+    fun provideLists(sort: Int, page: Int, condition: Int): Lists? {
         var response: Response<Lists>? = null
         runBlocking {
             try {
                 response = SearchRetrofitConfig.retrofit().create(ListsDao::class.java)
-                    .getLists(4, 2, 16, 0, 1)
+                    .getLists(sort, 2, 16, page, 1, condition)
             } catch (e: Exception) {
                 e.printStackTrace()
             }

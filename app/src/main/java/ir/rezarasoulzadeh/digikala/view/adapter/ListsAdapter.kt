@@ -51,7 +51,8 @@ class ListsAdapter(private val lists: ListsHits, private val arrange: Int) :
             val format = Format()
             when(arrange) {
                 0 -> {
-                    itemView.listFirstMaxPriceTextView.visibility=View.GONE
+                    itemView.listFirstMaxPriceTextView.visibility=View.INVISIBLE
+                    itemView.listFirstOfferTag.visibility=View.INVISIBLE
                     itemView.listFirstImageView.setImageURI(Uri.parse(list.source.imagePath))
                     itemView.listFirstFaTitleTextView.text = list.source.faTitle
                     itemView.listFirstEnTitleTextView.text = list.source.enTitle
@@ -66,7 +67,8 @@ class ListsAdapter(private val lists: ListsHits, private val arrange: Int) :
                     }
                 }
                 1 -> {
-                    itemView.listSecondMaxPriceTextView.visibility=View.GONE
+                    itemView.listSecondMaxPriceTextView.visibility=View.INVISIBLE
+                    itemView.listSecondOfferTag.visibility=View.INVISIBLE
                     itemView.listSecondImageView.setImageURI(Uri.parse(list.source.imagePath))
                     itemView.listSecondFaTitleTextView.text = list.source.faTitle
                     itemView.listSecondMaxPriceTextView.text = format.priceFormat(list.source.minPrice)
@@ -80,7 +82,7 @@ class ListsAdapter(private val lists: ListsHits, private val arrange: Int) :
                     }
                 }
                 2 -> {
-                    itemView.listThirdMaxPriceTextView.visibility=View.GONE
+                    itemView.listThirdOfferTag.visibility=View.INVISIBLE
                     itemView.listThirdImageView.setImageURI(Uri.parse(list.source.imagePath))
                     itemView.listThirdFaTitleTextView.text = list.source.faTitle
                     itemView.listThirdEnTitleTextView.text = list.source.enTitle

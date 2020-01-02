@@ -49,7 +49,7 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
         searchViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application)
             .create(SearchViewModel::class.java)
 
-        searchViewModel.provideLists(sort, 1)
+        searchViewModel.provideLists(sort, 0, 0)
         searchViewModel.listsLiveData.observe(this, this)
 
         arrangeCard.setOnClickListener {
@@ -108,7 +108,7 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
             sortView.mostViewRadioButton.setOnClickListener {
                 sortTitle.text = "پر بازدید ترین"
                 sort = 4
-                searchViewModel.provideLists(sort, 1)
+                searchViewModel.provideLists(sort, 0, 0)
                 searchViewModel.listsLiveData.observe(this, this)
                 sortAlertDialog.dismiss()
             }
@@ -116,7 +116,7 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
             sortView.mostSellRadioButton.setOnClickListener {
                 sortTitle.text = "پر فروش ترین"
                 sort = 7
-                searchViewModel.provideLists(sort, 1)
+                searchViewModel.provideLists(sort, 0, 0)
                 searchViewModel.listsLiveData.observe(this, this)
                 sortAlertDialog.dismiss()
             }
@@ -124,7 +124,7 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
             sortView.maxPriceRadioButton.setOnClickListener {
                 sortTitle.text = "قیمت از زیاد به کم"
                 sort = 10
-                searchViewModel.provideLists(sort, 1)
+                searchViewModel.provideLists(sort, 0, 0)
                 searchViewModel.listsLiveData.observe(this, this)
                 sortAlertDialog.dismiss()
             }
@@ -132,7 +132,7 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
             sortView.minPriceRadioButton.setOnClickListener {
                 sortTitle.text = "قیمت از کم به زیاد"
                 sort = 10
-                searchViewModel.provideLists(sort, 1)
+                searchViewModel.provideLists(sort, 0, 1)
                 searchViewModel.listsLiveData.observe(this, this)
                 sortAlertDialog.dismiss()
             }
@@ -140,7 +140,7 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
             sortView.newsRadioButton.setOnClickListener {
                 sortTitle.text = "جدید ترین"
                 sort = 1
-                searchViewModel.provideLists(sort, 1)
+                searchViewModel.provideLists(sort, 0, 0)
                 searchViewModel.listsLiveData.observe(this, this)
                 sortAlertDialog.dismiss()
             }
@@ -152,8 +152,13 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
         lists = t!!.hits
         val listOfferAdapter = ListsAdapter(lists, arrange)
         val listRecyclerView = findViewById<RecyclerView>(R.id.listRecyclerView)
-        val horizontal = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        listRecyclerView.layoutManager = horizontal
+        if (arrange == 1) {
+            val horizontal = GridLayoutManager(this, 2)
+            listRecyclerView.layoutManager = horizontal
+        } else {
+            val horizontal = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+            listRecyclerView.layoutManager = horizontal
+        }
         listRecyclerView.adapter = listOfferAdapter
     }
 

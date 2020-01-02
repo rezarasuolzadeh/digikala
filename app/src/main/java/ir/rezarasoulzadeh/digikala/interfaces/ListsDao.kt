@@ -19,7 +19,8 @@ interface ListsDao {
         @Query("status") status: Int,
         @Query("pageSize") pageSize: Int,
         @Query("pageno") pageno: Int,
-        @Query("mobile") mobile: Int
+        @Query("mobile") mobile: Int,
+        @Query("sortCondition") sortCondition: Int
     ): Response<Lists>
 
 }

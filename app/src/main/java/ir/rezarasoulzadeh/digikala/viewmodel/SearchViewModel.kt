@@ -21,9 +21,9 @@ class SearchViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
-    fun provideLists(sort: Int, page: Int) {
+    fun provideLists(sort: Int, page: Int, condition: Int) {
         CoroutineScope(Dispatchers.IO).launch {
-            listsLiveData.postValue(SearchRepository.getInstance().provideLists(sort, page))
+            listsLiveData.postValue(SearchRepository.getInstance().provideLists(sort, page, condition))
         }
     }
 
