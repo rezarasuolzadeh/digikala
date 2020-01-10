@@ -36,6 +36,7 @@ class OfferAdapter(private val offer: List<OfferData>) : RecyclerView.Adapter<Of
             itemView.offerMinPrice.text = format.priceFormat(offer.price - offer.discount)
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, ProductActivity::class.java)
+                intent.putExtra("productId", offer.id)
                 itemView.context.startActivity(intent)
             }
         }

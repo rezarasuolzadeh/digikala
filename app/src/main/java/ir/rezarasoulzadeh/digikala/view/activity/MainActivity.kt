@@ -3,7 +3,6 @@ package ir.rezarasoulzadeh.digikala.view.activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +21,7 @@ import ir.rezarasoulzadeh.digikala.model.OfferData
 import ir.rezarasoulzadeh.digikala.model.Responses
 import ir.rezarasoulzadeh.digikala.model.attribute.Data
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
+import ir.rezarasoulzadeh.digikala.service.utils.Timer
 import ir.rezarasoulzadeh.digikala.view.adapter.*
 import ir.rezarasoulzadeh.digikala.viewmodel.SearchViewModel
 import ir.rezarasoulzadeh.digikala.viewmodel.ServiceViewModel
@@ -29,8 +29,7 @@ import ir.rezarasoulzadeh.digikala.viewmodel.TopViewModel
 import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
 import kotlinx.android.synthetic.main.layout_toolbar.view.*
-import java.util.*
-import java.util.concurrent.TimeUnit
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -64,7 +63,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             menu = true
         )
 
-        handleCountDownTimer()
+        Timer().handleCountDownTimer(
+            hourCounterTextView,
+            minuteCounterTextView,
+            secondCounterTextView
+        )
 
         drawerView = findViewById(R.id.nav_view)
         drawerLayout = findViewById(R.id.drawer_layout)
@@ -242,51 +245,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
         }
         return false
-    }
-
-    private fun handleCountDownTimer() {
-        val current = Calendar.getInstance(TimeZone.getDefault())
-        val nextDate = getNextDay()
-        object : CountDownTimer(nextDate.timeInMillis - current.timeInMillis, 1000) {
-            override fun onTick(millisUntilFinished: Long) {
-                var hours = TimeUnit.MILLISECONDS.toHours(millisUntilFinished)
-                //if 24:00:00 occurs?
-                if (hours > 24) {
-                    hours %= 24
-                }
-                hourCounterTextView.text = String.format("%02d", hours)
-                minuteCounterTextView.text = String.format(
-                    "%02d",
-                    TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(
-                        TimeUnit.MILLISECONDS.toHours(millisUntilFinished)
-                    )
-                )
-                secondCounterTextView.text = String.format(
-                    "%02d",
-                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(
-                        TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)
-                    )
-                )
-            }
-
-            override fun onFinish() {
-
-            }
-        }.start()
-    }
-
-    private fun getNextDay(): Calendar {
-        return Calendar.getInstance(TimeZone.getDefault()).apply {
-            add(Calendar.DAY_OF_MONTH, 1)
-            set(
-                get(Calendar.YEAR),
-                get(Calendar.MONTH),
-                get(Calendar.DATE),
-                0,
-                0,
-                0
-            )
-        }
     }
 
 }
