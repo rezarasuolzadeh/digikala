@@ -18,6 +18,8 @@ import kotlinx.android.synthetic.main.activity_product.*
 import kotlinx.android.synthetic.main.layout_product_fifth_card.view.*
 import kotlinx.android.synthetic.main.layout_product_first_card.*
 import kotlinx.android.synthetic.main.layout_product_first_card.view.*
+import kotlinx.android.synthetic.main.layout_product_fourth_card.view.*
+import kotlinx.android.synthetic.main.layout_product_sixth_card.view.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
 import kotlinx.android.synthetic.main.layout_toolbar.view.*
 
@@ -70,6 +72,8 @@ class ProductActivity : AppCompatActivity() {
             productEnTitleTextView.text = productInfo.enTitle
             customToolbar.titleTextView.text = productInfo.faTitle
             productFifthCardInclude.productDescriptionTextView.text = productInfo.description
+            productSixthCardInclude.productRatingBar.rating = (productInfo.rate * 5/ 100).toFloat()
+            productSixthCardInclude.productRateFiveTextView.text = (productInfo.rate * 5/ 100).toFloat().toString()
 
             if (productInfo.enTitle == " ") {
                 productEnTitleTextView.visibility = View.GONE
@@ -86,13 +90,29 @@ class ProductActivity : AppCompatActivity() {
                 )
             }
 
-            if(productInfo.description == " ") {
+            if(productInfo.description == "") {
                 productFifthCardInclude.visibility = View.GONE
             } else {
                 productFifthCardInclude.productDescriptionTextView.text = productInfo.description
             }
 
+            if(productInfo.contentDescription == null) {
+                productForthCardInclude.visibility = View.GONE
+            } else {
+                productForthCardInclude.productContentDescriptionTextView.text = productInfo.contentDescription.toString()
+            }
+
         })
+
+        productFifthCardInclude.productDescriptionMoreButton.setOnClickListener {
+            if(productFifthCardInclude.productDescriptionMoreButton.text == "ادامه مطلب") {
+                productFifthCardInclude.productDescriptionTextView.maxLines = 100
+                productFifthCardInclude.productDescriptionMoreButton.text = "بستن"
+            } else {
+                productFifthCardInclude.productDescriptionTextView.maxLines = 8
+                productFifthCardInclude.productDescriptionMoreButton.text = "ادامه مطلب"
+            }
+        }
 
         customToolbar.titleTextView.isSelected = true
         productFifthCardInclude.productDescriptionTextView.isSelected = true

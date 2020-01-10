@@ -41,8 +41,9 @@
                 android:id="@+id/productFifthCardInclude"
                 layout="@layout/layout_product_fifth_card"/>
 
-<!--            <include-->
-<!--                android:id="@+id/productSixthCardInclude" />-->
+            <include
+                android:id="@+id/productSixthCardInclude"
+                layout="@layout/layout_product_sixth_card" />
 
 <!--            <include-->
 <!--                android:id="@+id/productSubCategoryInclude" />-->

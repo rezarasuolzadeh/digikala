@@ -35,4 +35,9 @@
         <item name="android:textSize">13sp</item>
     </style>
 
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/DARK</item>
+        <item name="colorControlActivated">@color/RED</item>
+    </style>
+
 </resources>
