@@ -21,7 +21,7 @@ data class ListsHit(
     val source: ListsSource = ListsSource()
 )
 
-data class ListsSource(
+    data class ListsSource(
     @SerializedName("Brand")
     val brand: Brand = Brand(),
     @SerializedName("CpcData")
@@ -69,7 +69,7 @@ data class ListsBrand(
 
 data class ListsProductColor(
     @SerializedName("ColorCode")
-    val colorCode: String = "", // #212121
+    val colorCode: String = " ", // #212121
     @SerializedName("ColorHex")
     val colorHex: String = "", // #212121
     @SerializedName("ColorId")
