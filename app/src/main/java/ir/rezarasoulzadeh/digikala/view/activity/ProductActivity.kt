@@ -5,13 +5,17 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.smarteist.autoimageslider.IndicatorAnimations
 import com.smarteist.autoimageslider.SliderAnimations
 import ir.rezarasoulzadeh.digikala.R
 import ir.rezarasoulzadeh.digikala.model.ProductAlbumData
 import ir.rezarasoulzadeh.digikala.model.ProductInfoData
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
+import ir.rezarasoulzadeh.digikala.service.utils.Format
 import ir.rezarasoulzadeh.digikala.service.utils.Timer
+import ir.rezarasoulzadeh.digikala.view.adapter.ProductCategoryAdapter
 import ir.rezarasoulzadeh.digikala.view.adapter.ProductSliderAdapter
 import ir.rezarasoulzadeh.digikala.viewmodel.ServiceViewModel
 import kotlinx.android.synthetic.main.activity_product.*
@@ -72,8 +76,15 @@ class ProductActivity : AppCompatActivity() {
             productEnTitleTextView.text = productInfo.enTitle
             customToolbar.titleTextView.text = productInfo.faTitle
             productFifthCardInclude.productDescriptionTextView.text = productInfo.description
-            productSixthCardInclude.productRatingBar.rating = (productInfo.rate * 5/ 100).toFloat()
-            productSixthCardInclude.productRateFiveTextView.text = (productInfo.rate * 5/ 100).toFloat().toString()
+            productSixthCardInclude.productRatingBar.rating = Format().rateFormatFloat(productInfo.rate)
+            productSixthCardInclude.productRateFiveTextView.text = Format().rateFormatString(productInfo.rate)
+            productSixthCardInclude.productVoteTextView.text = Format().voteFormat(productInfo.rateCounter)
+
+            val productCategoryAdapter = ProductCategoryAdapter(productInfo.navigationSource)
+            val productCategoryRecyclerView = findViewById<RecyclerView>(R.id.productCategoryRecyclerView)
+            val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            productCategoryRecyclerView.layoutManager = horizontal
+            productCategoryRecyclerView.adapter = productCategoryAdapter
 
             if (productInfo.enTitle == " ") {
                 productEnTitleTextView.visibility = View.GONE

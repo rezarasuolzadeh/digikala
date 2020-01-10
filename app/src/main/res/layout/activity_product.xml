@@ -45,11 +45,12 @@
                 android:id="@+id/productSixthCardInclude"
                 layout="@layout/layout_product_sixth_card" />
 
-<!--            <include-->
-<!--                android:id="@+id/productSubCategoryInclude" />-->
-
-<!--            <include-->
-<!--                android:id="@+id/productSimilarProductInclude" />-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productCategoryRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layoutDirection="rtl"/>
 
         </LinearLayout>
 
