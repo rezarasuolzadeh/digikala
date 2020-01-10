@@ -15,6 +15,7 @@ import ir.rezarasoulzadeh.digikala.service.utils.Timer
 import ir.rezarasoulzadeh.digikala.view.adapter.ProductSliderAdapter
 import ir.rezarasoulzadeh.digikala.viewmodel.ServiceViewModel
 import kotlinx.android.synthetic.main.activity_product.*
+import kotlinx.android.synthetic.main.layout_product_fifth_card.view.*
 import kotlinx.android.synthetic.main.layout_product_first_card.*
 import kotlinx.android.synthetic.main.layout_product_first_card.view.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
@@ -32,7 +33,16 @@ class ProductActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product)
 
-        CustomToolbar(this, basket = true, search = false, title = true, digikala = false, back = true, menu = false)
+        CustomToolbar(
+            this,
+            basket = false,
+            search = false,
+            title = true,
+            digikala = false,
+            back = true,
+            menu = false,
+            product = true
+        )
 
         customToolbar.backButton.setOnClickListener {
             super.onBackPressed()
@@ -59,11 +69,13 @@ class ProductActivity : AppCompatActivity() {
             productFaTitleTextView.text = productInfo.faTitle
             productEnTitleTextView.text = productInfo.enTitle
             customToolbar.titleTextView.text = productInfo.faTitle
-            customToolbar.titleTextView.isSelected = true
-            if(productInfo.enTitle == " ") {
+            productFifthCardInclude.productDescriptionTextView.text = productInfo.description
+
+            if (productInfo.enTitle == " ") {
                 productEnTitleTextView.visibility = View.GONE
             }
-            if(productInfo.isSpecialOffer) {
+
+            if (productInfo.isSpecialOffer) {
                 productFirstCardInclude.productTimerLayout.visibility = View.VISIBLE
                 productFirstCardInclude.productOfferTagImage.visibility = View.VISIBLE
                 productFirstCardInclude.productBellImageView.visibility = View.GONE
@@ -73,7 +85,17 @@ class ProductActivity : AppCompatActivity() {
                     productFirstCardInclude.productSecondCounterTextView
                 )
             }
+
+            if(productInfo.description == " ") {
+                productFifthCardInclude.visibility = View.GONE
+            } else {
+                productFifthCardInclude.productDescriptionTextView.text = productInfo.description
+            }
+
         })
+
+        customToolbar.titleTextView.isSelected = true
+        productFifthCardInclude.productDescriptionTextView.isSelected = true
 
     }
 

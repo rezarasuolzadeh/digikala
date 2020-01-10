@@ -60,7 +60,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             title = false,
             digikala = true,
             back = false,
-            menu = true
+            menu = true,
+            product = false
         )
 
         Timer().handleCountDownTimer(

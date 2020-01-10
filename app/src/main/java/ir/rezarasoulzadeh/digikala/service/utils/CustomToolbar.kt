@@ -1,13 +1,7 @@
 package ir.rezarasoulzadeh.digikala.service.utils
 
-import android.animation.ObjectAnimator
-import android.animation.StateListAnimator
-import android.graphics.drawable.ColorDrawable
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import com.google.android.material.appbar.AppBarLayout
-import ir.rezarasoulzadeh.digikala.R
 import kotlinx.android.synthetic.main.layout_toolbar.*
 import kotlinx.android.synthetic.main.layout_toolbar.view.*
 
@@ -28,16 +22,25 @@ import kotlinx.android.synthetic.main.layout_toolbar.view.*
  *      }
  */
 
-class CustomToolbar(activity: AppCompatActivity, basket: Boolean, search:Boolean, title:Boolean, digikala:Boolean, back:Boolean, menu:Boolean) {
+class CustomToolbar(
+    activity: AppCompatActivity,
+    basket: Boolean,
+    search: Boolean,
+    title: Boolean,
+    digikala: Boolean,
+    back: Boolean,
+    menu: Boolean,
+    product: Boolean
+) {
 
     init {
-
         if (basket) activity.customToolbar.basketButton.visibility = View.VISIBLE
         if (search) activity.customToolbar.searchButton.visibility = View.VISIBLE
         if (title) activity.customToolbar.titleTextView.visibility = View.VISIBLE
         if (back) activity.customToolbar.backButton.visibility = View.VISIBLE
         if (menu) activity.customToolbar.menuButton.visibility = View.VISIBLE
         if (digikala) activity.customToolbar.digikalaImage.visibility = View.VISIBLE
+        if (product) activity.customToolbar.product.visibility = View.VISIBLE
     }
 
 }

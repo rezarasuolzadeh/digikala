@@ -39,7 +39,8 @@ class CategoryActivity : AppCompatActivity() {
             title = true,
             digikala = false,
             back = true,
-            menu = false
+            menu = false,
+            product = false
         )
 
         customToolbar.titleTextView.text = "دسته بندی محصولات"

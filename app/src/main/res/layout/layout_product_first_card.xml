@@ -78,6 +78,7 @@
                 android:layout_height="30dp"
                 android:layout_marginLeft="25dp"
                 android:clickable="true"
+                android:visibility="gone"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackgroundBorderless"
                 android:layoutDirection="rtl"

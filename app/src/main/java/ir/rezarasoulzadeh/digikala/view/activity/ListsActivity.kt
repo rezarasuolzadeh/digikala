@@ -42,7 +42,8 @@ class ListsActivity : AppCompatActivity(), Observer<List<ListsHit>> {
             title = true,
             digikala = false,
             back = true,
-            menu = false
+            menu = false,
+            product = false
         )
 
         val title = intent.getStringExtra("title")
