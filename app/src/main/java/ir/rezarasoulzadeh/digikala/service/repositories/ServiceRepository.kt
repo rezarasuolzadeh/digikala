@@ -112,6 +112,19 @@ class ServiceRepository {
         return response!!.body()
     }
 
+    fun provideProductConfig(productId: Int): ProductConfig? {
+        var response: Response<ProductConfig>? = null
+        runBlocking {
+            try {
+                response = ServiceRetrofitConfig.retrofit().create(ProductDao::class.java)
+                    .getProductConfig(productId)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+        return response!!.body()
+    }
+
     companion object {
         @JvmStatic
         fun getInstance(): ServiceRepository {

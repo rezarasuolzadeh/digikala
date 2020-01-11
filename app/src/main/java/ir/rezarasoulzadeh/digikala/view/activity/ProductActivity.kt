@@ -11,6 +11,7 @@ import com.smarteist.autoimageslider.IndicatorAnimations
 import com.smarteist.autoimageslider.SliderAnimations
 import ir.rezarasoulzadeh.digikala.R
 import ir.rezarasoulzadeh.digikala.model.ProductAlbumData
+import ir.rezarasoulzadeh.digikala.model.ProductConfigData
 import ir.rezarasoulzadeh.digikala.model.ProductInfoData
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
 import ir.rezarasoulzadeh.digikala.service.utils.Format
@@ -24,6 +25,7 @@ import kotlinx.android.synthetic.main.layout_product_first_card.*
 import kotlinx.android.synthetic.main.layout_product_first_card.view.*
 import kotlinx.android.synthetic.main.layout_product_fourth_card.view.*
 import kotlinx.android.synthetic.main.layout_product_sixth_card.view.*
+import kotlinx.android.synthetic.main.layout_product_third_card.view.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
 import kotlinx.android.synthetic.main.layout_toolbar.view.*
 
@@ -32,8 +34,9 @@ class ProductActivity : AppCompatActivity() {
 
     private lateinit var serviceViewModel: ServiceViewModel
 
-    lateinit var productAlbum: List<ProductAlbumData>
-    lateinit var productInfo: ProductInfoData
+    private lateinit var productAlbum: List<ProductAlbumData>
+    private lateinit var productInfo: ProductInfoData
+    private lateinit var productConfig: ProductConfigData
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,6 +71,20 @@ class ProductActivity : AppCompatActivity() {
         productFirstCardInclude.productSlider.startAutoCycle()
         productFirstCardInclude.productSlider.setIndicatorAnimation(IndicatorAnimations.WORM)
         productFirstCardInclude.productSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
+
+        serviceViewModel.provideProductCOnfig(productId)
+        serviceViewModel.productConfigLiveData.observe(this, Observer {
+            productConfig = it.data
+            productThirdCardInclude.productAllStoreTextView.text = Format().storeFormat(productConfig.configNum)
+            productThirdCardInclude.productWarrantyTextView.text = productConfig.configViewModel.warranty.title
+            if(productConfig.configViewModel.seller.fullName == "دیجی\u200Cکالا") {
+                productThirdCardInclude.productStoreTextView.text = Format().digikalaTextFormat()
+                productThirdCardInclude.productStoreImageView.setImageResource(R.drawable.dk)
+            } else {
+                productThirdCardInclude.productStoreTextView.text = Format().storeTextFormat(productConfig.configViewModel.seller.fullName, productConfig.configViewModel.sellerRating)
+                productThirdCardInclude.productStoreImageView.setImageResource(R.drawable.ic_store)
+            }
+        })
 
         serviceViewModel.provideProductInfo(productId)
         serviceViewModel.productInfoLiveData.observe(this, Observer {
