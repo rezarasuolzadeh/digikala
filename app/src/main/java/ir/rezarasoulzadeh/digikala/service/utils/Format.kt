@@ -13,14 +13,14 @@ class Format {
         return price / 10
     }
 
-    fun rateFormatString(rate: Int) : String {
+    fun rateFormatString(rate: Float) : String {
         val rateFloat = rateFormatFloat(rate)
         val maxFloat = 5
         return rateFloat.toString().plus(" از ").plus(maxFloat)
     }
 
-    fun rateFormatFloat(rate: Int) : Float {
-        return (rate * 5/ 100).toFloat()
+    fun rateFormatFloat(rate: Float) : Float {
+        return String.format("%.1f", (rate * 5/ 100)).toFloat()
     }
 
     fun voteFormat(vote: Int) : String {

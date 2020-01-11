@@ -75,15 +75,33 @@ class ProductActivity : AppCompatActivity() {
         serviceViewModel.provideProductCOnfig(productId)
         serviceViewModel.productConfigLiveData.observe(this, Observer {
             productConfig = it.data
-            productThirdCardInclude.productAllStoreTextView.text = Format().storeFormat(productConfig.configNum)
-            productThirdCardInclude.productWarrantyTextView.text = productConfig.configViewModel.warranty.title
-            if(productConfig.configViewModel.seller.fullName == "دیجی\u200Cکالا") {
+            productThirdCardInclude.productAllStoreTextView.text =
+                Format().storeFormat(productConfig.configNum)
+            productThirdCardInclude.productWarrantyTextView.text =
+                productConfig.configViewModel.warranty.title
+
+            if (productConfig.configViewModel.seller.fullName == "دیجی\u200Cکالا") {
                 productThirdCardInclude.productStoreTextView.text = Format().digikalaTextFormat()
                 productThirdCardInclude.productStoreImageView.setImageResource(R.drawable.dk)
             } else {
-                productThirdCardInclude.productStoreTextView.text = Format().storeTextFormat(productConfig.configViewModel.seller.fullName, productConfig.configViewModel.sellerRating)
+                productThirdCardInclude.productStoreTextView.text = Format().storeTextFormat(
+                    productConfig.configViewModel.seller.fullName,
+                    productConfig.configViewModel.sellerRating
+                )
                 productThirdCardInclude.productStoreImageView.setImageResource(R.drawable.ic_store)
             }
+
+            if (productConfig.configViewModel.discount == 0) {
+                productThirdCardInclude.productMinPriceTextView.text =
+                    Format().priceFormat(productConfig.configViewModel.price)
+            } else {
+                productThirdCardInclude.productMaxPriceTextView.visibility = View.VISIBLE
+                productThirdCardInclude.productMinPriceTextView.text =
+                    Format().priceFormat(productConfig.configViewModel.price - productConfig.configViewModel.discount)
+                productThirdCardInclude.productMaxPriceTextView.text =
+                    Format().priceFormat(productConfig.configViewModel.price)
+            }
+
         })
 
         serviceViewModel.provideProductInfo(productId)
@@ -93,12 +111,16 @@ class ProductActivity : AppCompatActivity() {
             productEnTitleTextView.text = productInfo.enTitle
             customToolbar.titleTextView.text = productInfo.faTitle
             productFifthCardInclude.productDescriptionTextView.text = productInfo.description
-            productSixthCardInclude.productRatingBar.rating = Format().rateFormatFloat(productInfo.rate)
-            productSixthCardInclude.productRateFiveTextView.text = Format().rateFormatString(productInfo.rate)
-            productSixthCardInclude.productVoteTextView.text = Format().voteFormat(productInfo.rateCounter)
+            productSixthCardInclude.productRatingBar.rating =
+                Format().rateFormatFloat(productInfo.rate.toFloat())
+            productSixthCardInclude.productRateFiveTextView.text =
+                Format().rateFormatString(productInfo.rate.toFloat())
+            productSixthCardInclude.productVoteTextView.text =
+                Format().voteFormat(productInfo.rateCounter)
 
             val productCategoryAdapter = ProductCategoryAdapter(productInfo.navigationSource)
-            val productCategoryRecyclerView = findViewById<RecyclerView>(R.id.productCategoryRecyclerView)
+            val productCategoryRecyclerView =
+                findViewById<RecyclerView>(R.id.productCategoryRecyclerView)
             val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
             productCategoryRecyclerView.layoutManager = horizontal
             productCategoryRecyclerView.adapter = productCategoryAdapter
@@ -118,22 +140,23 @@ class ProductActivity : AppCompatActivity() {
                 )
             }
 
-            if(productInfo.description == "") {
+            if (productInfo.description == "") {
                 productFifthCardInclude.visibility = View.GONE
             } else {
                 productFifthCardInclude.productDescriptionTextView.text = productInfo.description
             }
 
-            if(productInfo.contentDescription == null) {
+            if (productInfo.contentDescription == null) {
                 productForthCardInclude.visibility = View.GONE
             } else {
-                productForthCardInclude.productContentDescriptionTextView.text = productInfo.contentDescription.toString()
+                productForthCardInclude.productContentDescriptionTextView.text =
+                    productInfo.contentDescription.toString()
             }
 
         })
 
         productFifthCardInclude.productDescriptionMoreButton.setOnClickListener {
-            if(productFifthCardInclude.productDescriptionMoreButton.text == "ادامه مطلب") {
+            if (productFifthCardInclude.productDescriptionMoreButton.text == "ادامه مطلب") {
                 productFifthCardInclude.productDescriptionTextView.maxLines = 100
                 productFifthCardInclude.productDescriptionMoreButton.text = "بستن"
             } else {

@@ -154,9 +154,10 @@
             android:layoutDirection="ltr">
 
             <TextView
+                android:id="@+id/productMinPriceTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="۲۵۰۰ تومان"
+                tools:text="۲۵۰۰ تومان"
                 android:textStyle="normal"
                 android:layout_gravity="center"
                 android:textSize="21sp"
@@ -164,17 +165,18 @@
                 android:fontFamily="@font/vazir"/>
 
             <TextView
+                android:id="@+id/productMaxPriceTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="۲۵۰۰ تومان"
+                tools:text="۲۵۰۰ تومان"
                 android:textStyle="normal"
+                android:visibility="gone"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:textSize="15sp"
                 android:background="@drawable/line"
                 android:textColor="@color/RED"
                 android:fontFamily="@font/vazir"/>
-
 
         </LinearLayout>
 

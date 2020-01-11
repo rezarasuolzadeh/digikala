@@ -31,15 +31,15 @@
 
             <include
                 android:id="@+id/productThirdCardInclude"
-                layout="@layout/layout_product_third_card"/>
+                layout="@layout/layout_product_third_card" />
 
             <include
                 android:id="@+id/productForthCardInclude"
-                layout="@layout/layout_product_fourth_card"/>
+                layout="@layout/layout_product_fourth_card" />
 
             <include
                 android:id="@+id/productFifthCardInclude"
-                layout="@layout/layout_product_fifth_card"/>
+                layout="@layout/layout_product_fifth_card" />
 
             <include
                 android:id="@+id/productSixthCardInclude"
@@ -49,8 +49,10 @@
                 android:id="@+id/productCategoryRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layoutDirection="rtl"/>
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layoutDirection="rtl"
+                android:orientation="horizontal" />
 
         </LinearLayout>
 
