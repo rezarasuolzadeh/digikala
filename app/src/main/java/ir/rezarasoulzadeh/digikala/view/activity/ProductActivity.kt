@@ -116,7 +116,7 @@ class ProductActivity : AppCompatActivity() {
             }
             else if(productConfig.configViewModel.size != null) {
                 productThirdCardInclude.productColourTextView.text = "سایز"
-                productThirdCardInclude.productColourNumTextView.text = Format().colourFormat(productConfig.sizes.hashCode())
+                productThirdCardInclude.productColourNumTextView.text = Format().sizeFormat(productConfig.sizes.size)
                 val productColourAdapter = ProductSizeAdapter(productConfig.sizes)
                 val productColourRecyclerView =
                     findViewById<RecyclerView>(R.id.productColourRecyclerView)

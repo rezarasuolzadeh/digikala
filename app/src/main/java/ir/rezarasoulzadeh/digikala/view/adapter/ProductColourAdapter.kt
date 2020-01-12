@@ -1,5 +1,6 @@
 package ir.rezarasoulzadeh.digikala.view.adapter
 
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
@@ -27,7 +28,7 @@ class ProductColourAdapter(private val productColour: List<ProductConfigColor>) 
 
     inner class ProductColourViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(productColour: ProductConfigColor) {
-            itemView.colourView.setBackgroundColor(Color.parseColor(productColour.code))
+            itemView.colourView.backgroundTintList = ColorStateList.valueOf(Color.parseColor(productColour.code))
             itemView.colourTextView.text = productColour.title
         }
     }

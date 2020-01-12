@@ -20,7 +20,7 @@ data class ProductConfigData(
     @SerializedName("ConfigViewModel")
     val configViewModel: ProductConfigViewModel = ProductConfigViewModel(),
     @SerializedName("Sizes")
-    val sizes: Any = Any() // null
+    val sizes: List<SizeX> = listOf()
 )
 
 data class ProductConfigColor(
@@ -100,4 +100,11 @@ data class ProductConfigWarranty(
     val id: Int = 0, // 765
     @SerializedName("Title")
     val title: String = "" // گارانتی 18 ماهه آواژنگ
+)
+
+data class SizeX(
+    @SerializedName("Id")
+    val id: Int = 0, // 9272
+    @SerializedName("Title")
+    val title: String = "" // 45
 )
