@@ -25,7 +25,7 @@ data class ProductConfigData(
 
 data class ProductConfigColor(
     @SerializedName("Code")
-    val code: String = "", // #212121
+    val code: String = " ", // #212121
     @SerializedName("HexCode")
     val hexCode: String = "", // #212121
     @SerializedName("Id")

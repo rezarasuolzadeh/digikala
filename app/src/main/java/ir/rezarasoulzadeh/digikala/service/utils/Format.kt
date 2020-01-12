@@ -39,4 +39,12 @@ class Format {
         return "فروش توسط دیجیکالا"
     }
 
+    fun colourFormat(colourNum: Int) : String {
+        return colourNum.toString().plus(" رنگ")
+    }
+
+    fun sizeFormat(colourNum: Int) : String {
+        return colourNum.toString().plus(" سایز")
+    }
+
 }

@@ -17,6 +17,8 @@ import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
 import ir.rezarasoulzadeh.digikala.service.utils.Format
 import ir.rezarasoulzadeh.digikala.service.utils.Timer
 import ir.rezarasoulzadeh.digikala.view.adapter.ProductCategoryAdapter
+import ir.rezarasoulzadeh.digikala.view.adapter.ProductColourAdapter
+import ir.rezarasoulzadeh.digikala.view.adapter.ProductSizeAdapter
 import ir.rezarasoulzadeh.digikala.view.adapter.ProductSliderAdapter
 import ir.rezarasoulzadeh.digikala.viewmodel.ServiceViewModel
 import kotlinx.android.synthetic.main.activity_product.*
@@ -100,6 +102,30 @@ class ProductActivity : AppCompatActivity() {
                     Format().priceFormat(productConfig.configViewModel.price - productConfig.configViewModel.discount)
                 productThirdCardInclude.productMaxPriceTextView.text =
                     Format().priceFormat(productConfig.configViewModel.price)
+            }
+
+            if(productConfig.configViewModel.color != null){
+                productThirdCardInclude.productColourTextView.text = "رنگ"
+                productThirdCardInclude.productColourNumTextView.text = Format().colourFormat(productConfig.colors.size)
+                val productColourAdapter = ProductColourAdapter(productConfig.colors)
+                val productColourRecyclerView =
+                    findViewById<RecyclerView>(R.id.productColourRecyclerView)
+                val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+                productColourRecyclerView.layoutManager = horizontal
+                productColourRecyclerView.adapter = productColourAdapter
+            }
+            else if(productConfig.configViewModel.size != null) {
+                productThirdCardInclude.productColourTextView.text = "سایز"
+                productThirdCardInclude.productColourNumTextView.text = Format().colourFormat(productConfig.sizes.hashCode())
+                val productColourAdapter = ProductSizeAdapter(productConfig.sizes)
+                val productColourRecyclerView =
+                    findViewById<RecyclerView>(R.id.productColourRecyclerView)
+                val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+                productColourRecyclerView.layoutManager = horizontal
+                productColourRecyclerView.adapter = productColourAdapter
+            } else {
+               productThirdCardInclude.productColourLayout.visibility = View.GONE
+               productThirdCardInclude.productColourRecyclerView.visibility = View.GONE
             }
 
         })
