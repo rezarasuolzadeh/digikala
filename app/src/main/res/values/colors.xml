@@ -12,5 +12,6 @@
     <color name="BLUE">#2093EB</color>
     <color name="backgroundColour">#EBEAEA</color>
     <color name="indicatorColour">#48FFFFFF</color>
+    <color name="darkGreen">#0A8501</color>
 
 </resources>

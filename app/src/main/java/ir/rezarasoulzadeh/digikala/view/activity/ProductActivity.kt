@@ -13,13 +13,11 @@ import ir.rezarasoulzadeh.digikala.R
 import ir.rezarasoulzadeh.digikala.model.ProductAlbumData
 import ir.rezarasoulzadeh.digikala.model.ProductConfigData
 import ir.rezarasoulzadeh.digikala.model.ProductInfoData
+import ir.rezarasoulzadeh.digikala.model.ProductRateData
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
 import ir.rezarasoulzadeh.digikala.service.utils.Format
 import ir.rezarasoulzadeh.digikala.service.utils.Timer
-import ir.rezarasoulzadeh.digikala.view.adapter.ProductCategoryAdapter
-import ir.rezarasoulzadeh.digikala.view.adapter.ProductColourAdapter
-import ir.rezarasoulzadeh.digikala.view.adapter.ProductSizeAdapter
-import ir.rezarasoulzadeh.digikala.view.adapter.ProductSliderAdapter
+import ir.rezarasoulzadeh.digikala.view.adapter.*
 import ir.rezarasoulzadeh.digikala.viewmodel.ServiceViewModel
 import kotlinx.android.synthetic.main.activity_product.*
 import kotlinx.android.synthetic.main.layout_product_fifth_card.view.*
@@ -39,6 +37,7 @@ class ProductActivity : AppCompatActivity() {
     private lateinit var productAlbum: List<ProductAlbumData>
     private lateinit var productInfo: ProductInfoData
     private lateinit var productConfig: ProductConfigData
+    private lateinit var productRate: ProductRateData
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -74,7 +73,7 @@ class ProductActivity : AppCompatActivity() {
         productFirstCardInclude.productSlider.setIndicatorAnimation(IndicatorAnimations.WORM)
         productFirstCardInclude.productSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
 
-        serviceViewModel.provideProductCOnfig(productId)
+        serviceViewModel.provideProductConfig(productId)
         serviceViewModel.productConfigLiveData.observe(this, Observer {
             productConfig = it.data
             productThirdCardInclude.productAllStoreTextView.text =
@@ -137,7 +136,7 @@ class ProductActivity : AppCompatActivity() {
             productEnTitleTextView.text = productInfo.enTitle
             customToolbar.titleTextView.text = productInfo.faTitle
             productFifthCardInclude.productDescriptionTextView.text = productInfo.description
-            productSixthCardInclude.productRatingBar.rating =
+            productSixthCardInclude.productRatingBar.rating = productInfo.rate.toFloat()
                 Format().rateFormatFloat(productInfo.rate.toFloat())
             productSixthCardInclude.productRateFiveTextView.text =
                 Format().rateFormatString(productInfo.rate.toFloat())
@@ -179,6 +178,17 @@ class ProductActivity : AppCompatActivity() {
                     productInfo.contentDescription.toString()
             }
 
+        })
+
+        serviceViewModel.provideProductRate(productId)
+        serviceViewModel.productRateLiveData.observe(this, Observer {
+            productRate = it.data
+            val productRateAdapter = ProductRateAdapter(productRate.categoryRateInfos[0].rateFactorInfos)
+            val productRateRecyclerView =
+                findViewById<RecyclerView>(R.id.productRateRecyclerView)
+            val vertical = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+            productRateRecyclerView.layoutManager = vertical
+            productRateRecyclerView.adapter = productRateAdapter
         })
 
         productFifthCardInclude.productDescriptionMoreButton.setOnClickListener {

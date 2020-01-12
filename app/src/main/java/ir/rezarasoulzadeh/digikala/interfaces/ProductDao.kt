@@ -41,7 +41,7 @@ interface ProductDao {
         "ApplicationVersion: 1.9.6-CB",
         "Mobile-Agent:MobileApp/Android/v-47/503eaa6d3af99023"
     )
-    @GET("ProductCache/GetUserRateInfoByProductId/")
-    suspend fun getProductRate(@Query("") productId: Int): Response<ProductRate>
+    @GET("ProductCache/GetUserRateInfoByProductId/{productId}")
+    suspend fun getProductRate(@Path("productId") productId: Int): Response<ProductRate>
 
 }

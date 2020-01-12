@@ -125,6 +125,19 @@ class ServiceRepository {
         return response!!.body()
     }
 
+    fun provideProductRate(productId: Int): ProductRate? {
+        var response: Response<ProductRate>? = null
+        runBlocking {
+            try {
+                response = ServiceRetrofitConfig.retrofit().create(ProductDao::class.java)
+                    .getProductRate(productId)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+        return response!!.body()
+    }
+
     companion object {
         @JvmStatic
         fun getInstance(): ServiceRepository {
