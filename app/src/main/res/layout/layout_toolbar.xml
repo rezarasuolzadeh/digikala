@@ -11,7 +11,7 @@
         android:id="@+id/customToolbar"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/RED"
+        android:background="@color/red"
         app:contentInsetEnd="0dp"
         app:contentInsetLeft="0dp"
         app:contentInsetRight="0dp"
@@ -20,7 +20,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="?android:attr/actionBarSize"
-            android:background="@color/RED"
+            android:background="@color/red"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -40,7 +40,7 @@
                     android:layout_width="20dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_basket"
-                    android:tint="@color/WHITE" />
+                    android:tint="@color/white" />
 
             </LinearLayout>
 
@@ -61,7 +61,7 @@
                     android:layout_width="20dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_magnifier"
-                    android:tint="@color/WHITE" />
+                    android:tint="@color/white" />
 
             </LinearLayout>
 
@@ -82,7 +82,7 @@
                     android:layout_width="20dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_menu"
-                    android:tint="@color/WHITE" />
+                    android:tint="@color/white" />
 
             </LinearLayout>
 
@@ -121,7 +121,7 @@
                     android:layout_height="20dp"
                     android:padding="2dp"
                     android:src="@drawable/ic_back"
-                    android:tint="@color/WHITE" />
+                    android:tint="@color/white" />
 
             </LinearLayout>
 
@@ -130,10 +130,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginRight="60dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
                 android:src="@drawable/ic_digikala_logo"
-                android:tint="@color/WHITE"
+                android:tint="@color/white"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -164,7 +164,7 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:src="@drawable/ic_option"
-                        android:tint="@color/WHITE" />
+                        android:tint="@color/white" />
 
                 </LinearLayout>
                 <LinearLayout
@@ -182,7 +182,7 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:src="@drawable/ic_basket"
-                        android:tint="@color/WHITE" />
+                        android:tint="@color/white" />
 
                 </LinearLayout>
 

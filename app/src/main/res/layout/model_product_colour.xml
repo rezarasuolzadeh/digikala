@@ -29,7 +29,8 @@
         android:layout_gravity="center"
         android:fontFamily="@font/iransans"
         android:gravity="center"
-        android:textColor="#444444"
+        android:lines="1"
+        android:textColor="@color/black"
         android:textSize="11sp"
         android:textStyle="normal"
         tools:text="سبز" />

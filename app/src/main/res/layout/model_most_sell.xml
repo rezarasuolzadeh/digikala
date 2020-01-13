@@ -2,12 +2,13 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="170dp"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    android:background="@color/WHITE"
+    android:background="@color/white"
     android:clickable="true"
     android:focusable="true"
+    app:cardElevation="1dp"
     android:foreground="?android:attr/selectableItemBackgroundBorderless"
     app:cardCornerRadius="5dp">
 
@@ -20,6 +21,7 @@
             android:id="@+id/mostSellImage"
             android:layout_width="140dp"
             android:layout_height="150dp"
+            android:layout_gravity="center"
             android:padding="5dp"
             app:placeholderImage="@drawable/placeholder"
             app:placeholderImageScaleType="centerCrop" />
@@ -32,7 +34,7 @@
             android:lines="2"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:textColor="@color/BLACK"
+            android:textColor="@color/black"
             android:textSize="12sp"
             android:textStyle="normal"
             tools:text="گوشی موبایل سامسونگ" />
@@ -41,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_marginTop="10dp"
-            android:background="@color/GRAY" />
+            android:background="@color/grayFour" />
 
         <TextView
             android:id="@+id/mostSellPrice"
@@ -51,7 +53,7 @@
             android:fontFamily="@font/vazir"
             android:gravity="left"
             android:padding="5dp"
-            android:textColor="@color/GREEN"
+            android:textColor="@color/greenLight"
             android:textStyle="normal"
             tools:text="۲۵۰۰۰۰۰۰ تومان" />
 

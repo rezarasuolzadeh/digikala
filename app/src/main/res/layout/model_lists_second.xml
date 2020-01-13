@@ -8,7 +8,7 @@
     android:focusable="true"
     android:foreground="?android:attr/selectableItemBackgroundBorderless"
     android:layout_margin="5dp"
-    android:background="@color/WHITE"
+    android:background="@color/white"
     app:cardCornerRadius="3dp">
 
     <LinearLayout
@@ -33,7 +33,7 @@
             android:lines="2"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:textColor="@color/BLACK"
+            android:textColor="@color/black"
             android:textSize="12sp"
             android:textStyle="normal"
             tools:text="گوشی موبایل سامسونگ" />
@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_marginTop="10dp"
-            android:background="@color/GRAY" />
+            android:background="@color/grayFour" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                 android:background="@drawable/line"
                 android:fontFamily="@font/vazir"
                 android:visibility="invisible"
-                android:textColor="@color/RED"
+                android:textColor="@color/red"
                 android:textStyle="normal"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -77,7 +77,7 @@
                 android:padding="1dp"
                 android:visibility="invisible"
                 android:text="پیشنهاد ویژه"
-                android:textColor="@color/WHITE"
+                android:textColor="@color/white"
                 android:textSize="10sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -97,7 +97,7 @@
             android:textSize="12sp"
             android:paddingRight="5dp"
             android:paddingBottom="5dp"
-            android:textColor="@color/GREEN"
+            android:textColor="@color/greenLight"
             android:textStyle="normal"
             tools:text="۲۵۰۰۰۰۰۰ تومان" />
 

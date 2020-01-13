@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- primary colours -->
     <color name="colorPrimary">#FC344C</color>
     <color name="colorPrimaryDark">#FC344C</color>
     <color name="colorAccent">#FFFFFF</color>
-    <color name="RED">#FC344C</color>
-    <color name="WHITE">#FFF</color>
-    <color name="GREEN">#47BD57</color>
-    <color name="BLACK">#000</color>
-    <color name="GRAY">#BBBBBB</color>
-    <color name="DARK">#505050</color>
-    <color name="BLUE">#2093EB</color>
-    <color name="backgroundColour">#EBEAEA</color>
-    <color name="indicatorColour">#48FFFFFF</color>
-    <color name="darkGreen">#0A8501</color>
+
+    <!-- main colours -->
+    <color name="black">#000</color>
+    <color name="white">#FFF</color>
+
+    <!-- red colours -->
+    <color name="red">#FC344C</color>
+
+    <!-- blue colours -->
+    <color name="blueLight">#9FA7AF</color>
+    <color name="blue">#2093EB</color>
+    <color name="blueDark">#384857</color>
+
+    <!-- gray colours -->
+    <color name="grayOne">#F7F7F7</color>
+    <color name="grayTwo">#EBEBEB</color>
+    <color name="grayThree">#C4FFFFFF</color>
+    <color name="grayFour">#BBBBBB</color>
+    <color name="grayFive">#9E9E9E</color>
+    <color name="graySix">#747474</color>
+    <color name="graySeven">#48FFFFFF</color>
+    <color name="grayEight">#646464</color>
+    <color name="grayNine">#36FFFFFF</color>
+    <color name="grayTen">#616060</color>
+    <color name="grayEleven">#505050</color>
+
+    <!-- green colours -->
+    <color name="greenLight">#47BD57</color>
 
 </resources>

@@ -44,7 +44,7 @@
                         android:layout_marginRight="15dp"
                         android:padding="10dp"
                         android:src="@drawable/ic_filter"
-                        android:tint="#3D3D3D" />
+                        android:tint="#646464" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -58,7 +58,7 @@
                             android:fontFamily="@font/iransans"
                             android:gravity="right"
                             android:text="فیلتر کردن"
-                            android:textColor="#3D3D3D"
+                            android:textColor="#646464"
                             android:textSize="11sp"
                             android:textStyle="bold" />
 
@@ -69,7 +69,7 @@
                             android:fontFamily="@font/iransans"
                             android:gravity="right"
                             android:text="رنگ، نوع، قیمت و ..."
-                            android:textColor="#797878"
+                            android:textColor="#9E9E9E"
                             android:textSize="8sp"
                             android:textStyle="bold" />
 
@@ -104,7 +104,7 @@
                         android:layoutDirection="ltr"
                         android:padding="10dp"
                         android:src="@drawable/ic_sort"
-                        android:tint="#3D3D3D" />
+                        android:tint="#646464" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -118,7 +118,7 @@
                             android:fontFamily="@font/iransans"
                             android:gravity="right"
                             android:text="مرتب کردن"
-                            android:textColor="#3D3D3D"
+                            android:textColor="#646464"
                             android:textSize="11sp"
                             android:textStyle="bold" />
 
@@ -130,7 +130,7 @@
                             android:fontFamily="@font/iransans"
                             android:gravity="right"
                             android:text="پر فروش ترین"
-                            android:textColor="#797878"
+                            android:textColor="#9E9E9E"
                             android:textSize="8sp"
                             android:textStyle="bold" />
 
@@ -157,7 +157,7 @@
                     android:layoutDirection="rtl"
                     android:padding="11dp"
                     android:src="@drawable/ic_arrange_first"
-                    android:tint="#5A5A5A" />
+                    android:tint="#646464" />
 
             </androidx.cardview.widget.CardView>
 
@@ -166,7 +166,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listRecyclerView"
-        android:background="@color/backgroundColour"
+        android:background="@color/grayTwo"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

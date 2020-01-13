@@ -13,13 +13,14 @@
         android:layout_weight="1"
         android:clickable="true"
         android:focusable="true"
+        app:cardElevation="3dp"
         android:foreground="?android:attr/selectableItemBackgroundBorderless"
         app:cardCornerRadius="3dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#F3F3F3"
+            android:background="@color/grayOne"
             android:gravity="center"
             android:layoutDirection="rtl"
             android:orientation="horizontal"
@@ -30,6 +31,7 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:padding="5dp"
+                android:tint="@color/blueLight"
                 android:src="@drawable/ic_clipboard" />
 
             <TextView
@@ -38,9 +40,10 @@
                 android:fontFamily="@font/iransans"
                 android:padding="3dp"
                 android:text="مشخصات"
-                android:textColor="#000"
+                android:textColor="@color/blueDark"
+                android:gravity="center"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="normal" />
 
         </LinearLayout>
 
@@ -51,12 +54,13 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_weight="1"
+        app:cardElevation="3dp"
         app:cardCornerRadius="3dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#F3F3F3"
+            android:background="@color/grayOne"
             android:gravity="center"
             android:clickable="true"
             android:focusable="true"
@@ -70,6 +74,7 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:padding="5dp"
+                android:tint="@color/blueLight"
                 android:src="@drawable/ic_chat" />
 
             <TextView
@@ -78,9 +83,10 @@
                 android:fontFamily="@font/iransans"
                 android:padding="3dp"
                 android:text="نظرات کاربران"
-                android:textColor="#000"
+                android:textColor="@color/blueDark"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:gravity="center"
+                android:textStyle="normal" />
 
         </LinearLayout>
 

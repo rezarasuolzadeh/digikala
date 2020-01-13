@@ -4,15 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:backgroundTint="#F3F3F3"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    app:cardElevation="3dp"
+    android:backgroundTint="@color/grayOne"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
-        android:background="#F3F3F3"
+        android:background="@color/grayOne"
         android:orientation="vertical">
 
         <LinearLayout
@@ -29,7 +32,7 @@
                 android:fontFamily="@font/vazir"
                 android:padding="5dp"
                 android:text="رنگ"
-                android:textColor="@color/BLACK"
+                android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="normal" />
 
@@ -41,7 +44,7 @@
                 android:gravity="left"
                 android:padding="5dp"
                 android:text="۲ رنگ"
-                android:textColor="#868686"
+                android:textColor="@color/grayFive"
                 android:textSize="15sp"
                 android:textStyle="normal" />
 
@@ -65,9 +68,9 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layoutDirection="ltr"
-                android:padding="8dp"
+                android:padding="11dp"
                 android:src="@drawable/ic_shield"
-                android:tint="#BBBABA" />
+                android:tint="@color/grayFive" />
 
             <TextView
                 android:id="@+id/productWarrantyTextView"
@@ -76,7 +79,7 @@
                 android:layout_gravity="center"
                 android:layout_marginRight="5dp"
                 android:fontFamily="@font/vazir"
-                android:textColor="#BBBABA"
+                android:textColor="@color/grayFive"
                 android:textSize="15sp"
                 android:textStyle="normal"
                 tools:text="گارانتی اصالت و سلامت فیزیکی" />
@@ -87,7 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_margin="5dp"
-            android:background="#BBBABA" />
+            android:background="@color/grayFour" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -100,7 +103,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layoutDirection="ltr"
-                android:padding="8dp"
+                android:padding="11dp"
                 android:src="@drawable/dk" />
 
             <TextView
@@ -110,7 +113,7 @@
                 android:layout_gravity="center"
                 android:layout_marginRight="5dp"
                 android:fontFamily="@font/vazir"
-                android:textColor="#BBBABA"
+                android:textColor="@color/grayFive"
                 android:textSize="15sp"
                 android:textStyle="normal"
                 tools:text="فروش توسط دیجیکالا" />
@@ -128,9 +131,9 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layoutDirection="rtl"
-                android:padding="8dp"
+                android:padding="11dp"
                 android:src="@drawable/ic_truck"
-                android:tint="#474747" />
+                android:tint="@color/grayEight" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -139,7 +142,7 @@
                 android:layout_marginRight="5dp"
                 android:fontFamily="@font/vazir"
                 android:text="آماده ارسال از انبار دیجیکالا"
-                android:textColor="#BBBABA"
+                android:textColor="@color/grayFive"
                 android:textSize="15sp"
                 android:textStyle="normal" />
 
@@ -149,7 +152,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_margin="5dp"
-            android:background="#BBBABA" />
+            android:background="@color/grayFour" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -165,7 +168,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/vazir"
-                android:textColor="@color/GREEN"
+                android:textColor="@color/greenLight"
                 android:textSize="21sp"
                 android:textStyle="normal"
                 tools:text="۲۵۰۰ تومان" />
@@ -178,7 +181,7 @@
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/line"
                 android:fontFamily="@font/vazir"
-                android:textColor="@color/RED"
+                android:textColor="@color/red"
                 android:textSize="15sp"
                 android:textStyle="normal"
                 android:visibility="gone"
@@ -200,7 +203,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/GREEN"
+                android:background="@color/greenLight"
                 android:gravity="center"
                 android:layoutDirection="rtl"
                 android:orientation="horizontal">
@@ -209,9 +212,9 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layoutDirection="ltr"
-                    android:padding="5dp"
+                    android:padding="8dp"
                     android:src="@drawable/ic_cart"
-                    android:tint="@color/WHITE" />
+                    android:tint="@color/white" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -220,8 +223,8 @@
                     android:layout_marginRight="10dp"
                     android:fontFamily="@font/iransans"
                     android:text="افزودن به سبد خرید"
-                    android:textColor="@color/WHITE"
-                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
                     android:textStyle="normal" />
 
             </LinearLayout>
@@ -232,7 +235,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_margin="5dp"
-            android:background="#BBBABA" />
+            android:background="@color/grayFour" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -248,9 +251,9 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:layoutDirection="ltr"
-                android:padding="8dp"
+                android:padding="11dp"
                 android:src="@drawable/ic_store"
-                android:tint="#474747" />
+                android:tint="@color/grayEight" />
 
             <TextView
                 android:id="@+id/productAllStoreTextView"
@@ -261,7 +264,7 @@
                 android:fontFamily="@font/vazir"
                 android:gravity="center"
                 android:lines="1"
-                android:textColor="@color/BLUE"
+                android:textColor="@color/blue"
                 android:textSize="15sp"
                 android:textStyle="normal"
                 tools:text="۶ فروشنده و گارانتی برای این کالا وجود دارد" />
@@ -274,9 +277,9 @@
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackgroundBorderless"
                 android:layoutDirection="ltr"
-                android:padding="12dp"
+                android:padding="13dp"
                 android:src="@drawable/ic_arrow"
-                android:tint="#474747" />
+                android:tint="@color/grayEight" />
 
         </LinearLayout>
 

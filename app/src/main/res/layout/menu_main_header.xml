@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="105dp"
-    android:background="@color/RED"
+    android:background="@color/red"
     android:orientation="vertical">
 
     <LinearLayout
@@ -21,7 +21,7 @@
             android:layout_marginRight="15dp"
             android:padding="10dp"
             android:src="@drawable/ic_user"
-            android:tint="@color/WHITE" />
+            android:tint="@color/white" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackgroundBorderless"
             android:text="ورود و ثبت نام"
-            android:textColor="@color/WHITE"
+            android:textColor="@color/white"
             android:textSize="10sp" />
 
     </LinearLayout>

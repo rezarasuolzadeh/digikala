@@ -11,7 +11,7 @@
         android:id="@+id/splashDigikala"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@color/RED"
+        android:background="@color/red"
         android:visibility="gone">
 
         <ImageView
@@ -41,13 +41,13 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/backgroundColour"
+        android:background="@color/grayTwo"
         android:scrollbars="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/backgroundColour"
+            android:background="@color/grayTwo"
             android:orientation="vertical">
 
             <com.smarteist.autoimageslider.SliderView
@@ -64,8 +64,8 @@
                 app:sliderIndicatorOrientation="horizontal"
                 app:sliderIndicatorPadding="2dp"
                 app:sliderIndicatorRadius="1.33dp"
-                app:sliderIndicatorSelectedColor="@color/WHITE"
-                app:sliderIndicatorUnselectedColor="@color/indicatorColour"
+                app:sliderIndicatorSelectedColor="@color/white"
+                app:sliderIndicatorUnselectedColor="@color/graySeven"
                 app:sliderScrollTimeInSec="1"
                 app:sliderStartAutoCycle="true" />
 
@@ -100,12 +100,12 @@
                     android:background="@drawable/background_timer"
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
-                    tools:text="12"
-                    android:textColor="@color/WHITE"
+                    android:textColor="@color/white"
                     android:textSize="23sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="12" />
 
                 <TextView
                     android:id="@+id/firstDot"
@@ -129,12 +129,12 @@
                     android:background="@drawable/background_timer"
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
-                    tools:text="34"
-                    android:textColor="@color/WHITE"
+                    android:textColor="@color/white"
                     android:textSize="23sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/firstDot"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="34" />
 
                 <TextView
                     android:id="@+id/secondDot"
@@ -158,12 +158,12 @@
                     android:background="@drawable/background_timer"
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
-                    tools:text="56"
-                    android:textColor="@color/WHITE"
+                    android:textColor="@color/white"
                     android:textSize="23sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/secondDot"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="56" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -181,11 +181,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/white"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="@color/WHITE"
                 android:foreground="?android:attr/selectableItemBackgroundBorderless"
-                android:layout_marginBottom="15dp"
                 app:placeholderImage="@drawable/placeholder"
                 app:placeholderImageScaleType="centerInside" />
 
@@ -202,9 +202,9 @@
                     android:id="@+id/bannerFirst"
                     android:layout_width="match_parent"
                     android:layout_height="110dp"
+                    android:background="@color/white"
                     android:clickable="true"
                     android:focusable="true"
-                    android:background="@color/WHITE"
                     android:foreground="?android:attr/selectableItemBackgroundBorderless"
                     app:placeholderImage="@drawable/placeholder"
                     app:placeholderImageScaleType="centerInside" />
@@ -275,11 +275,11 @@
                 <com.facebook.drawee.view.SimpleDraweeView
                     android:id="@+id/bannerFourth"
                     android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:background="@color/white"
                     android:clickable="true"
                     android:focusable="true"
-                    android:background="@color/WHITE"
                     android:foreground="?android:attr/selectableItemBackgroundBorderless"
-                    android:layout_height="110dp"
                     app:placeholderImage="@drawable/placeholder"
                     app:placeholderImageScaleType="centerInside" />
 
@@ -342,10 +342,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackgroundBorderless"
-                android:layout_marginBottom="15dp"
                 app:placeholderImage="@drawable/placeholder"
                 app:placeholderImageScaleType="centerCrop" />
 
@@ -361,7 +361,7 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/iransans"
                     android:text="@string/titleFirstText"
-                    android:textColor="#616060"
+                    android:textColor="@color/grayTen"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     app:layout_constraintRight_toRightOf="parent" />
@@ -375,7 +375,7 @@
                     android:foreground="?android:attr/selectableItemBackgroundBorderless"
                     android:gravity="center"
                     android:text="@string/allListText"
-                    android:textColor="@color/BLUE"
+                    android:textColor="@color/blue"
                     android:textSize="12sp"
                     android:textStyle="normal"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -405,7 +405,7 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/iransans"
                     android:text="@string/titleSecondText"
-                    android:textColor="#616060"
+                    android:textColor="@color/grayTen"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     app:layout_constraintRight_toRightOf="parent" />
@@ -419,7 +419,7 @@
                     android:foreground="?android:attr/selectableItemBackgroundBorderless"
                     android:gravity="center"
                     android:text="@string/allListText"
-                    android:textColor="@color/BLUE"
+                    android:textColor="@color/blue"
                     android:textSize="12sp"
                     android:textStyle="normal"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -446,7 +446,7 @@
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:text="کالای دیجیتال"
-                android:textColor="#616060"
+                android:textColor="@color/grayTen"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -468,7 +468,7 @@
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:text="آرایشی، بهداشتی و سلامت"
-                android:textColor="#616060"
+                android:textColor="@color/grayTen"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -490,7 +490,7 @@
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:text="خانه و آشپزخانه"
-                android:textColor="#616060"
+                android:textColor="@color/grayTen"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -512,7 +512,7 @@
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:text="مد و پوشاک"
-                android:textColor="#616060"
+                android:textColor="@color/grayTen"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 

@@ -2,13 +2,15 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="10dp"
+    app:cardElevation="3dp"
     android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#F3F3F3"
+        android:background="@color/grayOne"
         android:orientation="vertical">
 
         <TextView
@@ -20,7 +22,7 @@
             android:maxLines="8"
             android:ellipsize="end"
             tools:text="این مدل از بدنه پلاستیکی ساخنه شده است"
-            android:textColor="@color/BLACK"
+            android:textColor="@color/black"
             android:textSize="12sp" />
 
         <View
@@ -28,7 +30,7 @@
             android:layout_height="0.5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="@color/GRAY" />
+            android:background="@color/grayFour" />
 
         <TextView
             android:id="@+id/productDescriptionMoreButton"
@@ -41,7 +43,7 @@
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackgroundBorderless"
-            android:textColor="@color/GRAY"
+            android:textColor="@color/grayFive"
             android:textSize="15sp"
             android:textStyle="bold" />
 

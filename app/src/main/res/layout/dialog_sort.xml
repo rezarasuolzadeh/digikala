@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/WHITE">
+    android:background="@color/white">
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/WHITE"
+        android:background="@color/white"
         android:paddingLeft="20dp"
         android:layoutDirection="rtl"
         android:orientation="vertical"
@@ -18,10 +18,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:buttonTint="@color/GREEN"
+            android:buttonTint="@color/greenLight"
             android:fontFamily="@font/iransans"
             android:text="@string/sortFirstTypeTitle"
-            android:textColor="@color/BLACK"
+            android:textColor="@color/black"
             android:textSize="13sp"
             android:textStyle="normal" />
 
@@ -30,10 +30,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:buttonTint="@color/GREEN"
+            android:buttonTint="@color/greenLight"
             android:fontFamily="@font/iransans"
             android:text="@string/sortSecondTypeTitle"
-            android:textColor="@color/BLACK"
+            android:textColor="@color/black"
             android:textSize="13sp"
             android:textStyle="normal" />
 
@@ -42,10 +42,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:buttonTint="@color/GREEN"
+            android:buttonTint="@color/greenLight"
             android:fontFamily="@font/iransans"
             android:text="@string/sortThirdTypeTitle"
-            android:textColor="@color/BLACK"
+            android:textColor="@color/black"
             android:textSize="13sp"
             android:textStyle="normal" />
 
@@ -54,10 +54,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:buttonTint="@color/GREEN"
+            android:buttonTint="@color/greenLight"
             android:fontFamily="@font/iransans"
             android:text="@string/sortFourthTypeTitle"
-            android:textColor="@color/BLACK"
+            android:textColor="@color/black"
             android:textSize="13sp"
             android:textStyle="normal" />
 
@@ -67,10 +67,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="15dp"
-            android:buttonTint="@color/GREEN"
+            android:buttonTint="@color/greenLight"
             android:fontFamily="@font/iransans"
             android:text="@string/sortFifthTypeTitle"
-            android:textColor="@color/BLACK"
+            android:textColor="@color/black"
             android:textSize="13sp"
             android:textStyle="normal" />
 

@@ -13,7 +13,7 @@
         <item name="android:textSize">10sp</item><!-- text size in menu-->
         <item name="android:textStyle">normal</item><!-- text size in menu-->
         <item name="android:fontFamily">@font/iransans</item><!-- text size in menu-->
-        <item name="android:textColor">@color/BLACK</item><!-- text size in menu-->
+        <item name="android:textColor">@color/black</item><!-- text size in menu-->
 
         <!-- item size in menu-->
         <item name="android:listPreferredItemHeightSmall">20dp</item>
@@ -35,9 +35,10 @@
         <item name="android:textSize">13sp</item>
     </style>
 
+    <!-- Rating Bar theme. -->
     <style name="RatingBar" parent="Theme.AppCompat">
-        <item name="colorControlNormal">@color/DARK</item>
-        <item name="colorControlActivated">@color/RED</item>
+        <item name="colorControlNormal">@color/grayEight</item>
+        <item name="colorControlActivated">@color/red</item>
     </style>
 
 </resources>

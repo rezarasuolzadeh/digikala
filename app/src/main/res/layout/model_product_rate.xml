@@ -39,14 +39,14 @@
             android:layout_weight="11"
             android:progress="0"
             android:max="20"
-            android:progressBackgroundTint="@color/GRAY"
+            android:progressBackgroundTint="@color/grayFour"
             android:scaleY="2" />
 
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/WHITE" />
+            android:background="@color/white" />
 
         <ProgressBar
             android:id="@+id/rateProgressBarSecond"
@@ -57,14 +57,14 @@
             android:layout_weight="11"
             android:progress="0"
             android:max="20"
-            android:progressBackgroundTint="@color/GRAY"
+            android:progressBackgroundTint="@color/grayFour"
             android:scaleY="2" />
 
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/WHITE" />
+            android:background="@color/white" />
 
         <ProgressBar
             android:id="@+id/rateProgressBarThird"
@@ -75,14 +75,14 @@
             android:layout_weight="11"
             android:progress="0"
             android:max="20"
-            android:progressBackgroundTint="@color/GRAY"
+            android:progressBackgroundTint="@color/grayFour"
             android:scaleY="2" />
 
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/WHITE" />
+            android:background="@color/white" />
 
         <ProgressBar
             android:id="@+id/rateProgressBarForth"
@@ -93,14 +93,14 @@
             android:layout_weight="11"
             android:progress="0"
             android:max="20"
-            android:progressBackgroundTint="@color/GRAY"
+            android:progressBackgroundTint="@color/grayFour"
             android:scaleY="2" />
 
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/WHITE" />
+            android:background="@color/white" />
 
         <ProgressBar
             android:id="@+id/rateProgressBarFifth"
@@ -111,7 +111,7 @@
             android:layout_weight="11"
             android:progress="0"
             android:max="20"
-            android:progressBackgroundTint="@color/GRAY"
+            android:progressBackgroundTint="@color/grayFour"
             android:scaleY="2" />
 
     </LinearLayout>
