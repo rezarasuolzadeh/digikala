@@ -4,15 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layoutDirection="rtl"
+    android:layout_marginTop="3dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginBottom="3dp"
     android:orientation="horizontal">
 
     <TextView
         android:id="@+id/rateTitleTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="3dp"
         android:layout_weight="4"
         android:fontFamily="@font/iransans"
         android:gravity="right"
@@ -26,7 +27,6 @@
         android:layout_height="11dp"
         android:layout_gravity="center"
         android:layout_weight="6"
-        android:layout_marginLeft="15dp"
         android:layoutDirection="rtl"
         android:orientation="horizontal">
 
@@ -36,11 +36,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_weight="10"
+            android:layout_weight="11"
             android:progress="0"
             android:max="20"
             android:progressBackgroundTint="@color/GRAY"
-            android:scaleY="2.5" />
+            android:scaleY="2" />
 
         <View
             android:layout_width="0dp"
@@ -54,11 +54,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_weight="10"
+            android:layout_weight="11"
             android:progress="0"
             android:max="20"
             android:progressBackgroundTint="@color/GRAY"
-            android:scaleY="2.5" />
+            android:scaleY="2" />
 
         <View
             android:layout_width="0dp"
@@ -72,11 +72,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_weight="10"
+            android:layout_weight="11"
             android:progress="0"
             android:max="20"
             android:progressBackgroundTint="@color/GRAY"
-            android:scaleY="2.5" />
+            android:scaleY="2" />
 
         <View
             android:layout_width="0dp"
@@ -90,11 +90,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_weight="10"
+            android:layout_weight="11"
             android:progress="0"
             android:max="20"
             android:progressBackgroundTint="@color/GRAY"
-            android:scaleY="2.5" />
+            android:scaleY="2" />
 
         <View
             android:layout_width="0dp"
@@ -108,11 +108,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_weight="10"
+            android:layout_weight="11"
             android:progress="0"
             android:max="20"
             android:progressBackgroundTint="@color/GRAY"
-            android:scaleY="2.5" />
+            android:scaleY="2" />
 
     </LinearLayout>
 

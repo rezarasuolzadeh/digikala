@@ -136,7 +136,7 @@ class ProductActivity : AppCompatActivity() {
             productEnTitleTextView.text = productInfo.enTitle
             customToolbar.titleTextView.text = productInfo.faTitle
             productFifthCardInclude.productDescriptionTextView.text = productInfo.description
-            productSixthCardInclude.productRatingBar.rating = productInfo.rate.toFloat()
+            productSixthCardInclude.productRatingBar.rating =
                 Format().rateFormatFloat(productInfo.rate.toFloat())
             productSixthCardInclude.productRateFiveTextView.text =
                 Format().rateFormatString(productInfo.rate.toFloat())

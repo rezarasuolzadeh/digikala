@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="10dp"
     android:backgroundTint="#F3F3F3"
     android:orientation="vertical">
@@ -51,11 +51,13 @@
             android:id="@+id/productColourRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layoutDirection="rtl" />
+            android:layoutDirection="rtl"
+            android:overScrollMode="never" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:layoutDirection="rtl"
             android:orientation="horizontal">
 
@@ -74,10 +76,10 @@
                 android:layout_gravity="center"
                 android:layout_marginRight="5dp"
                 android:fontFamily="@font/vazir"
-                tools:text="گارانتی اصالت و سلامت فیزیکی"
                 android:textColor="#BBBABA"
                 android:textSize="15sp"
-                android:textStyle="normal" />
+                android:textStyle="normal"
+                tools:text="گارانتی اصالت و سلامت فیزیکی" />
 
         </LinearLayout>
 
@@ -108,10 +110,10 @@
                 android:layout_gravity="center"
                 android:layout_marginRight="5dp"
                 android:fontFamily="@font/vazir"
-                tools:text="فروش توسط دیجیکالا"
                 android:textColor="#BBBABA"
                 android:textSize="15sp"
-                android:textStyle="normal" />
+                android:textStyle="normal"
+                tools:text="فروش توسط دیجیکالا" />
 
         </LinearLayout>
 
@@ -152,46 +154,46 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
+            android:layoutDirection="ltr"
             android:orientation="horizontal"
-            android:layoutDirection="ltr">
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
 
             <TextView
                 android:id="@+id/productMinPriceTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="۲۵۰۰ تومان"
-                android:textStyle="normal"
                 android:layout_gravity="center"
-                android:textSize="21sp"
+                android:fontFamily="@font/vazir"
                 android:textColor="@color/GREEN"
-                android:fontFamily="@font/vazir"/>
+                android:textSize="21sp"
+                android:textStyle="normal"
+                tools:text="۲۵۰۰ تومان" />
 
             <TextView
                 android:id="@+id/productMaxPriceTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="۲۵۰۰ تومان"
-                android:textStyle="normal"
-                android:visibility="gone"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:textSize="15sp"
                 android:background="@drawable/line"
+                android:fontFamily="@font/vazir"
                 android:textColor="@color/RED"
-                android:fontFamily="@font/vazir"/>
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:visibility="gone"
+                tools:text="۲۵۰۰ تومان" />
 
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:elevation="0dp"
+            android:layout_marginBottom="10dp"
             android:clickable="true"
+            android:elevation="0dp"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackgroundBorderless"
-            android:layout_marginBottom="10dp"
             app:cardCornerRadius="3dp"
             app:cardElevation="0dp">
 
@@ -235,15 +237,18 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
             android:layoutDirection="rtl"
             android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="50dp"
+                android:layout_weight="1"
                 android:layoutDirection="ltr"
                 android:padding="8dp"
-                android:layout_weight="1"
                 android:src="@drawable/ic_store"
                 android:tint="#474747" />
 
@@ -253,23 +258,23 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="5"
-                android:lines="1"
-                android:gravity="center"
                 android:fontFamily="@font/vazir"
-                tools:text="۶ فروشنده و گارانتی برای این کالا وجود دارد"
+                android:gravity="center"
+                android:lines="1"
                 android:textColor="@color/BLUE"
                 android:textSize="15sp"
-                android:textStyle="normal" />
+                android:textStyle="normal"
+                tools:text="۶ فروشنده و گارانتی برای این کالا وجود دارد" />
 
             <ImageView
-                android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:layoutDirection="ltr"
-                android:padding="12dp"
+                android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:layoutDirection="ltr"
+                android:padding="12dp"
                 android:src="@drawable/ic_arrow"
                 android:tint="#474747" />
 
