@@ -5,11 +5,12 @@ import java.util.*
 
 class Format {
 
+
     fun priceFormat(price: Int): String {
-        return NumberFormat.getNumberInstance(Locale.US).format(priceToman(price)).toString().plus(" تومان")
+        return NumberFormat.getNumberInstance(Locale.US).format(priceTooman(price)).toString().plus("تومان")
     }
 
-    fun priceToman(price: Int): Int {
+    fun priceTooman(price: Int): Int {
         return price / 10
     }
 
@@ -24,11 +25,11 @@ class Format {
     }
 
     fun voteFormat(vote: Int) : String {
-        return "از مجوع ".plus(vote).plus(" رای ثبت شده")
+        return "از مجموع ".plus(vote).plus(" رای ثبت شده")
     }
 
     fun storeFormat(store: Int) : String {
-        return store.toString().plus(" فروشنده و گارانتی برای این کالا وجود دارد")
+        return store.toString().plus(" از")
     }
 
     fun storeTextFormat(name:String, rate:Int) : String {

@@ -10,9 +10,9 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ir.rezarasoulzadeh.digikala.R
-import ir.rezarasoulzadeh.digikala.model.ListsHit
+import ir.rezarasoulzadeh.digikala.model.Lists
+import ir.rezarasoulzadeh.digikala.model.ListsHits
 import ir.rezarasoulzadeh.digikala.service.utils.CustomToolbar
-import ir.rezarasoulzadeh.digikala.service.utils.RecyclerViewOnVerticalScrollListener
 import ir.rezarasoulzadeh.digikala.view.adapter.ListsAdapter
 import ir.rezarasoulzadeh.digikala.viewmodel.SearchViewModel
 import kotlinx.android.synthetic.main.activity_list.*
@@ -20,16 +20,14 @@ import kotlinx.android.synthetic.main.dialog_sort.view.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
 import kotlinx.android.synthetic.main.layout_toolbar.view.*
 
-class ListsActivity : AppCompatActivity(), Observer<List<ListsHit>> {
+class ListsActivity : AppCompatActivity(), Observer<Lists> {
 
     private var arrange = 0
     private var sort = 4
 
     private lateinit var searchViewModel: SearchViewModel
 
-    private lateinit var listRecyclerView : RecyclerView
-    lateinit var lists: List<ListsHit>
-    lateinit var adapter: ListsAdapter
+    lateinit var lists: ListsHits
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,42 +44,14 @@ class ListsActivity : AppCompatActivity(), Observer<List<ListsHit>> {
             product = false
         )
 
-        val title = intent.getStringExtra("title")
-        val title1 = intent.getStringExtra("sortTitle")
-
-        listRecyclerView = findViewById(R.id.listRecyclerView)
-
-        customToolbar.titleTextView.text = title
-        sortTitle.text = title1
+        customToolbar.titleTextView.text = intent.getStringExtra("title")
+        sortTitle.text = intent.getStringExtra("sortTitle")
 
         searchViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application)
             .create(SearchViewModel::class.java)
 
-        adapter = ListsAdapter(arrange)
-        if (arrange == 1) {
-            val horizontal = GridLayoutManager(this, 2)
-            listRecyclerView.layoutManager = horizontal
-        } else {
-            val horizontal = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-            listRecyclerView.layoutManager = horizontal
-        }
-        listRecyclerView.adapter = adapter
-        attachListener()
-
-        if (title1 == "پر بازدید ترین") {
-            searchViewModel.provideLists(sort, 0, true)
-            searchViewModel.listsLiveData.observe(this, this)
-        }
-
-        if (title1 == "پر فروش ترین") {
-            searchViewModel.provideLists(sort, 0, true)
-            searchViewModel.listsLiveData.observe(this, this)
-        }
-
-        if (title1 == "جدید ترین") {
-            searchViewModel.provideLists(sort, 0, true)
-            searchViewModel.listsLiveData.observe(this, this)
-        }
+        searchViewModel.provideLists(sort,  0)
+        searchViewModel.listsLiveData.observe(this, this)
 
         arrangeCard.setOnClickListener {
             arrange++
@@ -89,66 +59,27 @@ class ListsActivity : AppCompatActivity(), Observer<List<ListsHit>> {
             when (arrange) {
                 0 -> {
                     arrangeImage.setImageResource(R.drawable.ic_arrange_first)
-                    adapter = ListsAdapter(arrange)
+                    val listOfferAdapter = ListsAdapter(lists, arrange)
+                    val listRecyclerView = findViewById<RecyclerView>(R.id.listRecyclerView)
                     val horizontal = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
                     listRecyclerView.layoutManager = horizontal
-                    listRecyclerView.adapter = adapter
-                    if (title1 == "پر بازدید ترین") {
-                        searchViewModel.provideLists(sort, 0, true)
-                        searchViewModel.listsLiveData.observe(this, this)
-                    }
-
-                    if (title1 == "پر فروش ترین") {
-                        searchViewModel.provideLists(sort, 0, true)
-                        searchViewModel.listsLiveData.observe(this, this)
-                    }
-
-                    if (title1 == "جدید ترین") {
-                        searchViewModel.provideLists(sort, 0, true)
-                        searchViewModel.listsLiveData.observe(this, this)
-                    }
+                    listRecyclerView.adapter = listOfferAdapter
                 }
                 1 -> {
                     arrangeImage.setImageResource(R.drawable.ic_arrange_second)
-                    adapter = ListsAdapter(arrange)
+                    val listOfferAdapter = ListsAdapter(lists, arrange)
+                    val listRecyclerView = findViewById<RecyclerView>(R.id.listRecyclerView)
                     val horizontal = GridLayoutManager(this, 2)
                     listRecyclerView.layoutManager = horizontal
-                    listRecyclerView.adapter = adapter
-                    if (title1 == "پر بازدید ترین") {
-                        searchViewModel.provideLists(sort, 0, true)
-                        searchViewModel.listsLiveData.observe(this, this)
-                    }
-
-                    if (title1 == "پر فروش ترین") {
-                        searchViewModel.provideLists(sort, 0, true)
-                        searchViewModel.listsLiveData.observe(this, this)
-                    }
-
-                    if (title1 == "جدید ترین") {
-                        searchViewModel.provideLists(sort, 0, true)
-                        searchViewModel.listsLiveData.observe(this, this)
-                    }
+                    listRecyclerView.adapter = listOfferAdapter
                 }
                 2 -> {
                     arrangeImage.setImageResource(R.drawable.ic_arrange_third)
-                    adapter = ListsAdapter(arrange)
+                    val listOfferAdapter = ListsAdapter(lists, arrange)
+                    val listRecyclerView = findViewById<RecyclerView>(R.id.listRecyclerView)
                     val horizontal = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
                     listRecyclerView.layoutManager = horizontal
-                    listRecyclerView.adapter = adapter
-                    if (title1 == "پر بازدید ترین") {
-                        searchViewModel.provideLists(sort, 0, true)
-                        searchViewModel.listsLiveData.observe(this, this)
-                    }
-
-                    if (title1 == "پر فروش ترین") {
-                        searchViewModel.provideLists(sort, 0, true)
-                        searchViewModel.listsLiveData.observe(this, this)
-                    }
-
-                    if (title1 == "جدید ترین") {
-                        searchViewModel.provideLists(sort, 0, true)
-                        searchViewModel.listsLiveData.observe(this, this)
-                    }
+                    listRecyclerView.adapter = listOfferAdapter
                 }
             }
         }
@@ -178,7 +109,7 @@ class ListsActivity : AppCompatActivity(), Observer<List<ListsHit>> {
             sortView.mostViewRadioButton.setOnClickListener {
                 sortTitle.text = "پر بازدید ترین"
                 sort = 4
-                searchViewModel.provideLists(sort, 0, true)
+                searchViewModel.provideLists(sort, 0)
                 searchViewModel.listsLiveData.observe(this, this)
                 sortAlertDialog.dismiss()
             }
@@ -186,7 +117,7 @@ class ListsActivity : AppCompatActivity(), Observer<List<ListsHit>> {
             sortView.mostSellRadioButton.setOnClickListener {
                 sortTitle.text = "پر فروش ترین"
                 sort = 7
-                searchViewModel.provideLists(sort, 0, true)
+                searchViewModel.provideLists(sort, 0)
                 searchViewModel.listsLiveData.observe(this, this)
                 sortAlertDialog.dismiss()
             }
@@ -194,7 +125,7 @@ class ListsActivity : AppCompatActivity(), Observer<List<ListsHit>> {
             sortView.maxPriceRadioButton.setOnClickListener {
                 sortTitle.text = "قیمت از زیاد به کم"
                 sort = 10
-                searchViewModel.provideLists(sort, 0, true)
+                searchViewModel.provideLists(sort, 0)
                 searchViewModel.listsLiveData.observe(this, this)
                 sortAlertDialog.dismiss()
             }
@@ -202,7 +133,7 @@ class ListsActivity : AppCompatActivity(), Observer<List<ListsHit>> {
             sortView.minPriceRadioButton.setOnClickListener {
                 sortTitle.text = "قیمت از کم به زیاد"
                 sort = 10
-                searchViewModel.provideLists(sort, 1, true)
+                searchViewModel.provideLists(sort, 1)
                 searchViewModel.listsLiveData.observe(this, this)
                 sortAlertDialog.dismiss()
             }
@@ -210,7 +141,7 @@ class ListsActivity : AppCompatActivity(), Observer<List<ListsHit>> {
             sortView.newsRadioButton.setOnClickListener {
                 sortTitle.text = "جدید ترین"
                 sort = 1
-                searchViewModel.provideLists(sort, 0, true)
+                searchViewModel.provideLists(sort, 0)
                 searchViewModel.listsLiveData.observe(this, this)
                 sortAlertDialog.dismiss()
             }
@@ -218,44 +149,13 @@ class ListsActivity : AppCompatActivity(), Observer<List<ListsHit>> {
 
     }
 
-    override fun onChanged(t: List<ListsHit>?) {
-        adapter.lists = t!!
-        adapter.notifyDataSetChanged()
+    override fun onChanged(t: Lists?) {
+        lists = t!!.hits
+        val listOfferAdapter = ListsAdapter(lists, arrange)
+        val listRecyclerView = findViewById<RecyclerView>(R.id.listRecyclerView)
+        val horizontal = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        listRecyclerView.layoutManager = horizontal
+        listRecyclerView.adapter = listOfferAdapter
     }
 
-    private fun attachListener(){
-        listRecyclerView.addOnScrollListener(RecyclerViewOnVerticalScrollListener(
-            reachedBottom = {
-                if (sortTitle.text == "پر بازدید ترین") {
-                    sort = 4
-                    searchViewModel.provideLists(sort, 0, false)
-                    searchViewModel.listsLiveData.observe(this, this)
-                }
-
-                if (sortTitle.text == "پر فروش ترین") {
-                    sort = 7
-                    searchViewModel.provideLists(sort, 0, false)
-                    searchViewModel.listsLiveData.observe(this, this)
-                }
-
-                if (sortTitle.text == "قیمت از زیاد به کم") {
-                    sort = 10
-                    searchViewModel.provideLists(sort, 0, false)
-                    searchViewModel.listsLiveData.observe(this, this)
-                }
-
-                if (sortTitle.text == "قیمت از کم به زیاد") {
-                    sort = 10
-                    searchViewModel.provideLists(sort, 1, false)
-                    searchViewModel.listsLiveData.observe(this, this)
-                }
-
-                if (sortTitle.text == "جدید ترین") {
-                    sort = 1
-                    searchViewModel.provideLists(sort, 0, false)
-                    searchViewModel.listsLiveData.observe(this, this)
-                }
-            }
-        ))
-    }
 }

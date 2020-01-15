@@ -9,7 +9,6 @@ import kotlinx.coroutines.runBlocking
 import retrofit2.Response
 
 class SearchRepository {
-    var page: Int = 0
 
     fun provideTop(): Top? {
         var response: Response<Top>? = null
@@ -24,13 +23,12 @@ class SearchRepository {
         return response!!.body()
     }
 
-    fun provideLists(sort: Int, condition: Int, reset: Boolean = false): Lists? {
-        if (reset) page = 0
+    fun provideLists(sort: Int, condition: Int): Lists? {
         var response: Response<Lists>? = null
         runBlocking {
             try {
                 response = SearchRetrofitConfig.retrofit().create(ListsDao::class.java)
-                    .getLists(sort, 2, 16, page++, 1, condition)
+                    .getLists(sort, 2, 16, 0, 0, condition)
             } catch (e: Exception) {
                 e.printStackTrace()
             }

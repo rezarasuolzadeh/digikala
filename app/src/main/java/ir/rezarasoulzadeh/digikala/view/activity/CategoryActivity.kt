@@ -43,7 +43,7 @@ class CategoryActivity : AppCompatActivity() {
             product = false
         )
 
-        customToolbar.titleTextView.text = "دسته بندی محصولات"
+        customToolbar.titleTextView.text = getString(R.string.categoryHeaderTitle)
 
         customToolbar.backButton.setOnClickListener {
             super.onBackPressed()

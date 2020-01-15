@@ -106,7 +106,7 @@ class ProductActivity : AppCompatActivity() {
             }
 
             if(productConfig.configViewModel.color != null){
-                productThirdCardInclude.productColourTextView.text = "رنگ"
+                productThirdCardInclude.productColourTextView.text = getString(R.string.productColourTitle)
                 productThirdCardInclude.productColourNumTextView.text = Format().colourFormat(productConfig.colors.size)
                 val productColourAdapter = ProductColourAdapter(productConfig.colors)
                 val productColourRecyclerView =
@@ -116,7 +116,7 @@ class ProductActivity : AppCompatActivity() {
                 productColourRecyclerView.adapter = productColourAdapter
             }
             else if(productConfig.configViewModel.size != null) {
-                productThirdCardInclude.productColourTextView.text = "سایز"
+                productThirdCardInclude.productColourTextView.text = getString(R.string.productSizeTitle)
                 productThirdCardInclude.productColourNumTextView.text = Format().sizeFormat(productConfig.sizes.size)
                 val productColourAdapter = ProductSizeAdapter(productConfig.sizes)
                 val productColourRecyclerView =
@@ -194,12 +194,12 @@ class ProductActivity : AppCompatActivity() {
         })
 
         productFifthCardInclude.productDescriptionMoreButton.setOnClickListener {
-            if (productFifthCardInclude.productDescriptionMoreButton.text == "ادامه مطلب") {
+            if (productFifthCardInclude.productDescriptionMoreButton.text == getString(R.string.productContinueTitle)) {
                 productFifthCardInclude.productDescriptionTextView.maxLines = 100
-                productFifthCardInclude.productDescriptionMoreButton.text = "بستن"
+                productFifthCardInclude.productDescriptionMoreButton.text = getString(R.string.productCloseTitle)
             } else {
                 productFifthCardInclude.productDescriptionTextView.maxLines = 8
-                productFifthCardInclude.productDescriptionMoreButton.text = "ادامه مطلب"
+                productFifthCardInclude.productDescriptionMoreButton.text = getString(R.string.productContinueTitle)
             }
         }
 

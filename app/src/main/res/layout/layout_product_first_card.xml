@@ -47,7 +47,7 @@
                 android:fontFamily="@font/iransans"
                 android:visibility="gone"
                 android:padding="1dp"
-                android:text="پیشنهاد ویژه"
+                android:text="@string/productOfferTitle"
                 android:textColor="@color/white"
                 android:textSize="10sp"
                 android:textStyle="normal"

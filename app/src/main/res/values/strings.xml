@@ -1,15 +1,66 @@
 <resources>
+
+    <!-- Primary Strings -->
     <string name="app_name">دیجیکالا</string>
+
+    <!-- Navigation Drawer Strings -->
+    <string name="menuLoginTitle">ورود و ثبت نام</string>
+    <string name="menuHomeTitle">خانه</string>
+    <string name="menuCategoryTitle">لیست دسته بندی محصولات</string>
+    <string name="menuBasketTitle">سبد خرید</string>
+    <string name="menuStar1Title">پر فروش ترین ها</string>
+    <string name="menuStar2Title">پیشنهاد ویژه دیجیکالا</string>
+    <string name="menuStar3Title">پر بازدید ترین ها</string>
+    <string name="menuStar4Title">جدیدی ترین ها</string>
+    <string name="menuSettingTitle">تنظیمات</string>
+    <string name="menuQuestionTitle">سئوالات متداول</string>
+    <string name="menuInfoTitle">درباره ما</string>
+
+    <!-- Sort Dialog Strings -->
     <string name="sortFirstTypeTitle">پر بازدید ترین</string>
     <string name="sortSecondTypeTitle">پر فروش ترین</string>
     <string name="sortThirdTypeTitle">قیمت از زیاد به کم</string>
     <string name="sortFourthTypeTitle">قیمت از کم به زیاد</string>
     <string name="sortFifthTypeTitle">جدید ترین</string>
-    <string name="titleFirstText">محصولات پرفروش</string>
-    <string name="allListText">لیست کامل</string>
-    <string name="titleSecondText">جدیدترین محصولات</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Characters Strings -->
+    <string name="characterColonText">:</string>
+    <string name="characterPercentText">%</string>
+    <string name="characterDividerText"> | </string>
+    <string name="characterToomanText">تومان</string>
+
+    <!-- Activity Main Strings-->
+    <string name="mainMostSellTitle">محصولات پرفروش</string>
+    <string name="mainNewsTitle">جدیدترین محصولات</string>
+    <string name="mainDigitalTitle">کالای دیجیتال</string>
+    <string name="mainMakeupTitle">آرایشی، بهداشتی و سلامت</string>
+    <string name="mainKitchenTitle">خانه و آشپزخانه</string>
+    <string name="mainFashionTitle">مد و پوشاک</string>
+    <string name="mainAllListTitle">لیست کامل</string>
+
+    <!-- Activity Category Strings -->
+    <string name="categoryHeaderTitle">لیست کامل</string>
+
+    <!-- Activity Lists Strings -->
+    <string name="listsFilterTitle">فیلتر کردن</string>
+    <string name="listsFilterSecondTitle">رنگ، نوع، قیمت و ..</string>
+    <string name="listsSortTitle">مرتب کردن</string>
+
+    <!-- Activity Product Strings -->
+    <string name="productOfferTitle">پیشنهاد ویژه</string>
+    <string name="productSpecificationTitle">مشخصات</string>
+    <string name="productCommentTitle">نظرات کاربران</string>
+    <string name="productAddToBasketTitle">افزودن به سبد خرید</string>
+    <string name="productStoreNumTitle"> فروشنده و گارانتی برای این کالا وجود دارد</string>
+    <string name="productContinueTitle">ادامه مطلب</string>
+    <string name="productCloseTitle">بستن</string>
+    <string name="productFromTitle">از مجموع </string>
+    <string name="productAcceptCommentTitle"> رای ثبت شده</string>
+    <string name="productAsTitle"> از </string>
+    <string name="productColourTitle">رنگ</string>
+    <string name="productSizeTitle">سایز</string>
+    <string name="productSellWithTitle">فروش توسط </string>
+    <string name="productShopSatisfyTitle">رضایت خرید: </string>
+    <string name="productShopWithDigikalaTitle">فروش توسط دیجیکالا</string>
 
 </resources>
