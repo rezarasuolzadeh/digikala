@@ -1,5 +1,7 @@
 package ir.rezarasoulzadeh.digikala.view.activity
 
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -203,6 +205,8 @@ class ProductActivity : AppCompatActivity() {
 
         customToolbar.titleTextView.isSelected = true
         productFifthCardInclude.productDescriptionTextView.isSelected = true
+        productSixthCardInclude.productRatingBar.progressTintList =
+            ColorStateList.valueOf(Color.parseColor("#FC344C"))
 
     }
 

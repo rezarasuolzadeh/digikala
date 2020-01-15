@@ -37,8 +37,8 @@
 
     <!-- Rating Bar theme. -->
     <style name="RatingBar" parent="Theme.AppCompat">
-        <item name="colorControlNormal">@color/grayEight</item>
         <item name="colorControlActivated">@color/red</item>
+        <item name="colorControlNormal">@color/grayNine</item>
     </style>
 
 </resources>

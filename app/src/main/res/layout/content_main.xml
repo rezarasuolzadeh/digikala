@@ -53,7 +53,7 @@
             <com.smarteist.autoimageslider.SliderView
                 android:id="@+id/mainSlider"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="190dp"
                 app:sliderAnimationDuration="600"
                 app:sliderAutoCycleDirection="back_and_forth"
                 app:sliderAutoCycleEnabled="false"
@@ -73,7 +73,7 @@
                 android:id="@+id/categoryFirstRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="2dp"
                 android:layout_marginBottom="5dp"
                 android:layoutDirection="rtl"
                 android:orientation="horizontal" />
@@ -95,13 +95,13 @@
 
                 <TextView
                     android:id="@+id/hourCounterTextView"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
                     android:background="@drawable/background_timer"
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
                     android:textColor="@color/white"
-                    android:textSize="23sp"
+                    android:textSize="22sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -124,13 +124,13 @@
 
                 <TextView
                     android:id="@+id/minuteCounterTextView"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
                     android:background="@drawable/background_timer"
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
                     android:textColor="@color/white"
-                    android:textSize="23sp"
+                    android:textSize="22sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/firstDot"
                     app:layout_constraintTop_toTopOf="parent"
@@ -153,13 +153,13 @@
 
                 <TextView
                     android:id="@+id/secondCounterTextView"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
                     android:background="@drawable/background_timer"
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
                     android:textColor="@color/white"
-                    android:textSize="23sp"
+                    android:textSize="22sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/secondDot"
                     app:layout_constraintTop_toTopOf="parent"

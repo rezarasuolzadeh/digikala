@@ -30,7 +30,7 @@ class OfferAdapter(private val offer: List<OfferData>) : RecyclerView.Adapter<Of
     inner class OfferViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(offer: OfferData) {
             val format = Format()
-            itemView.offerImage.setImageURI(Uri.parse(offer.imagePaths.original))
+            itemView.offerImage.setImageURI(Uri.parse(offer.imagePaths.size220))
             itemView.offerTitle.text = offer.title
             itemView.offerMaxPrice.text = format.priceFormat(offer.price)
             itemView.offerMinPrice.text = format.priceFormat(offer.price - offer.discount)

@@ -2,15 +2,15 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="170dp"
+    android:layout_width="155dp"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     android:background="@color/white"
     android:clickable="true"
     android:focusable="true"
-    app:cardElevation="1dp"
     android:foreground="?android:attr/selectableItemBackgroundBorderless"
-    app:cardCornerRadius="5dp">
+    app:cardCornerRadius="5dp"
+    app:cardElevation="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,14 +35,14 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textColor="@color/black"
-            android:textSize="12sp"
+            android:textSize="11sp"
             android:textStyle="normal"
             tools:text="گوشی موبایل سامسونگ" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:background="@color/grayFour" />
 
         <TextView
@@ -54,6 +54,7 @@
             android:gravity="left"
             android:padding="5dp"
             android:textColor="@color/greenLight"
+            android:textSize="11sp"
             android:textStyle="normal"
             tools:text="۲۵۰۰۰۰۰۰ تومان" />
 

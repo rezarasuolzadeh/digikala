@@ -2,15 +2,15 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="170dp"
+    android:layout_width="155dp"
     android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/white"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?android:attr/selectableItemBackgroundBorderless"
-    android:layout_margin="5dp"
-    app:cardElevation="1dp"
-    android:background="@color/white"
-    app:cardCornerRadius="5dp">
+    app:cardCornerRadius="5dp"
+    app:cardElevation="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,22 +35,22 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textColor="@color/black"
-            android:textSize="12sp"
+            android:textSize="11sp"
             android:textStyle="normal"
             tools:text="گوشی موبایل سامسونگ" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:background="@color/grayFour" />
 
         <TextView
             android:id="@+id/offerMaxPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
             android:layout_gravity="left"
+            android:layout_marginLeft="5dp"
             android:background="@drawable/line"
             android:fontFamily="@font/vazir"
             android:gravity="left"
@@ -58,6 +58,7 @@
             android:paddingRight="5dp"
             android:paddingBottom="2dp"
             android:textColor="@color/red"
+            android:textSize="11sp"
             android:textStyle="normal"
             tools:text="۲۵۰۰۰۰۰۰ تومان" />
 
@@ -72,6 +73,7 @@
             android:paddingRight="5dp"
             android:paddingBottom="5dp"
             android:textColor="@color/greenLight"
+            android:textSize="11sp"
             android:textStyle="normal"
             tools:text="۲۵۰۰۰۰۰۰ تومان" />
 

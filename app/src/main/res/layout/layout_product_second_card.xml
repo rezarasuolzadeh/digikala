@@ -3,6 +3,8 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layoutDirection="rtl"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
     android:orientation="horizontal"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -30,7 +32,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:padding="5dp"
+                android:padding="7dp"
                 android:tint="@color/blueLight"
                 android:src="@drawable/ic_clipboard" />
 
@@ -42,8 +44,8 @@
                 android:text="مشخصات"
                 android:textColor="@color/blueDark"
                 android:gravity="center"
-                android:textSize="14sp"
-                android:textStyle="normal" />
+                android:textSize="10sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -73,7 +75,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:padding="5dp"
+                android:padding="7dp"
                 android:tint="@color/blueLight"
                 android:src="@drawable/ic_chat" />
 
@@ -84,9 +86,9 @@
                 android:padding="3dp"
                 android:text="نظرات کاربران"
                 android:textColor="@color/blueDark"
-                android:textSize="14sp"
+                android:textSize="10sp"
                 android:gravity="center"
-                android:textStyle="normal" />
+                android:textStyle="bold" />
 
         </LinearLayout>
 

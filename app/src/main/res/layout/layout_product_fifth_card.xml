@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="10dp"
-    app:cardElevation="3dp"
-    android:layout_height="wrap_content">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="10dp"
+    app:cardElevation="3dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,13 +19,13 @@
             android:id="@+id/productDescriptionTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/iransans"
-            android:padding="10dp"
-            android:maxLines="8"
             android:ellipsize="end"
-            tools:text="این مدل از بدنه پلاستیکی ساخنه شده است"
+            android:fontFamily="@font/iransans"
+            android:maxLines="8"
+            android:padding="10dp"
             android:textColor="@color/black"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            tools:text="این مدل از بدنه پلاستیکی ساخنه شده است" />
 
         <View
             android:layout_width="match_parent"
@@ -36,13 +38,13 @@
             android:id="@+id/productDescriptionMoreButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
             android:fontFamily="@font/iransans"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
             android:gravity="center"
             android:padding="10dp"
             android:text="ادامه مطلب"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackgroundBorderless"
             android:textColor="@color/grayFive"
             android:textSize="15sp"
             android:textStyle="bold" />

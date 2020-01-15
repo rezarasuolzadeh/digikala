@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
     android:layout_marginBottom="10dp"
     app:cardElevation="3dp"
     android:backgroundTint="@color/grayOne"
@@ -33,7 +33,7 @@
                 android:padding="5dp"
                 android:text="رنگ"
                 android:textColor="@color/black"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:textStyle="normal" />
 
             <TextView
@@ -45,7 +45,7 @@
                 android:padding="5dp"
                 android:text="۲ رنگ"
                 android:textColor="@color/grayFive"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:textStyle="normal" />
 
         </LinearLayout>
@@ -65,8 +65,8 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layoutDirection="ltr"
                 android:padding="11dp"
                 android:src="@drawable/ic_shield"
@@ -80,7 +80,7 @@
                 android:layout_marginRight="5dp"
                 android:fontFamily="@font/vazir"
                 android:textColor="@color/grayFive"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textStyle="normal"
                 tools:text="گارانتی اصالت و سلامت فیزیکی" />
 
@@ -100,8 +100,8 @@
 
             <ImageView
                 android:id="@+id/productStoreImageView"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layoutDirection="ltr"
                 android:padding="11dp"
                 android:src="@drawable/dk" />
@@ -114,7 +114,7 @@
                 android:layout_marginRight="5dp"
                 android:fontFamily="@font/vazir"
                 android:textColor="@color/grayFive"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textStyle="normal"
                 tools:text="فروش توسط دیجیکالا" />
 
@@ -128,8 +128,8 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layoutDirection="rtl"
                 android:padding="11dp"
                 android:src="@drawable/ic_truck"
@@ -143,7 +143,7 @@
                 android:fontFamily="@font/vazir"
                 android:text="آماده ارسال از انبار دیجیکالا"
                 android:textColor="@color/grayFive"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textStyle="normal" />
 
         </LinearLayout>
@@ -168,8 +168,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/vazir"
+                android:layout_marginLeft="10dp"
                 android:textColor="@color/greenLight"
-                android:textSize="21sp"
+                android:textSize="20sp"
                 android:textStyle="normal"
                 tools:text="۲۵۰۰ تومان" />
 
@@ -196,6 +197,7 @@
             android:clickable="true"
             android:elevation="0dp"
             android:focusable="true"
+            android:layout_margin="5dp"
             android:foreground="?android:attr/selectableItemBackgroundBorderless"
             app:cardCornerRadius="3dp"
             app:cardElevation="0dp">
@@ -248,7 +250,7 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layoutDirection="ltr"
                 android:padding="11dp"
@@ -265,13 +267,13 @@
                 android:gravity="center"
                 android:lines="1"
                 android:textColor="@color/blue"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textStyle="normal"
                 tools:text="۶ فروشنده و گارانتی برای این کالا وجود دارد" />
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
