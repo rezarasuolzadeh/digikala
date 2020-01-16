@@ -24,7 +24,7 @@
             android:maxLines="8"
             android:padding="@dimen/padding10"
             android:textColor="@color/black"
-            android:textSize="12sp"
+            android:textSize="@dimen/font12"
             tools:text="این مدل از بدنه پلاستیکی ساخنه شده است" />
 
         <View
@@ -46,7 +46,7 @@
             android:padding="@dimen/padding10"
             android:text="@string/productContinueTitle"
             android:textColor="@color/grayFive"
-            android:textSize="15sp"
+            android:textSize="@dimen/font15"
             android:textStyle="bold" />
 
     </LinearLayout>

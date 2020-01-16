@@ -38,7 +38,7 @@
             android:fontFamily="@font/iransans"
             android:gravity="center|right"
             android:textColor="@color/grayEleven"
-            android:textSize="13sp"
+            android:textSize="@dimen/font13"
             android:textStyle="normal"
             tools:text="کامپیوتر و تجهیزات جانبی" />
 

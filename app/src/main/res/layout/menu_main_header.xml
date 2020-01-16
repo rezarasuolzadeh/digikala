@@ -35,7 +35,7 @@
             android:foreground="?android:attr/selectableItemBackgroundBorderless"
             android:text="@string/menuLoginTitle"
             android:textColor="@color/white"
-            android:textSize="10sp" />
+            android:textSize="@dimen/font10" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

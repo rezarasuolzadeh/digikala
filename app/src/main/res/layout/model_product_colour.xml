@@ -32,7 +32,7 @@
         android:lines="1"
         android:layout_marginTop="@dimen/margin5"
         android:textColor="@color/graySix"
-        android:textSize="8sp"
+        android:textSize="@dimen/font8"
         android:textStyle="normal"
         tools:text="سبز" />
 

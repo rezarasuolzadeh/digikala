@@ -43,7 +43,7 @@
                 android:text="@string/productSpecificationTitle"
                 android:textColor="@color/blueDark"
                 android:gravity="center"
-                android:textSize="10sp"
+                android:textSize="@dimen/font10"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -84,7 +84,7 @@
                 android:padding="@dimen/padding3"
                 android:text="@string/productCommentTitle"
                 android:textColor="@color/blueDark"
-                android:textSize="10sp"
+                android:textSize="@dimen/font10"
                 android:gravity="center"
                 android:textStyle="bold" />
 

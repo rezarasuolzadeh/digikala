@@ -17,6 +17,6 @@
     android:paddingRight="@dimen/padding13"
     android:paddingBottom="@dimen/padding5"
     android:textColor="@color/white"
-    android:textSize="12sp"
+    android:textSize="@dimen/font12"
     android:textStyle="normal"
     tools:text="کالای دیجیتال" />

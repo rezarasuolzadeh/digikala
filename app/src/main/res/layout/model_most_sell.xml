@@ -35,7 +35,7 @@
             android:paddingLeft="@dimen/padding10"
             android:paddingRight="@dimen/padding10"
             android:textColor="@color/black"
-            android:textSize="11sp"
+            android:textSize="@dimen/font11"
             android:textStyle="normal"
             tools:text="گوشی موبایل سامسونگ" />
 
@@ -54,7 +54,7 @@
             android:gravity="left"
             android:padding="@dimen/padding5"
             android:textColor="@color/greenLight"
-            android:textSize="11sp"
+            android:textSize="@dimen/font11"
             android:textStyle="normal"
             tools:text="۲۵۰۰۰۰۰۰ تومان" />
 

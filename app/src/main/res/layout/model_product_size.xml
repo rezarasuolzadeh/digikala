@@ -20,7 +20,7 @@
         android:fontFamily="@font/vazir"
         android:gravity="center"
         android:textColor="@color/black"
-        android:textSize="11sp"
+        android:textSize="@dimen/font11"
         tools:text="XL" />
 
 </LinearLayout>

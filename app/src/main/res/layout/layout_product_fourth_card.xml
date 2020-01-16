@@ -35,7 +35,7 @@
             android:padding="@dimen/padding5"
             tools:text="هشدار سامانه همتا: حتما در زمان تحویل دستکاه به کمک کد "
             android:textColor="@color/greenLight"
-            android:textSize="11sp"
+            android:textSize="@dimen/font11"
             android:textStyle="normal" />
 
     </LinearLayout>

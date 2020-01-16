@@ -35,7 +35,7 @@
             android:paddingLeft="@dimen/padding10"
             android:paddingRight="@dimen/padding10"
             android:textColor="@color/black"
-            android:textSize="11sp"
+            android:textSize="@dimen/font11"
             android:textStyle="normal"
             tools:text="گوشی موبایل سامسونگ" />
 
@@ -58,7 +58,7 @@
             android:paddingRight="@dimen/padding5"
             android:paddingBottom="@dimen/padding2"
             android:textColor="@color/red"
-            android:textSize="11sp"
+            android:textSize="@dimen/font11"
             android:textStyle="normal"
             tools:text="۲۵۰۰۰۰۰۰ تومان" />
 
@@ -73,7 +73,7 @@
             android:paddingRight="@dimen/padding5"
             android:paddingBottom="@dimen/padding5"
             android:textColor="@color/greenLight"
-            android:textSize="11sp"
+            android:textSize="@dimen/font11"
             android:textStyle="normal"
             tools:text="۲۵۰۰۰۰۰۰ تومان" />
 

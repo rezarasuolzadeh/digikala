@@ -35,7 +35,7 @@
                 android:fontFamily="@font/vazir"
                 android:text="از مجموع 38 رای ثبت شده"
                 android:textColor="@color/grayFive"
-                android:textSize="10sp"
+                android:textSize="@dimen/font10"
                 android:textStyle="normal" />
 
             <TextView
@@ -47,7 +47,7 @@
                 android:fontFamily="@font/vazir"
                 tools:text="4.5 از 5"
                 android:textColor="@color/grayEight"
-                android:textSize="12sp"
+                android:textSize="@dimen/font12"
                 android:textStyle="bold" />
 
             <RatingBar

@@ -43,7 +43,7 @@
                 android:fontFamily="@font/iransans"
                 android:lines="1"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="@dimen/font14"
                 android:textStyle="normal"
                 tools:text="گوشی موبایل سامسونگ" />
 
@@ -56,7 +56,7 @@
                 android:gravity="right"
                 android:lines="1"
                 android:textColor="@color/grayFour"
-                android:textSize="12sp"
+                android:textSize="@dimen/font12"
                 android:textStyle="normal"
                 tools:text="حافظه داخلی 64 گیگ" />
 
@@ -81,7 +81,7 @@
                     android:fontFamily="@font/vazir"
                     android:text="۲۵۰۰۰۰۰۰ تومان"
                     android:textColor="@color/red"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/font12"
                     android:textStyle="normal"
                     android:visibility="invisible"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -99,7 +99,7 @@
                     android:padding="1dp"
                     android:text="پیشنهاد ویژه"
                     android:textColor="@color/white"
-                    android:textSize="10sp"
+                    android:textSize="@dimen/font10"
                     android:textStyle="normal"
                     android:visibility="invisible"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -116,7 +116,7 @@
                 android:layout_marginLeft="@dimen/margin5"
                 android:fontFamily="@font/vazir"
                 android:textColor="@color/greenLight"
-                android:textSize="12sp"
+                android:textSize="@dimen/font12"
                 android:textStyle="normal"
                 tools:text="۲۵۰۰۰۰۰۰ تومان" />
 

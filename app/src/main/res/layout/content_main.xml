@@ -101,7 +101,7 @@
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
                     android:textColor="@color/white"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/font22"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -116,7 +116,7 @@
                     android:paddingRight="@dimen/padding3"
                     android:text="@string/characterColonText"
                     android:textColor="#383838"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/font15"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/hourCounterTextView"
@@ -130,7 +130,7 @@
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
                     android:textColor="@color/white"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/font22"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/firstDot"
                     app:layout_constraintTop_toTopOf="parent"
@@ -145,7 +145,7 @@
                     android:paddingRight="@dimen/padding3"
                     android:text="@string/characterColonText"
                     android:textColor="#383838"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/font15"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/minuteCounterTextView"
@@ -159,7 +159,7 @@
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
                     android:textColor="@color/white"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/font22"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/secondDot"
                     app:layout_constraintTop_toTopOf="parent"
@@ -362,7 +362,7 @@
                     android:fontFamily="@font/iransans"
                     android:text="@string/mainMostSellTitle"
                     android:textColor="@color/grayTen"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/font14"
                     android:textStyle="bold"
                     app:layout_constraintRight_toRightOf="parent" />
 
@@ -376,7 +376,7 @@
                     android:gravity="center"
                     android:text="@string/mainAllListTitle"
                     android:textColor="@color/blue"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/font12"
                     android:textStyle="normal"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -406,7 +406,7 @@
                     android:fontFamily="@font/iransans"
                     android:text="@string/mainNewsTitle"
                     android:textColor="@color/grayTen"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/font14"
                     android:textStyle="bold"
                     app:layout_constraintRight_toRightOf="parent" />
 
@@ -420,7 +420,7 @@
                     android:gravity="center"
                     android:text="@string/mainAllListTitle"
                     android:textColor="@color/blue"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/font12"
                     android:textStyle="normal"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -447,7 +447,7 @@
                 android:paddingRight="@dimen/padding15"
                 android:text="@string/mainDigitalTitle"
                 android:textColor="@color/grayTen"
-                android:textSize="14sp"
+                android:textSize="@dimen/font14"
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -469,7 +469,7 @@
                 android:paddingRight="@dimen/padding15"
                 android:text="@string/mainMakeupTitle"
                 android:textColor="@color/grayTen"
-                android:textSize="14sp"
+                android:textSize="@dimen/font14"
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -491,7 +491,7 @@
                 android:paddingRight="@dimen/padding15"
                 android:text="@string/mainKitchenTitle"
                 android:textColor="@color/grayTen"
-                android:textSize="14sp"
+                android:textSize="@dimen/font14"
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -513,7 +513,7 @@
                 android:paddingRight="@dimen/padding15"
                 android:text="@string/mainFashionTitle"
                 android:textColor="@color/grayTen"
-                android:textSize="14sp"
+                android:textSize="@dimen/font14"
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView

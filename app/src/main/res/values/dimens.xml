@@ -81,30 +81,30 @@
 
     <!-- Margin -->
     <dimen name="margin1">1dp</dimen>
-    <dimen name="margin15">15dp</dimen>
-    <dimen name="margin5">5dp</dimen>
-    <dimen name="margin10">10dp</dimen>
     <dimen name="margin2">2dp</dimen>
-    <dimen name="margin20">20dp</dimen>
     <dimen name="margin3">3dp</dimen>
+    <dimen name="margin5">5dp</dimen>
     <dimen name="margin8">8dp</dimen>
+    <dimen name="margin10">10dp</dimen>
     <dimen name="margin12">12dp</dimen>
+    <dimen name="margin15">15dp</dimen>
+    <dimen name="margin20">20dp</dimen>
     <dimen name="margin25">25dp</dimen>
     <dimen name="margin60">60dp</dimen>
 
     <!-- Padding -->
-    <dimen name="padding20">20dp</dimen>
-    <dimen name="padding15">15dp</dimen>
-    <dimen name="padding3">3dp</dimen>
     <dimen name="padding1">1dp</dimen>
-    <dimen name="padding5">5dp</dimen>
+    <dimen name="padding2">2dp</dimen>
+    <dimen name="padding3">3dp</dimen>
     <dimen name="padding4">4dp</dimen>
+    <dimen name="padding5">5dp</dimen>
     <dimen name="padding7">7dp</dimen>
     <dimen name="padding8">8dp</dimen>
+    <dimen name="padding10">10dp</dimen>
     <dimen name="padding11">11dp</dimen>
     <dimen name="padding13">13dp</dimen>
-    <dimen name="padding2">2dp</dimen>
-    <dimen name="padding10">10dp</dimen>
+    <dimen name="padding15">15dp</dimen>
+    <dimen name="padding20">20dp</dimen>
 
     <!-- Radius -->
     <dimen name="radius0">0dp</dimen>
@@ -117,26 +117,36 @@
     <!-- Border -->
     <dimen name="borderHeight1Dimen">1dp</dimen>
     <dimen name="borderHeight5Dimen">5dp</dimen>
-    <dimen name="width40">40dp</dimen>
+
+    <!-- Special Width & Height -->
     <dimen name="width0">0dp</dimen>
-    <dimen name="height80">80dp</dimen>
-    <dimen name="height40">40dp</dimen>
-    <dimen name="height38">38dp</dimen>
-    <dimen name="width160">160dp</dimen>
-    <dimen name="width32">32dp</dimen>
-    <dimen name="height32">32dp</dimen>
-    <dimen name="height40">40dp</dimen>
-    <dimen name="height120">120dp</dimen>
-    <dimen name="height110">110dp</dimen>
-    <dimen name="height110">110dp</dimen>
-    <dimen name="width165">165dp</dimen>
-    <dimen name="width32">32dp</dimen>
-    <dimen name="height32">32dp</dimen>
-    <dimen name="width30">30dp</dimen>
-    <dimen name="height30">30dp</dimen>
-    <dimen name="height105">105dp</dimen>
-    <dimen name="width20">20dp</dimen>
-    <dimen name="height20">20dp</dimen>
     <dimen name="height11">11dp</dimen>
+    <dimen name="width20">20dp</dimen>
+    <dimen name="width30">30dp</dimen>
+    <dimen name="width32">32dp</dimen>
+    <dimen name="width40">40dp</dimen>
+    <dimen name="width165">165dp</dimen>
+    <dimen name="width160">160dp</dimen>
+    <dimen name="height20">20dp</dimen>
+    <dimen name="height30">30dp</dimen>
+    <dimen name="height32">32dp</dimen>
+    <dimen name="height38">38dp</dimen>
+    <dimen name="height40">40dp</dimen>
+    <dimen name="height80">80dp</dimen>
+    <dimen name="height105">105dp</dimen>
+    <dimen name="height110">110dp</dimen>
+    <dimen name="height120">120dp</dimen>
+    <dimen name="font11">11sp</dimen>
+    <dimen name="font8">8sp</dimen>
+    <dimen name="font22">22sp</dimen>
+    <dimen name="font15">15sp</dimen>
+    <dimen name="font14">14sp</dimen>
+    <dimen name="font12">12sp</dimen>
+    <dimen name="font13">13sp</dimen>
+    <dimen name="font10">10sp</dimen>
+    <dimen name="font21">21sp</dimen>
+    <dimen name="font20">20sp</dimen>
+    <dimen name="font17">17sp</dimen>
+    <dimen name="font7">7sp</dimen>
 
 </resources>

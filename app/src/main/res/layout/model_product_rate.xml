@@ -18,7 +18,7 @@
         android:fontFamily="@font/iransans"
         android:gravity="right"
         android:textColor="#000"
-        android:textSize="7sp"
+        android:textSize="@dimen/font7"
         android:textStyle="normal"
         tools:text="میزان نگهداری باتری" />
 

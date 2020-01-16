@@ -23,7 +23,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/filterCard"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/width0"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/margin1"
                 android:layout_weight="4"
@@ -40,8 +40,8 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="@dimen/width40"
+                        android:layout_height="@dimen/height40"
                         android:layout_marginRight="@dimen/margin15"
                         android:padding="@dimen/padding10"
                         android:src="@drawable/ic_filter"
@@ -60,7 +60,7 @@
                             android:gravity="right"
                             android:text="فیلتر کردن"
                             android:textColor="#646464"
-                            android:textSize="11sp"
+                            android:textSize="@dimen/font11"
                             android:textStyle="bold" />
 
                         <TextView
@@ -71,7 +71,7 @@
                             android:gravity="right"
                             android:text="رنگ، نوع، قیمت و ..."
                             android:textColor="#9E9E9E"
-                            android:textSize="8sp"
+                            android:textSize="@dimen/font8"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -82,7 +82,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/sortCard"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/width0"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/margin1"
                 android:layout_weight="4"
@@ -120,7 +120,7 @@
                             android:gravity="right"
                             android:text="مرتب کردن"
                             android:textColor="#646464"
-                            android:textSize="11sp"
+                            android:textSize="@dimen/font11"
                             android:textStyle="bold" />
 
                         <TextView
@@ -132,7 +132,7 @@
                             android:gravity="right"
                             android:text="پر فروش ترین"
                             android:textColor="#9E9E9E"
-                            android:textSize="8sp"
+                            android:textSize="@dimen/font8"
                             android:textStyle="bold" />
 
                     </LinearLayout>

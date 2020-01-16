@@ -22,7 +22,7 @@
             android:fontFamily="@font/iransans"
             android:text="@string/sortFirstTypeTitle"
             android:textColor="@color/black"
-            android:textSize="13sp"
+            android:textSize="@dimen/font13"
             android:textStyle="normal" />
 
         <RadioButton
@@ -34,7 +34,7 @@
             android:fontFamily="@font/iransans"
             android:text="@string/sortSecondTypeTitle"
             android:textColor="@color/black"
-            android:textSize="13sp"
+            android:textSize="@dimen/font13"
             android:textStyle="normal" />
 
         <RadioButton
@@ -46,7 +46,7 @@
             android:fontFamily="@font/iransans"
             android:text="@string/sortThirdTypeTitle"
             android:textColor="@color/black"
-            android:textSize="13sp"
+            android:textSize="@dimen/font13"
             android:textStyle="normal" />
 
         <RadioButton
@@ -58,7 +58,7 @@
             android:fontFamily="@font/iransans"
             android:text="@string/sortFourthTypeTitle"
             android:textColor="@color/black"
-            android:textSize="13sp"
+            android:textSize="@dimen/font13"
             android:textStyle="normal" />
 
         <RadioButton
@@ -71,7 +71,7 @@
             android:fontFamily="@font/iransans"
             android:text="@string/sortFifthTypeTitle"
             android:textColor="@color/black"
-            android:textSize="13sp"
+            android:textSize="@dimen/font13"
             android:textStyle="normal" />
 
     </RadioGroup>

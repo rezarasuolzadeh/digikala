@@ -98,7 +98,7 @@
                 android:fontFamily="@font/iransans"
                 android:singleLine="true"
                 android:textColor="#fff"
-                android:textSize="13sp"
+                android:textSize="@dimen/font13"
                 android:textStyle="normal"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -49,7 +49,7 @@
                 android:padding="@dimen/padding1"
                 android:text="@string/productOfferTitle"
                 android:textColor="@color/white"
-                android:textSize="10sp"
+                android:textSize="@dimen/font10"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent" />
@@ -114,7 +114,7 @@
             android:layout_marginRight="@dimen/margin10"
             android:text="گوشی موبایل سامسونگ مدل A50"
             android:textColor="@color/black"
-            android:textSize="13sp"
+            android:textSize="@dimen/font13"
             android:textStyle="normal" />
 
         <TextView
@@ -129,7 +129,7 @@
             android:layout_marginBottom="@dimen/margin10"
             android:text="Samsung Galaxy A50 Dual SIM"
             android:textColor="@color/grayFive"
-            android:textSize="13sp"
+            android:textSize="@dimen/font13"
             android:textStyle="bold" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -158,7 +158,7 @@
                 android:gravity="center"
                 tools:text="12"
                 android:textColor="@color/white"
-                android:textSize="21sp"
+                android:textSize="@dimen/font21"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -173,7 +173,7 @@
                 android:paddingRight="@dimen/padding3"
                 android:text="@string/characterColonText"
                 android:textColor="@color/grayEight"
-                android:textSize="15sp"
+                android:textSize="@dimen/font15"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/productHourCounterTextView"
@@ -188,7 +188,7 @@
                 android:gravity="center"
                 tools:text="34"
                 android:textColor="@color/white"
-                android:textSize="21sp"
+                android:textSize="@dimen/font21"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/firstDot"
@@ -203,7 +203,7 @@
                 android:paddingRight="@dimen/padding3"
                 android:text="@string/characterColonText"
                 android:textColor="@color/grayEight"
-                android:textSize="15sp"
+                android:textSize="@dimen/font15"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/productMinuteCounterTextView"
@@ -218,7 +218,7 @@
                 android:gravity="center"
                 tools:text="56"
                 android:textColor="@color/white"
-                android:textSize="21sp"
+                android:textSize="@dimen/font21"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/secondDot"

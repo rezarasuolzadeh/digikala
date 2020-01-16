@@ -33,7 +33,7 @@
                 android:padding="@dimen/padding5"
                 android:text="رنگ"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="@dimen/font14"
                 android:textStyle="normal" />
 
             <TextView
@@ -45,7 +45,7 @@
                 android:padding="5dp"
                 android:text="۲ رنگ"
                 android:textColor="@color/grayFive"
-                android:textSize="14sp"
+                android:textSize="@dimen/font14"
                 android:textStyle="normal" />
 
         </LinearLayout>
@@ -80,7 +80,7 @@
                 android:layout_marginRight="@dimen/padding5"
                 android:fontFamily="@font/vazir"
                 android:textColor="@color/grayFive"
-                android:textSize="13sp"
+                android:textSize="@dimen/font13"
                 android:textStyle="normal"
                 tools:text="گارانتی اصالت و سلامت فیزیکی" />
 
@@ -114,7 +114,7 @@
                 android:layout_marginRight="@dimen/margin5"
                 android:fontFamily="@font/vazir"
                 android:textColor="@color/grayFive"
-                android:textSize="13sp"
+                android:textSize="@dimen/font13"
                 android:textStyle="normal"
                 tools:text="فروش توسط دیجیکالا" />
 
@@ -143,7 +143,7 @@
                 android:fontFamily="@font/vazir"
                 android:text="آماده ارسال از انبار دیجیکالا"
                 android:textColor="@color/grayFive"
-                android:textSize="13sp"
+                android:textSize="@dimen/font13"
                 android:textStyle="normal" />
 
         </LinearLayout>
@@ -170,7 +170,7 @@
                 android:fontFamily="@font/vazir"
                 android:layout_marginLeft="@dimen/margin10"
                 android:textColor="@color/greenLight"
-                android:textSize="20sp"
+                android:textSize="@dimen/font20"
                 android:textStyle="normal"
                 tools:text="۲۵۰۰ تومان" />
 
@@ -183,7 +183,7 @@
                 android:background="@drawable/line"
                 android:fontFamily="@font/vazir"
                 android:textColor="@color/red"
-                android:textSize="15sp"
+                android:textSize="@dimen/font15"
                 android:textStyle="normal"
                 android:visibility="gone"
                 tools:text="۲۵۰۰ تومان" />
@@ -227,7 +227,7 @@
                     android:fontFamily="@font/iransans"
                     android:text="@string/productAddToBasketTitle"
                     android:textColor="@color/white"
-                    android:textSize="17sp"
+                    android:textSize="@dimen/font17"
                     android:textStyle="normal" />
 
             </LinearLayout>
@@ -268,7 +268,7 @@
                 android:gravity="center"
                 android:lines="1"
                 android:textColor="@color/blue"
-                android:textSize="13sp"
+                android:textSize="@dimen/font13"
                 android:textStyle="normal"
                 tools:text="۶ فروشنده و گارانتی برای این کالا وجود دارد" />
 

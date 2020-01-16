@@ -36,7 +36,7 @@
             android:paddingLeft="@dimen/padding10"
             android:paddingRight="@dimen/padding10"
             android:textColor="@color/black"
-            android:textSize="12sp"
+            android:textSize="@dimen/font12"
             android:textStyle="normal"
             tools:text="گوشی موبایل سامسونگ" />
 
@@ -61,7 +61,7 @@
                 android:background="@drawable/line"
                 android:fontFamily="@font/vazir"
                 android:textColor="@color/red"
-                android:textSize="12sp"
+                android:textSize="@dimen/font12"
                 android:textStyle="normal"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -79,7 +79,7 @@
                 android:padding="@dimen/padding1"
                 android:text="پیشنهاد ویژه"
                 android:textColor="@color/white"
-                android:textSize="10sp"
+                android:textSize="@dimen/font10"
                 android:textStyle="normal"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -99,7 +99,7 @@
             android:paddingRight="@dimen/padding5"
             android:paddingBottom="@dimen/padding5"
             android:textColor="@color/greenLight"
-            android:textSize="12sp"
+            android:textSize="@dimen/font12"
             android:textStyle="normal"
             tools:text="۲۵۰۰۰۰۰۰ تومان" />
 
