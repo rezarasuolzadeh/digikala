@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- CardView Dimens -->
+    <dimen name="cardOfferWidthDimen">155dp</dimen>
+    <dimen name="cardOfferRadiusDimen">5dp</dimen>
+    <dimen name="cardOfferMarginDimen">5dp</dimen>
+    <dimen name="cardOfferElevationDimen">1dp</dimen>
+    <dimen name="cardMostSellWidthDimen">155dp</dimen>
+    <dimen name="cardMostSellRadiusDimen">5dp</dimen>
+    <dimen name="cardMostSellMarginDimen">5dp</dimen>
+    <dimen name="cardMostSellElevationDimen">1dp</dimen>
+    <dimen name="cardProductElevationDimen">2dp</dimen>
+    <dimen name="cardProductMarginRightDimen">20dp</dimen>
+    <dimen name="cardProductMarginLeftDimen">20dp</dimen>
+    <dimen name="cardProductMarginBottomDimen">10dp</dimen>
+    <dimen name="cardProductMarginDimen">10dp</dimen>
+    <dimen name="cardListMarginLeftDimen">5dp</dimen>
+    <dimen name="cardListMarginRightDimen">5dp</dimen>
+    <dimen name="cardListMarginTopDimen">10dp</dimen>
+    <dimen name="cardFilterRadiusDimen">0dp</dimen>
+    <dimen name="cardBannerLittleMarginDimen">5dp</dimen>
+    <dimen name="cardBannerBiggerMarginDimen">10dp</dimen>
+
+    <!-- SimpleDrawee Dimens -->
+    <dimen name="draweeProductHeightDimen">280dp</dimen>
+    <dimen name="draweeMainHeightDimen">180dp</dimen>
+    <dimen name="draweeOfferWidthDimen">140dp</dimen>
+    <dimen name="draweeOfferHeightDimen">150dp</dimen>
+    <dimen name="draweeOfferPaddingDimen">5dp</dimen>
+    <dimen name="draweeListPaddingDimen">5dp</dimen>
+    <dimen name="draweeListFirstWidthDimen">140dp</dimen>
+    <dimen name="draweeListFirstHeightDimen">150dp</dimen>
+    <dimen name="draweeListSecondWidthDimen">160dp</dimen>
+    <dimen name="draweeListSecondHeightDimen">170dp</dimen>
+    <dimen name="draweeListThirdWidthDimen">180dp</dimen>
+    <dimen name="draweeListThirdHeightDimen">180dp</dimen>
+    <dimen name="draweeSubCategoryWidthDimen">50dp</dimen>
+    <dimen name="draweeSubCategoryHeightDimen">50dp</dimen>
+
+    <!-- SliderView Dimens -->
+    <dimen name="sliderMainHeightDimen">190dp</dimen>
+    <dimen name="sliderMainIndicatorMarginDimen">18dp</dimen>
+    <dimen name="sliderMainIndicatorPaddingDimen">2dp</dimen>
+    <dimen name="sliderMainIndicatorRadiusDimen">1.33dp</dimen>
+    <dimen name="sliderProductHeightDimen">280dp</dimen>
+    <dimen name="sliderProductIndicatorMarginDimen">18dp</dimen>
+    <dimen name="sliderProductIndicatorPaddingDimen">3dp</dimen>
+    <dimen name="sliderProductIndicatorRadiusDimen">1dp</dimen>
+
+    <!-- Divider Dimens -->
+    <dimen name="dividerHeightDimen">0.5dp</dimen>
+    <dimen name="dividerMarginDimen">5dp</dimen>
+
+    <!-- TextView Dimens -->
+    <dimen name="textViewCategoryFirstHeightDimen">37dp</dimen>
+
+    <!-- TabLayout Dimens -->
+    <dimen name="tabLayoutElevationDimen">5dp</dimen>
+
+    <!-- ImageView Dimens -->
+    <dimen name="imageViewCategorySecondWidthDimen">20dp</dimen>
+    <dimen name="imageViewProductIconWidthDimen">40dp</dimen>
+    <dimen name="imageViewProductIconHeightDimen">40dp</dimen>
+
+    <!-- FAB Dimens -->
+    <dimen name="fabProductColourWidthDimen">20dp</dimen>
+    <dimen name="fabProductColourHeightDimen">20dp</dimen>
+
+    <!-- View Dimens -->
+    <dimen name="viewProductColourWidthDimen">55dp</dimen>
+    <dimen name="viewProductColourHeightDimen">55dp</dimen>
+    <dimen name="viewProductColourPaddingDimen">5dp</dimen>
+
+    <!-- Toolbar Dimens -->
+    <dimen name="toolbarTitleWidthDimen">200dp</dimen>
+    <dimen name="toolbarIconLayoutWidthDimen">50dp</dimen>
+    <dimen name="toolbarIconWidthDimen">20dp</dimen>
+    <dimen name="toolbarIconPaddingDimen">1dp</dimen>
+    <dimen name="toolbarElevationDimen">5dp</dimen>
+
+    <!-- Padding and Margin -->
+    <dimen name="margin1">1dp</dimen>
+    <dimen name="margin15">15dp</dimen>
+    <dimen name="padding10">10dp</dimen>
+    <dimen name="margin5">5dp</dimen>
+    <dimen name="padding11">11dp</dimen>
+    <dimen name="padding20">20dp</dimen>
+    <dimen name="margin10">10dp</dimen>
+    <dimen name="margin2">2dp</dimen>
+    <dimen name="padding15">15dp</dimen>
+    <dimen name="padding3">3dp</dimen>
+    <dimen name="margin20">20dp</dimen>
+    <dimen name="padding1">1dp</dimen>
+    <dimen name="margin3">3dp</dimen>
+    <dimen name="padding5">5dp</dimen>
+
+</resources>

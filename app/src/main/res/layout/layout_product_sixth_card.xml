@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
-    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="@dimen/cardProductMarginLeftDimen"
+    android:layout_marginRight="@dimen/cardProductMarginRightDimen"
+    android:layout_marginBottom="@dimen/cardProductMarginBottomDimen"
     android:layoutDirection="rtl"
     android:orientation="horizontal"
-    app:cardElevation="3dp">
+    app:cardElevation="@dimen/cardProductElevationDimen">
 
     <LinearLayout
         android:layout_width="match_parent"

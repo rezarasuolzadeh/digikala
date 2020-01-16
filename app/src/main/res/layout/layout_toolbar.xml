@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/appBarContainer"
-    android:elevation="5dp"
     android:layout_width="match_parent"
-    android:layout_height="?android:attr/actionBarSize">
+    android:layout_height="?android:attr/actionBarSize"
+    android:elevation="@dimen/toolbarElevationDimen">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/customToolbar"
@@ -25,7 +25,7 @@
 
             <LinearLayout
                 android:id="@+id/basketButton"
-                android:layout_width="50dp"
+                android:layout_width="@dimen/toolbarIconLayoutWidthDimen"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
@@ -37,9 +37,9 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:padding="1dp"
+                    android:layout_width="@dimen/toolbarIconWidthDimen"
                     android:layout_height="match_parent"
+                    android:padding="@dimen/toolbarIconPaddingDimen"
                     android:src="@drawable/ic_basket"
                     android:tint="@color/white" />
 
@@ -47,7 +47,7 @@
 
             <LinearLayout
                 android:id="@+id/searchButton"
-                android:layout_width="50dp"
+                android:layout_width="@dimen/toolbarIconLayoutWidthDimen"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
@@ -59,9 +59,9 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:padding="1dp"
+                    android:layout_width="@dimen/toolbarIconWidthDimen"
                     android:layout_height="match_parent"
+                    android:padding="@dimen/toolbarIconPaddingDimen"
                     android:src="@drawable/ic_magnifier"
                     android:tint="@color/white" />
 
@@ -69,7 +69,7 @@
 
             <LinearLayout
                 android:id="@+id/menuButton"
-                android:layout_width="50dp"
+                android:layout_width="@dimen/toolbarIconLayoutWidthDimen"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
@@ -81,9 +81,9 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:padding="1dp"
+                    android:layout_width="@dimen/toolbarIconWidthDimen"
                     android:layout_height="match_parent"
+                    android:padding="@dimen/toolbarIconPaddingDimen"
                     android:src="@drawable/ic_menu"
                     android:tint="@color/white" />
 
@@ -91,15 +91,15 @@
 
             <TextView
                 android:id="@+id/titleTextView"
-                android:layout_width="200dp"
+                android:layout_width="@dimen/toolbarTitleWidthDimen"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="60dp"
+                android:ellipsize="end"
                 android:fontFamily="@font/iransans"
+                android:singleLine="true"
                 android:textColor="#fff"
                 android:textSize="13sp"
                 android:textStyle="normal"
-                android:ellipsize="end"
-                android:singleLine="true"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -108,7 +108,7 @@
 
             <LinearLayout
                 android:id="@+id/backButton"
-                android:layout_width="50dp"
+                android:layout_width="@dimen/toolbarIconLayoutWidthDimen"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
@@ -120,9 +120,9 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:padding="2dp"
+                    android:layout_width="@dimen/toolbarIconWidthDimen"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/toolbarIconPaddingDimen"
                     android:src="@drawable/ic_back"
                     android:tint="@color/white" />
 
@@ -146,14 +146,14 @@
                 android:id="@+id/product"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layoutDirection="ltr"
                 android:orientation="horizontal"
                 android:visibility="gone"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:layoutDirection="ltr">
+                app:layout_constraintLeft_toLeftOf="parent">
 
                 <LinearLayout
                     android:id="@+id/optionButton"
-                    android:layout_width="50dp"
+                    android:layout_width="@dimen/toolbarIconLayoutWidthDimen"
                     android:layout_height="match_parent"
                     android:clickable="true"
                     android:focusable="true"
@@ -164,15 +164,16 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:padding="1dp"
+                        android:layout_width="@dimen/toolbarIconWidthDimen"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/toolbarIconPaddingDimen"
                         android:src="@drawable/ic_option"
                         android:tint="@color/white" />
 
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_width="50dp"
+                    android:layout_width="@dimen/toolbarIconLayoutWidthDimen"
                     android:layout_height="match_parent"
                     android:clickable="true"
                     android:focusable="true"
@@ -183,9 +184,9 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:padding="1dp"
+                        android:layout_width="@dimen/toolbarIconWidthDimen"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/toolbarIconPaddingDimen"
                         android:src="@drawable/ic_basket"
                         android:tint="@color/white" />
 

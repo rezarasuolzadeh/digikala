@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/categoryFirstTitle"
     android:layout_width="wrap_content"
-    android:layout_height="37dp"
+    android:layout_height="@dimen/textViewCategoryFirstHeightDimen"
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
     android:background="@drawable/background_category_first"

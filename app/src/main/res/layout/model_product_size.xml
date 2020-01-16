@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="65dp"
-    android:layout_height="65dp"
-    android:layout_margin="5dp"
+    android:layout_width="@dimen/viewProductColourWidthDimen"
+    android:layout_height="@dimen/viewProductColourHeightDimen"
+    android:layout_margin="@dimen/viewProductColourPaddingDimen"
     android:background="@drawable/stroke_square_gray"
     android:clickable="true"
     android:focusable="true"
@@ -20,7 +20,7 @@
         android:fontFamily="@font/vazir"
         android:gravity="center"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="11sp"
         tools:text="XL" />
 
 </LinearLayout>

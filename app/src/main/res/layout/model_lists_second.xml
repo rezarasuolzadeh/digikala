@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/cardListMarginLeftDimen"
+    android:layout_marginTop="@dimen/cardListMarginTopDimen"
+    android:layout_marginRight="5dp"
+    android:background="@color/white"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?android:attr/selectableItemBackgroundBorderless"
-    android:layout_margin="5dp"
-    android:background="@color/white"
     app:cardCornerRadius="3dp">
 
     <LinearLayout
@@ -18,10 +20,10 @@
 
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/listSecondImageView"
-            android:layout_width="160dp"
-            android:layout_height="170dp"
+            android:layout_width="@dimen/draweeListSecondWidthDimen"
+            android:layout_height="@dimen/draweeListSecondHeightDimen"
             android:layout_gravity="center"
-            android:padding="5dp"
+            android:padding="@dimen/draweeListPaddingDimen"
             app:placeholderImage="@drawable/placeholder"
             app:placeholderImageScaleType="centerCrop" />
 
@@ -40,7 +42,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
+            android:layout_height="@dimen/dividerHeightDimen"
             android:layout_marginTop="10dp"
             android:background="@color/grayFour" />
 
@@ -58,10 +60,10 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/line"
                 android:fontFamily="@font/vazir"
-                android:visibility="invisible"
                 android:textColor="@color/red"
-                android:textStyle="normal"
                 android:textSize="12sp"
+                android:textStyle="normal"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -75,11 +77,11 @@
                 android:background="@drawable/background_offer"
                 android:fontFamily="@font/iransans"
                 android:padding="1dp"
-                android:visibility="invisible"
                 android:text="پیشنهاد ویژه"
                 android:textColor="@color/white"
                 android:textSize="10sp"
                 android:textStyle="normal"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -94,10 +96,10 @@
             android:gravity="left"
             android:paddingLeft="5dp"
             android:paddingTop="2dp"
-            android:textSize="12sp"
             android:paddingRight="5dp"
             android:paddingBottom="5dp"
             android:textColor="@color/greenLight"
+            android:textSize="12sp"
             android:textStyle="normal"
             tools:text="۲۵۰۰۰۰۰۰ تومان" />
 

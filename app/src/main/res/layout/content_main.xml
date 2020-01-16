@@ -26,7 +26,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="@dimen/margin15"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -53,17 +53,17 @@
             <com.smarteist.autoimageslider.SliderView
                 android:id="@+id/mainSlider"
                 android:layout_width="match_parent"
-                android:layout_height="190dp"
+                android:layout_height="@dimen/sliderMainHeightDimen"
                 app:sliderAnimationDuration="600"
                 app:sliderAutoCycleDirection="back_and_forth"
                 app:sliderAutoCycleEnabled="false"
                 app:sliderCircularHandlerEnabled="true"
                 app:sliderIndicatorAnimationDuration="10"
                 app:sliderIndicatorGravity="center_horizontal|bottom"
-                app:sliderIndicatorMargin="18dp"
+                app:sliderIndicatorMargin="@dimen/sliderMainIndicatorMarginDimen"
                 app:sliderIndicatorOrientation="horizontal"
-                app:sliderIndicatorPadding="2dp"
-                app:sliderIndicatorRadius="1.33dp"
+                app:sliderIndicatorPadding="@dimen/sliderMainIndicatorPaddingDimen"
+                app:sliderIndicatorRadius="@dimen/sliderMainIndicatorRadiusDimen"
                 app:sliderIndicatorSelectedColor="@color/white"
                 app:sliderIndicatorUnselectedColor="@color/graySeven"
                 app:sliderScrollTimeInSec="1"
@@ -73,17 +73,17 @@
                 android:id="@+id/categoryFirstRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginTop="@dimen/margin2"
+                android:layout_marginBottom="@dimen/margin5"
                 android:layoutDirection="rtl"
                 android:orientation="horizontal" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp">
+                android:layout_marginTop="@dimen/margin10"
+                android:paddingLeft="@dimen/padding15"
+                android:paddingRight="@dimen/padding15">
 
                 <ImageView
                     android:layout_width="160dp"
@@ -112,8 +112,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:gravity="center"
-                    android:paddingLeft="3dp"
-                    android:paddingRight="3dp"
+                    android:paddingLeft="@dimen/padding3"
+                    android:paddingRight="@dimen/padding3"
                     android:text="@string/characterColonText"
                     android:textColor="#383838"
                     android:textSize="15sp"
@@ -141,8 +141,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:gravity="center"
-                    android:paddingLeft="3dp"
-                    android:paddingRight="3dp"
+                    android:paddingLeft="@dimen/padding3"
+                    android:paddingRight="@dimen/padding3"
                     android:text="@string/characterColonText"
                     android:textColor="#383838"
                     android:textSize="15sp"
@@ -171,8 +171,8 @@
                 android:id="@+id/offerRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginTop="@dimen/margin5"
+                android:layout_marginBottom="@dimen/margin5"
                 android:layoutDirection="rtl"
                 android:orientation="horizontal" />
 
@@ -180,8 +180,8 @@
                 android:id="@+id/advertisementTop"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="15dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginBottom="@dimen/margin15"
                 android:background="@color/white"
                 android:clickable="true"
                 android:focusable="true"
@@ -192,10 +192,10 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="@dimen/cardBannerBiggerMarginDimen"
+                android:layout_marginTop="@dimen/cardBannerLittleMarginDimen"
+                android:layout_marginRight="@dimen/cardBannerBiggerMarginDimen"
+                android:layout_marginBottom="@dimen/cardBannerLittleMarginDimen"
                 app:cardCornerRadius="3dp">
 
                 <com.facebook.drawee.view.SimpleDraweeView
@@ -220,10 +220,10 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="@dimen/cardBannerLittleMarginDimen"
+                    android:layout_marginTop="@dimen/cardBannerLittleMarginDimen"
+                    android:layout_marginRight="@dimen/cardBannerBiggerMarginDimen"
+                    android:layout_marginBottom="@dimen/cardBannerLittleMarginDimen"
                     android:layout_weight="1"
                     app:cardCornerRadius="3dp">
 
@@ -242,10 +242,10 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="@dimen/cardBannerBiggerMarginDimen"
+                    android:layout_marginTop="@dimen/cardBannerLittleMarginDimen"
+                    android:layout_marginRight="@dimen/cardBannerLittleMarginDimen"
+                    android:layout_marginBottom="@dimen/cardBannerLittleMarginDimen"
                     android:layout_weight="1"
                     app:cardCornerRadius="3dp">
 
@@ -294,10 +294,10 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="@dimen/cardBannerLittleMarginDimen"
+                    android:layout_marginTop="@dimen/cardBannerLittleMarginDimen"
+                    android:layout_marginRight="@dimen/cardBannerBiggerMarginDimen"
+                    android:layout_marginBottom="@dimen/cardBannerLittleMarginDimen"
                     android:layout_weight="1"
                     app:cardCornerRadius="3dp">
 
@@ -316,10 +316,10 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="@dimen/cardBannerBiggerMarginDimen"
+                    android:layout_marginTop="@dimen/cardBannerLittleMarginDimen"
+                    android:layout_marginRight="@dimen/cardBannerLittleMarginDimen"
+                    android:layout_marginBottom="@dimen/cardBannerLittleMarginDimen"
                     android:layout_weight="1"
                     app:cardCornerRadius="3dp">
 
@@ -341,8 +341,8 @@
                 android:id="@+id/advertisementBottom"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="15dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginBottom="@dimen/margin15"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackgroundBorderless"
@@ -352,9 +352,9 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp">
+                android:layout_marginTop="@dimen/margin20"
+                android:paddingLeft="@dimen/padding15"
+                android:paddingRight="@dimen/padding15">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -388,17 +388,17 @@
                 android:id="@+id/mostSellRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginTop="@dimen/margin5"
+                android:layout_marginBottom="@dimen/margin5"
                 android:layoutDirection="rtl"
                 android:orientation="horizontal" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp">
+                android:layout_marginTop="@dimen/margin20"
+                android:paddingLeft="@dimen/padding15"
+                android:paddingRight="@dimen/padding15">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -432,19 +432,19 @@
                 android:id="@+id/newsRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginTop="@dimen/margin5"
+                android:layout_marginBottom="@dimen/margin5"
                 android:layoutDirection="rtl"
                 android:orientation="horizontal" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/margin20"
                 android:fontFamily="@font/iransans"
                 android:gravity="right"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
+                android:paddingLeft="@dimen/padding15"
+                android:paddingRight="@dimen/padding15"
                 android:text="@string/mainDigitalTitle"
                 android:textColor="@color/grayTen"
                 android:textSize="14sp"
@@ -454,19 +454,19 @@
                 android:id="@+id/digitalRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginTop="@dimen/margin5"
+                android:layout_marginBottom="@dimen/margin5"
                 android:layoutDirection="rtl"
                 android:orientation="horizontal" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/margin20"
                 android:fontFamily="@font/iransans"
                 android:gravity="right"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
+                android:paddingLeft="@dimen/padding15"
+                android:paddingRight="@dimen/padding15"
                 android:text="@string/mainMakeupTitle"
                 android:textColor="@color/grayTen"
                 android:textSize="14sp"
@@ -476,19 +476,19 @@
                 android:id="@+id/makeupRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginTop="@dimen/margin5"
+                android:layout_marginBottom="@dimen/margin5"
                 android:layoutDirection="rtl"
                 android:orientation="horizontal" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/margin20"
                 android:fontFamily="@font/iransans"
                 android:gravity="right"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
+                android:paddingLeft="@dimen/padding15"
+                android:paddingRight="@dimen/padding15"
                 android:text="@string/mainKitchenTitle"
                 android:textColor="@color/grayTen"
                 android:textSize="14sp"
@@ -498,19 +498,19 @@
                 android:id="@+id/kitchenRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginTop="@dimen/margin5"
+                android:layout_marginBottom="@dimen/margin5"
                 android:layoutDirection="rtl"
                 android:orientation="horizontal" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/margin20"
                 android:fontFamily="@font/iransans"
                 android:gravity="right"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
+                android:paddingLeft="@dimen/padding15"
+                android:paddingRight="@dimen/padding15"
                 android:text="@string/mainFashionTitle"
                 android:textColor="@color/grayTen"
                 android:textSize="14sp"
@@ -520,8 +520,8 @@
                 android:id="@+id/fashionRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginTop="@dimen/margin5"
+                android:layout_marginBottom="@dimen/margin5"
                 android:layoutDirection="rtl"
                 android:orientation="horizontal" />
 

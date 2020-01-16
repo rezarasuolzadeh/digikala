@@ -11,7 +11,7 @@
     android:orientation="horizontal">
 
     <ImageView
-        android:layout_width="20dp"
+        android:layout_width="@dimen/imageViewCategorySecondWidthDimen"
         android:layout_height="match_parent"
         android:layout_marginLeft="8dp"
         android:padding="5dp"

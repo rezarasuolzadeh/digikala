@@ -2,15 +2,15 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="155dp"
+    android:layout_width="@dimen/cardMostSellWidthDimen"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
+    android:layout_margin="@dimen/cardMostSellMarginDimen"
     android:background="@color/white"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?android:attr/selectableItemBackgroundBorderless"
-    app:cardCornerRadius="5dp"
-    app:cardElevation="1dp">
+    app:cardCornerRadius="@dimen/cardMostSellRadiusDimen"
+    app:cardElevation="@dimen/cardMostSellElevationDimen">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,10 +19,10 @@
 
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/mostSellImage"
-            android:layout_width="140dp"
-            android:layout_height="150dp"
+            android:layout_width="@dimen/draweeOfferWidthDimen"
+            android:layout_height="@dimen/draweeOfferHeightDimen"
             android:layout_gravity="center"
-            android:padding="5dp"
+            android:padding="@dimen/draweeOfferPaddingDimen"
             app:placeholderImage="@drawable/placeholder"
             app:placeholderImageScaleType="centerCrop" />
 
@@ -41,8 +41,8 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:layout_marginTop="5dp"
+            android:layout_height="@dimen/dividerHeightDimen"
+            android:layout_marginTop="@dimen/dividerMarginDimen"
             android:background="@color/grayFour" />
 
         <TextView

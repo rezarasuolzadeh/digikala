@@ -110,7 +110,9 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
                 sortTitle.text = "پر بازدید ترین"
                 sort = 4
                 searchViewModel.provideLists(sort, 0)
+                arrange = 0
                 searchViewModel.listsLiveData.observe(this, this)
+                arrangeImage.setImageResource(R.drawable.ic_arrange_first)
                 sortAlertDialog.dismiss()
             }
 
@@ -118,15 +120,18 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
                 sortTitle.text = "پر فروش ترین"
                 sort = 7
                 searchViewModel.provideLists(sort, 0)
+                arrange = 0
                 searchViewModel.listsLiveData.observe(this, this)
+                arrangeImage.setImageResource(R.drawable.ic_arrange_first)
                 sortAlertDialog.dismiss()
             }
 
             sortView.maxPriceRadioButton.setOnClickListener {
                 sortTitle.text = "قیمت از زیاد به کم"
                 sort = 10
-                searchViewModel.provideLists(sort, 0)
+                searchViewModel.provideLists(sort, 1)
                 searchViewModel.listsLiveData.observe(this, this)
+                arrangeImage.setImageResource(R.drawable.ic_arrange_first)
                 sortAlertDialog.dismiss()
             }
 
@@ -134,7 +139,9 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
                 sortTitle.text = "قیمت از کم به زیاد"
                 sort = 10
                 searchViewModel.provideLists(sort, 1)
+                arrange = 0
                 searchViewModel.listsLiveData.observe(this, this)
+                arrangeImage.setImageResource(R.drawable.ic_arrange_first)
                 sortAlertDialog.dismiss()
             }
 
@@ -142,7 +149,9 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
                 sortTitle.text = "جدید ترین"
                 sort = 1
                 searchViewModel.provideLists(sort, 0)
+                arrange = 0
                 searchViewModel.listsLiveData.observe(this, this)
+                arrangeImage.setImageResource(R.drawable.ic_arrange_first)
                 sortAlertDialog.dismiss()
             }
         }

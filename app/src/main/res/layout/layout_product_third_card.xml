@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
-    android:layout_marginBottom="10dp"
-    app:cardElevation="3dp"
+    android:layout_marginLeft="@dimen/cardProductMarginLeftDimen"
+    android:layout_marginRight="@dimen/cardProductMarginRightDimen"
+    android:layout_marginBottom="@dimen/cardProductMarginBottomDimen"
+    app:cardElevation="@dimen/cardProductElevationDimen"
     android:backgroundTint="@color/grayOne"
     android:orientation="vertical">
 
@@ -68,7 +68,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layoutDirection="ltr"
-                android:padding="11dp"
+                android:padding="8dp"
                 android:src="@drawable/ic_shield"
                 android:tint="@color/grayFive" />
 
@@ -88,7 +88,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
+            android:layout_height="@dimen/dividerHeightDimen"
             android:layout_margin="5dp"
             android:background="@color/grayFour" />
 
@@ -103,7 +103,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layoutDirection="ltr"
-                android:padding="11dp"
+                android:padding="8dp"
                 android:src="@drawable/dk" />
 
             <TextView
@@ -131,7 +131,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layoutDirection="rtl"
-                android:padding="11dp"
+                android:padding="8dp"
                 android:src="@drawable/ic_truck"
                 android:tint="@color/grayEight" />
 
@@ -211,10 +211,11 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layoutDirection="ltr"
-                    android:padding="8dp"
+                    android:padding="7dp"
+                    android:layout_margin="5dp"
                     android:src="@drawable/ic_cart"
                     android:tint="@color/white" />
 
@@ -224,7 +225,7 @@
                     android:layout_gravity="center"
                     android:layout_marginRight="10dp"
                     android:fontFamily="@font/iransans"
-                    android:text="افزودن به سبد خرید"
+                    android:text="@string/productAddToBasketTitle"
                     android:textColor="@color/white"
                     android:textSize="17sp"
                     android:textStyle="normal" />
@@ -250,7 +251,7 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layoutDirection="ltr"
                 android:padding="11dp"

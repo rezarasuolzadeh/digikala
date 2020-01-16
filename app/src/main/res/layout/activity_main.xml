@@ -21,8 +21,8 @@
         android:fitsSystemWindows="true"
         android:layoutDirection="rtl"
         app:headerLayout="@layout/menu_main_header"
-        app:itemHorizontalPadding="20dp"
-        app:itemIconPadding="20dp"
+        app:itemHorizontalPadding="@dimen/padding20"
+        app:itemIconPadding="@dimen/padding20"
         app:menu="@menu/menu_main_item"
         app:theme="@style/NavigationDrawerStyle" />
 

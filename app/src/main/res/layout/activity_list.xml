@@ -11,7 +11,8 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/cardFilterRadiusDimen">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,12 +25,12 @@
                 android:id="@+id/filterCard"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="1dp"
+                android:layout_marginLeft="@dimen/margin1"
                 android:layout_weight="4"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="0dp">
+                app:cardCornerRadius="@dimen/cardFilterRadiusDimen">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -41,8 +42,8 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:layout_marginRight="15dp"
-                        android:padding="10dp"
+                        android:layout_marginRight="@dimen/margin15"
+                        android:padding="@dimen/padding10"
                         android:src="@drawable/ic_filter"
                         android:tint="#646464" />
 
@@ -83,12 +84,12 @@
                 android:id="@+id/sortCard"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="1dp"
+                android:layout_marginLeft="@dimen/margin1"
                 android:layout_weight="4"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="0dp">
+                app:cardCornerRadius="@dimen/cardFilterRadiusDimen">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -100,9 +101,9 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="15dp"
+                        android:layout_marginRight="@dimen/margin15"
                         android:layoutDirection="ltr"
-                        android:padding="10dp"
+                        android:padding="@dimen/padding10"
                         android:src="@drawable/ic_sort"
                         android:tint="#646464" />
 
@@ -126,7 +127,7 @@
                             android:id="@+id/sortTitle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginBottom="@dimen/margin5"
                             android:fontFamily="@font/iransans"
                             android:gravity="right"
                             android:text="پر فروش ترین"
@@ -148,14 +149,14 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="0dp">
+                app:cardCornerRadius="@dimen/cardFilterRadiusDimen">
 
                 <ImageView
                     android:id="@+id/arrangeImage"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layoutDirection="rtl"
-                    android:padding="11dp"
+                    android:padding="@dimen/padding11"
                     android:src="@drawable/ic_arrange_first"
                     android:tint="#646464" />
 
@@ -166,8 +167,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listRecyclerView"
-        android:background="@color/grayTwo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="@color/grayTwo" />
 
 </LinearLayout>

@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
-    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="@dimen/cardProductMarginLeftDimen"
+    android:layout_marginRight="@dimen/cardProductMarginRightDimen"
+    android:layout_marginBottom="@dimen/cardProductMarginBottomDimen"
     app:cardElevation="3dp">
 
     <LinearLayout
@@ -22,16 +22,16 @@
             android:ellipsize="end"
             android:fontFamily="@font/iransans"
             android:maxLines="8"
-            android:padding="10dp"
+            android:padding="@dimen/padding10"
             android:textColor="@color/black"
             android:textSize="12sp"
             tools:text="این مدل از بدنه پلاستیکی ساخنه شده است" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_height="@dimen/dividerHeightDimen"
+            android:layout_marginLeft="@dimen/padding10"
+            android:layout_marginRight="@dimen/padding10"
             android:background="@color/grayFour" />
 
         <TextView
@@ -43,8 +43,8 @@
             android:fontFamily="@font/iransans"
             android:foreground="?android:attr/selectableItemBackgroundBorderless"
             android:gravity="center"
-            android:padding="10dp"
-            android:text="ادامه مطلب"
+            android:padding="@dimen/padding10"
+            android:text="@string/productContinueTitle"
             android:textColor="@color/grayFive"
             android:textSize="15sp"
             android:textStyle="bold" />

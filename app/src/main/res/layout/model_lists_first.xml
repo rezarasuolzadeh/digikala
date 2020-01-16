@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
+    android:layout_marginLeft="@dimen/cardListMarginLeftDimen"
+    android:layout_marginTop="@dimen/cardListMarginTopDimen"
+    android:layout_marginRight="@dimen/cardListMarginRightDimen"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?android:attr/selectableItemBackgroundBorderless"
-    android:layout_marginRight="5dp"
-    android:layout_marginLeft="5dp"
     app:cardCornerRadius="3dp">
 
     <LinearLayout
@@ -21,10 +21,10 @@
 
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/listFirstImageView"
-            android:layout_width="140dp"
-            android:layout_height="150dp"
+            android:layout_width="@dimen/draweeListFirstWidthDimen"
+            android:layout_height="@dimen/draweeListFirstHeightDimen"
             android:layout_gravity="center"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/draweeListPaddingDimen"
             android:background="@color/white"
             app:placeholderImage="@drawable/placeholder"
             app:placeholderImageScaleType="centerInside" />
@@ -52,8 +52,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:gravity="right"
                 android:fontFamily="@font/iransans"
+                android:gravity="right"
                 android:lines="1"
                 android:textColor="@color/grayFour"
                 android:textSize="12sp"
@@ -62,7 +62,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0.5dp"
+                android:layout_height="@dimen/dividerHeightDimen"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:background="@color/grayFour" />
@@ -77,13 +77,13 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_marginLeft="5dp"
-                    android:visibility="invisible"
                     android:background="@drawable/line"
                     android:fontFamily="@font/vazir"
                     android:text="۲۵۰۰۰۰۰۰ تومان"
                     android:textColor="@color/red"
                     android:textSize="12sp"
                     android:textStyle="normal"
+                    android:visibility="invisible"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -97,11 +97,11 @@
                     android:background="@drawable/background_offer"
                     android:fontFamily="@font/iransans"
                     android:padding="1dp"
-                    android:visibility="invisible"
                     android:text="پیشنهاد ویژه"
                     android:textColor="@color/white"
                     android:textSize="10sp"
                     android:textStyle="normal"
+                    android:visibility="invisible"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -114,10 +114,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginLeft="5dp"
-                android:textSize="12sp"
                 android:fontFamily="@font/vazir"
-                android:text="۲۵۰۰۰۰۰۰ تومان"
+                tools:text="۲۵۰۰۰۰۰۰ تومان"
                 android:textColor="@color/greenLight"
+                android:textSize="12sp"
                 android:textStyle="normal" />
 
         </LinearLayout>

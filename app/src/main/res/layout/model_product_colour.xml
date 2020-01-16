@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="55dp"
-    android:layout_height="55dp"
-    android:layout_margin="5dp"
+    android:layout_width="@dimen/viewProductColourWidthDimen"
+    android:layout_height="@dimen/viewProductColourHeightDimen"
+    android:layout_margin="@dimen/viewProductColourPaddingDimen"
     android:background="@drawable/stroke_square_gray"
     android:clickable="true"
     android:focusable="true"
@@ -13,8 +13,8 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/colourView"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="@dimen/fabProductColourWidthDimen"
+        android:layout_height="@dimen/fabProductColourHeightDimen"
         android:layout_gravity="center"
         app:borderWidth="1dp"
         app:elevation="0dp"
