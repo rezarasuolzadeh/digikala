@@ -7,7 +7,7 @@
     android:layout_marginLeft="@dimen/cardProductMarginLeftDimen"
     android:layout_marginRight="@dimen/cardProductMarginRightDimen"
     android:layout_marginBottom="@dimen/cardProductMarginBottomDimen"
-    app:cardElevation="3dp">
+    app:cardElevation="@dimen/elevation3">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,5 +50,4 @@
             android:textStyle="bold" />
 
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>

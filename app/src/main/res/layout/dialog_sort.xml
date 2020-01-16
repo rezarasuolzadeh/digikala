@@ -11,7 +11,7 @@
         android:paddingLeft="@dimen/padding20"
         android:layoutDirection="rtl"
         android:orientation="vertical"
-        android:paddingRight="20dp">
+        android:paddingRight="@dimen/padding20">
 
         <RadioButton
             android:id="@+id/mostViewRadioButton"
@@ -75,5 +75,4 @@
             android:textStyle="normal" />
 
     </RadioGroup>
-
 </LinearLayout>

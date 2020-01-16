@@ -13,8 +13,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="@dimen/margin10"
+        android:layout_marginBottom="@dimen/margin10"
         android:background="@color/white"
         android:layoutDirection="ltr"
         android:orientation="horizontal">
@@ -23,10 +23,10 @@
             android:id="@+id/subCategoryImageView"
             android:layout_width="@dimen/draweeSubCategoryWidthDimen"
             android:layout_height="@dimen/draweeSubCategoryHeightDimen"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="@dimen/margin25"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginRight="@dimen/margin15"
+            android:layout_marginBottom="@dimen/margin5"
             app:placeholderImage="@drawable/placeholder"
             app:placeholderImageScaleType="centerInside" />
 
@@ -34,7 +34,7 @@
             android:id="@+id/subCategoryTitleTextView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp"
+            android:padding="@dimen/padding10"
             android:fontFamily="@font/iransans"
             android:gravity="center|right"
             android:textColor="@color/grayEleven"

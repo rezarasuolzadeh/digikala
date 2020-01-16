@@ -10,7 +10,7 @@
     android:clickable="true"
     android:focusable="true"
     android:foreground="?android:attr/selectableItemBackgroundBorderless"
-    app:cardCornerRadius="3dp">
+    app:cardCornerRadius="@dimen/radius3">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                 android:id="@+id/listFirstFaTitleTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/margin10"
                 android:fontFamily="@font/iransans"
                 android:lines="1"
                 android:textColor="@color/black"
@@ -51,7 +51,7 @@
                 android:id="@+id/listFirstEnTitleTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/margin10"
                 android:fontFamily="@font/iransans"
                 android:gravity="right"
                 android:lines="1"
@@ -63,8 +63,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dividerHeightDimen"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginBottom="@dimen/margin10"
                 android:background="@color/grayFour" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -76,7 +76,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="@dimen/margin5"
                     android:background="@drawable/line"
                     android:fontFamily="@font/vazir"
                     android:text="۲۵۰۰۰۰۰۰ تومان"
@@ -93,7 +93,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/margin10"
                     android:background="@drawable/background_offer"
                     android:fontFamily="@font/iransans"
                     android:padding="1dp"
@@ -113,15 +113,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="@dimen/margin5"
                 android:fontFamily="@font/vazir"
-                tools:text="۲۵۰۰۰۰۰۰ تومان"
                 android:textColor="@color/greenLight"
                 android:textSize="12sp"
-                android:textStyle="normal" />
+                android:textStyle="normal"
+                tools:text="۲۵۰۰۰۰۰۰ تومان" />
 
         </LinearLayout>
-
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>

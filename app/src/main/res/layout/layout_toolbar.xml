@@ -93,7 +93,7 @@
                 android:id="@+id/titleTextView"
                 android:layout_width="@dimen/toolbarTitleWidthDimen"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="60dp"
+                android:layout_marginRight="@dimen/margin60"
                 android:ellipsize="end"
                 android:fontFamily="@font/iransans"
                 android:singleLine="true"
@@ -132,9 +132,9 @@
                 android:id="@+id/digikalaImage"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginRight="60dp"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp"
+                android:layout_marginRight="@dimen/margin60"
+                android:paddingTop="@dimen/padding15"
+                android:paddingBottom="@dimen/padding15"
                 android:src="@drawable/ic_digikala_logo"
                 android:tint="@color/white"
                 android:visibility="gone"
@@ -191,9 +191,7 @@
                         android:tint="@color/white" />
 
                 </LinearLayout>
-
             </LinearLayout>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
 </com.google.android.material.appbar.AppBarLayout>

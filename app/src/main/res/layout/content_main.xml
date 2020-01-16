@@ -16,15 +16,15 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="@dimen/height80"
             android:src="@drawable/splash_logo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ProgressBar
             style="?android:attr/progressBarStyle"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/width40"
+            android:layout_height="@dimen/height40"
             android:layout_centerInParent="true"
             android:layout_marginBottom="@dimen/margin15"
             android:visibility="visible"
@@ -72,7 +72,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/categoryFirstRecyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="38dp"
+                android:layout_height="@dimen/height38"
                 android:layout_marginTop="@dimen/margin2"
                 android:layout_marginBottom="@dimen/margin5"
                 android:layoutDirection="rtl"
@@ -86,7 +86,7 @@
                 android:paddingRight="@dimen/padding15">
 
                 <ImageView
-                    android:layout_width="160dp"
+                    android:layout_width="@dimen/width160"
                     android:layout_height="match_parent"
                     android:src="@drawable/special"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -95,8 +95,8 @@
 
                 <TextView
                     android:id="@+id/hourCounterTextView"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
+                    android:layout_width="@dimen/width32"
+                    android:layout_height="@dimen/height32"
                     android:background="@drawable/background_timer"
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
@@ -110,7 +110,7 @@
                 <TextView
                     android:id="@+id/firstDot"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="@dimen/height40"
                     android:gravity="center"
                     android:paddingLeft="@dimen/padding3"
                     android:paddingRight="@dimen/padding3"
@@ -124,8 +124,8 @@
 
                 <TextView
                     android:id="@+id/minuteCounterTextView"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
+                    android:layout_width="@dimen/width32"
+                    android:layout_height="@dimen/height32"
                     android:background="@drawable/background_timer"
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
@@ -139,7 +139,7 @@
                 <TextView
                     android:id="@+id/secondDot"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="@dimen/height40"
                     android:gravity="center"
                     android:paddingLeft="@dimen/padding3"
                     android:paddingRight="@dimen/padding3"
@@ -153,8 +153,8 @@
 
                 <TextView
                     android:id="@+id/secondCounterTextView"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
+                    android:layout_width="@dimen/width32"
+                    android:layout_height="@dimen/height32"
                     android:background="@drawable/background_timer"
                     android:fontFamily="@font/roboto"
                     android:gravity="center"
@@ -179,7 +179,7 @@
             <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/advertisementTop"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="@dimen/height120"
                 android:layout_marginTop="@dimen/margin10"
                 android:layout_marginBottom="@dimen/margin15"
                 android:background="@color/white"
@@ -201,7 +201,7 @@
                 <com.facebook.drawee.view.SimpleDraweeView
                     android:id="@+id/bannerFirst"
                     android:layout_width="match_parent"
-                    android:layout_height="110dp"
+                    android:layout_height="@dimen/height110"
                     android:background="@color/white"
                     android:clickable="true"
                     android:focusable="true"
@@ -218,19 +218,19 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/width0"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/cardBannerLittleMarginDimen"
                     android:layout_marginTop="@dimen/cardBannerLittleMarginDimen"
                     android:layout_marginRight="@dimen/cardBannerBiggerMarginDimen"
                     android:layout_marginBottom="@dimen/cardBannerLittleMarginDimen"
                     android:layout_weight="1"
-                    app:cardCornerRadius="3dp">
+                    app:cardCornerRadius="@dimen/radius3">
 
                     <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/bannerSecond"
                         android:layout_width="match_parent"
-                        android:layout_height="110dp"
+                        android:layout_height="@dimen/height110"
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?android:attr/selectableItemBackgroundBorderless"
@@ -240,19 +240,19 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/width0"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/cardBannerBiggerMarginDimen"
                     android:layout_marginTop="@dimen/cardBannerLittleMarginDimen"
                     android:layout_marginRight="@dimen/cardBannerLittleMarginDimen"
                     android:layout_marginBottom="@dimen/cardBannerLittleMarginDimen"
                     android:layout_weight="1"
-                    app:cardCornerRadius="3dp">
+                    app:cardCornerRadius="@dimen/radius3">
 
                     <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/bannerThird"
                         android:layout_width="match_parent"
-                        android:layout_height="110dp"
+                        android:layout_height="@dimen/height110"
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?android:attr/selectableItemBackgroundBorderless"
@@ -266,16 +266,16 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
-                app:cardCornerRadius="3dp">
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin5"
+                android:layout_marginRight="@dimen/margin10"
+                android:layout_marginBottom="@dimen/margin5"
+                app:cardCornerRadius="@dimen/radius3">
 
                 <com.facebook.drawee.view.SimpleDraweeView
                     android:id="@+id/bannerFourth"
                     android:layout_width="match_parent"
-                    android:layout_height="110dp"
+                    android:layout_height="@dimen/height110"
                     android:background="@color/white"
                     android:clickable="true"
                     android:focusable="true"
@@ -292,19 +292,19 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/width0"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/cardBannerLittleMarginDimen"
                     android:layout_marginTop="@dimen/cardBannerLittleMarginDimen"
                     android:layout_marginRight="@dimen/cardBannerBiggerMarginDimen"
                     android:layout_marginBottom="@dimen/cardBannerLittleMarginDimen"
                     android:layout_weight="1"
-                    app:cardCornerRadius="3dp">
+                    app:cardCornerRadius="@dimen/radius3">
 
                     <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/bannerFifth"
                         android:layout_width="match_parent"
-                        android:layout_height="110dp"
+                        android:layout_height="@dimen/height110"
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?android:attr/selectableItemBackgroundBorderless"
@@ -314,19 +314,19 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/width0"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/cardBannerBiggerMarginDimen"
                     android:layout_marginTop="@dimen/cardBannerLittleMarginDimen"
                     android:layout_marginRight="@dimen/cardBannerLittleMarginDimen"
                     android:layout_marginBottom="@dimen/cardBannerLittleMarginDimen"
                     android:layout_weight="1"
-                    app:cardCornerRadius="3dp">
+                    app:cardCornerRadius="@dimen/radius3">
 
                     <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/bannerSixth"
                         android:layout_width="match_parent"
-                        android:layout_height="110dp"
+                        android:layout_height="@dimen/height110"
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?android:attr/selectableItemBackgroundBorderless"
@@ -340,7 +340,7 @@
             <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/advertisementBottom"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="@dimen/height120"
                 android:layout_marginTop="@dimen/margin10"
                 android:layout_marginBottom="@dimen/margin15"
                 android:clickable="true"
@@ -526,7 +526,5 @@
                 android:orientation="horizontal" />
 
         </LinearLayout>
-
     </ScrollView>
-
 </LinearLayout>

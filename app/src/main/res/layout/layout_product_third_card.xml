@@ -14,7 +14,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
+        android:layout_margin="@dimen/margin10"
         android:background="@color/grayOne"
         android:orientation="vertical">
 
@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/vazir"
-                android:padding="5dp"
+                android:padding="@dimen/padding5"
                 android:text="رنگ"
                 android:textColor="@color/black"
                 android:textSize="14sp"
@@ -60,15 +60,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/margin10"
             android:layoutDirection="rtl"
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/width40"
+                android:layout_height="@dimen/height40"
                 android:layoutDirection="ltr"
-                android:padding="8dp"
+                android:padding="@dimen/padding8"
                 android:src="@drawable/ic_shield"
                 android:tint="@color/grayFive" />
 
@@ -77,7 +77,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="@dimen/padding5"
                 android:fontFamily="@font/vazir"
                 android:textColor="@color/grayFive"
                 android:textSize="13sp"
@@ -89,7 +89,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dividerHeightDimen"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/margin5"
             android:background="@color/grayFour" />
 
         <LinearLayout
@@ -100,10 +100,10 @@
 
             <ImageView
                 android:id="@+id/productStoreImageView"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/width40"
+                android:layout_height="@dimen/height40"
                 android:layoutDirection="ltr"
-                android:padding="8dp"
+                android:padding="@dimen/padding8"
                 android:src="@drawable/dk" />
 
             <TextView
@@ -111,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="@dimen/margin5"
                 android:fontFamily="@font/vazir"
                 android:textColor="@color/grayFive"
                 android:textSize="13sp"
@@ -128,10 +128,10 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/width40"
+                android:layout_height="@dimen/height40"
                 android:layoutDirection="rtl"
-                android:padding="8dp"
+                android:padding="@dimen/padding8"
                 android:src="@drawable/ic_truck"
                 android:tint="@color/grayEight" />
 
@@ -139,7 +139,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="@dimen/padding5"
                 android:fontFamily="@font/vazir"
                 android:text="آماده ارسال از انبار دیجیکالا"
                 android:textColor="@color/grayFive"
@@ -150,8 +150,8 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:layout_margin="5dp"
+            android:layout_height="@dimen/dividerHeightDimen"
+            android:layout_margin="@dimen/margin5"
             android:background="@color/grayFour" />
 
         <LinearLayout
@@ -159,8 +159,8 @@
             android:layout_height="wrap_content"
             android:layoutDirection="ltr"
             android:orientation="horizontal"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp">
+            android:paddingTop="@dimen/margin10"
+            android:paddingBottom="@dimen/margin10">
 
             <TextView
                 android:id="@+id/productMinPriceTextView"
@@ -168,7 +168,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/vazir"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="@dimen/margin10"
                 android:textColor="@color/greenLight"
                 android:textSize="20sp"
                 android:textStyle="normal"
@@ -179,7 +179,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="@dimen/margin10"
                 android:background="@drawable/line"
                 android:fontFamily="@font/vazir"
                 android:textColor="@color/red"
@@ -193,14 +193,14 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="@dimen/margin10"
             android:clickable="true"
             android:elevation="0dp"
             android:focusable="true"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/margin5"
             android:foreground="?android:attr/selectableItemBackgroundBorderless"
-            app:cardCornerRadius="3dp"
-            app:cardElevation="0dp">
+            app:cardCornerRadius="@dimen/radius3"
+            app:cardElevation="@dimen/elevation0">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -211,11 +211,11 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/width40"
+                    android:layout_height="@dimen/height40"
                     android:layoutDirection="ltr"
-                    android:padding="7dp"
-                    android:layout_margin="5dp"
+                    android:padding="@dimen/padding7"
+                    android:layout_margin="@dimen/margin5"
                     android:src="@drawable/ic_cart"
                     android:tint="@color/white" />
 
@@ -223,7 +223,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/margin10"
                     android:fontFamily="@font/iransans"
                     android:text="@string/productAddToBasketTitle"
                     android:textColor="@color/white"
@@ -236,8 +236,8 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:layout_margin="5dp"
+            android:layout_height="@dimen/dividerHeightDimen"
+            android:layout_margin="@dimen/margin5"
             android:background="@color/grayFour" />
 
         <LinearLayout
@@ -250,17 +250,17 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="0dp"
+                android:layout_width="@dimen/width0"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layoutDirection="ltr"
-                android:padding="11dp"
+                android:padding="@dimen/padding11"
                 android:src="@drawable/ic_store"
                 android:tint="@color/grayEight" />
 
             <TextView
                 android:id="@+id/productAllStoreTextView"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/width0"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="5"
@@ -273,19 +273,17 @@
                 tools:text="۶ فروشنده و گارانتی برای این کالا وجود دارد" />
 
             <ImageView
-                android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/width0"
+                android:layout_height="@dimen/height40"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackgroundBorderless"
                 android:layoutDirection="ltr"
-                android:padding="13dp"
+                android:padding="@dimen/padding13"
                 android:src="@drawable/ic_arrow"
                 android:tint="@color/grayEight" />
 
         </LinearLayout>
-
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>
