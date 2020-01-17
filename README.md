@@ -12,8 +12,19 @@ this secton is:
 #### Main Page
 this page has several banners and image slider for advertisment of the products and a timer for the show time of special offer to user. also contain of several list of the special products in specil category and show themain category in top of page.
 
+complete: 100%
+
 #### List Page
+this page contain of list of several type of the products that's separate with several attribute for example price, views and etc.
+
+complete: 80%
 
 #### Category Page
+this page show the all categories and sub categories. the category show on top of the page and sub categories show in list in fragment in center of page.
+
+complete: 100%
 
 #### Product Page
+this page is the very heavy and difficcult page in digikala. contains all information about a product and thats picture. also this page show the rate of the product and users vote for that product and user can see the number of the stores that's sell this product.
+
+complete: 90%
