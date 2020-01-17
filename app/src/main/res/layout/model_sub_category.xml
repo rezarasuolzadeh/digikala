@@ -27,6 +27,7 @@
             android:layout_marginTop="@dimen/margin5"
             android:layout_marginRight="@dimen/margin15"
             android:layout_marginBottom="@dimen/margin5"
+            android:scaleType="centerInside"
             app:placeholderImage="@drawable/placeholder"
             app:placeholderImageScaleType="centerInside" />
 

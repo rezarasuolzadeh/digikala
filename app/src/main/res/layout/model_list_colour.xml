@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.floatingactionbutton.FloatingActionButton xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/colourCircle"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="@dimen/width20"
-    android:layout_height="@dimen/height20"
     android:layout_marginRight="@dimen/margin5"
-    app:borderWidth="@dimen/borderHeight5Dimen"
-    app:elevation="@dimen/elevation0"
-    app:fabSize="mini"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintRight_toRightOf="parent" />
+    android:background="@drawable/stroke_circle_gray"
+    android:layout_height="@dimen/height20">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/colourCircle"
+        android:layout_width="@dimen/width18"
+        android:layout_height="@dimen/height18"
+        app:elevation="@dimen/elevation0"
+        android:layout_gravity="center"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</FrameLayout>

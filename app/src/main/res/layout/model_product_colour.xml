@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/viewProductColourWidthDimen"
     android:layout_height="@dimen/viewProductColourHeightDimen"
@@ -11,26 +12,33 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/colourView"
-        android:layout_width="@dimen/fabProductColourWidthDimen"
-        android:layout_height="@dimen/fabProductColourHeightDimen"
+    <FrameLayout
+        android:layout_width="@dimen/width20"
+        android:layout_height="@dimen/height20"
         android:layout_gravity="center"
-        app:borderWidth="@dimen/borderHeight1Dimen"
-        app:elevation="@dimen/elevation0"
-        app:fabSize="mini"
+        android:background="@drawable/stroke_circle_gray"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/colourView"
+            android:layout_width="@dimen/fabProductColourWidthDimen"
+            android:layout_height="@dimen/fabProductColourHeightDimen"
+            android:layout_gravity="center"
+            app:borderWidth="@dimen/borderHeight1Dimen"
+            app:elevation="@dimen/elevation0"
+            app:fabSize="mini" />
+    </FrameLayout>
 
     <TextView
         android:id="@+id/colourTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin5"
         android:fontFamily="@font/iransans"
         android:gravity="center"
         android:lines="1"
-        android:layout_marginTop="@dimen/margin5"
         android:textColor="@color/graySix"
         android:textSize="@dimen/font8"
         android:textStyle="normal"

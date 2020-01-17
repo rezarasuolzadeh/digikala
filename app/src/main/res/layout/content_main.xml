@@ -12,7 +12,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@color/red"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <ImageView
             android:layout_width="match_parent"

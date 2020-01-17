@@ -3,6 +3,7 @@ package ir.rezarasoulzadeh.digikala.view.activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -52,6 +53,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        Handler().postDelayed({
+            splashDigikala.visibility = View.GONE
+        }, 3000)
 
         CustomToolbar(
             this,
@@ -197,8 +202,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         mainSlider.startAutoCycle()
         mainSlider.setIndicatorAnimation(IndicatorAnimations.WORM)
         mainSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
-
-        splashDigikala.visibility = View.GONE
 
         customToolbar.menuButton.setOnClickListener {
             drawerLayout.openDrawer(drawerView)

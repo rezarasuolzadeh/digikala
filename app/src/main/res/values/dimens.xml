@@ -35,7 +35,7 @@
     <dimen name="draweeListSecondHeightDimen">170dp</dimen>
     <dimen name="draweeListThirdWidthDimen">180dp</dimen>
     <dimen name="draweeListThirdHeightDimen">180dp</dimen>
-    <dimen name="draweeSubCategoryWidthDimen">50dp</dimen>
+    <dimen name="draweeSubCategoryWidthDimen">60dp</dimen>
     <dimen name="draweeSubCategoryHeightDimen">50dp</dimen>
 
     <!-- SliderView Dimens -->
@@ -64,8 +64,8 @@
     <dimen name="imageViewProductIconHeightDimen">40dp</dimen>
 
     <!-- FAB Dimens -->
-    <dimen name="fabProductColourWidthDimen">20dp</dimen>
-    <dimen name="fabProductColourHeightDimen">20dp</dimen>
+    <dimen name="fabProductColourWidthDimen">18dp</dimen>
+    <dimen name="fabProductColourHeightDimen">18dp</dimen>
 
     <!-- View Dimens -->
     <dimen name="viewProductColourWidthDimen">55dp</dimen>
@@ -121,12 +121,14 @@
     <!-- Special Width & Height -->
     <dimen name="width0">0dp</dimen>
     <dimen name="height11">11dp</dimen>
+    <dimen name="width18">18dp</dimen>
     <dimen name="width20">20dp</dimen>
     <dimen name="width30">30dp</dimen>
     <dimen name="width32">32dp</dimen>
     <dimen name="width40">40dp</dimen>
     <dimen name="width165">165dp</dimen>
     <dimen name="width160">160dp</dimen>
+    <dimen name="height18">18dp</dimen>
     <dimen name="height20">20dp</dimen>
     <dimen name="height30">30dp</dimen>
     <dimen name="height32">32dp</dimen>
@@ -135,7 +137,8 @@
     <dimen name="height80">80dp</dimen>
     <dimen name="height105">105dp</dimen>
     <dimen name="height110">110dp</dimen>
-    <dimen name="height120">120dp</dimen>
+
+    <!-- Font sizes -->
     <dimen name="font11">11sp</dimen>
     <dimen name="font8">8sp</dimen>
     <dimen name="font22">22sp</dimen>
@@ -148,5 +151,12 @@
     <dimen name="font20">20sp</dimen>
     <dimen name="font17">17sp</dimen>
     <dimen name="font7">7sp</dimen>
+    <dimen name="width1">1dp</dimen>
+    <dimen name="width120">120dp</dimen>
+    <dimen name="height120">120dp</dimen>
+    <dimen name="padding0">0dp</dimen>
+    <dimen name="radius10">10dp</dimen>
+    <dimen name="radius80">80dp</dimen>
+    <dimen name="radius100">100dp</dimen>
 
 </resources>

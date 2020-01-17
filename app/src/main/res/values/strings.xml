@@ -39,7 +39,7 @@
     <string name="mainAllListTitle">لیست کامل</string>
 
     <!-- Activity Category Strings -->
-    <string name="categoryHeaderTitle">لیست کامل</string>
+    <string name="categoryHeaderTitle">دسته بندی محصولات</string>
 
     <!-- Activity Lists Strings -->
     <string name="listsFilterTitle">فیلتر کردن</string>
