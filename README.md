@@ -22,7 +22,7 @@ complete: 80%
 #### Category Page :heart_eyes:
 this page show the all categories and sub categories. the category show on top of the page and sub categories show in list in fragment in center of page.
 
-complete: 100%
+compltet: 100%
 
 #### Product Page :unamused:
 this page is the very heavy and difficcult page in digikala :sob:. contains all information about a product and thats picture. also this page show the rate of the product and users vote for that product and user can see the number of the stores that's sell this product.
