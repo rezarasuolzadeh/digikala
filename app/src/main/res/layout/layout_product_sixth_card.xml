@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginLeft="@dimen/cardProductMarginLeftDimen"
-    android:layout_marginRight="@dimen/cardProductMarginRightDimen"
+    android:layout_marginLeft="@dimen/width10"
+    android:layout_marginRight="@dimen/height10"
     android:layout_marginBottom="@dimen/cardProductMarginBottomDimen"
     android:layoutDirection="rtl"
     android:orientation="horizontal"
@@ -45,24 +45,26 @@
                 android:layout_gravity="center"
                 android:layout_marginRight="@dimen/margin10"
                 android:fontFamily="@font/vazir"
-                tools:text="4.5 از 5"
                 android:textColor="@color/grayEight"
                 android:textSize="@dimen/font12"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:text="4.5 از 5" />
 
             <RatingBar
                 android:id="@+id/productRatingBar"
                 style="?android:attr/ratingBarStyleIndicator"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layoutDirection="ltr"
                 android:max="100"
                 android:numStars="5"
+                android:progressTint="@color/red"
                 android:scaleX="0.6"
                 android:scaleY="0.6"
-                android:stepSize="0.1"
-                android:progressBackgroundTint="@color/grayEleven" />
+                android:progressBackgroundTint="@color/grayEleven"
+                android:secondaryProgressTint="@color/red"
+                android:stepSize="0.1" />
 
         </LinearLayout>
 

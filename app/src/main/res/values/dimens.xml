@@ -158,5 +158,7 @@
     <dimen name="radius10">10dp</dimen>
     <dimen name="radius80">80dp</dimen>
     <dimen name="radius100">100dp</dimen>
+    <dimen name="width10">10dp</dimen>
+    <dimen name="height10">10dp</dimen>
 
 </resources>

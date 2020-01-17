@@ -76,4 +76,9 @@
     <string name="intentSortTitle">sortTitle</string>
     <string name="intentProductId">productId</string>
 
+    <!-- Link Strings -->
+    <string name="productShareDeepLink">https://vtpd.adj.st/?adjust_t=mk5b2y&amp;adjust_deeplink=dkapp%3A%2F%2Fwww.digikala.com%2FProduct%2Fdkp-130273&amp;adjust_redirect=https://www.digikala.com/Product/dkp-</string>
+    <string name="productShareSubject">دیجیکالا</string>
+    <string name="productShareTitle">اشتراک گذاری محصول</string>
+
 </resources>

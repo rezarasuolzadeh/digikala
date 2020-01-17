@@ -1,7 +1,6 @@
 package ir.rezarasoulzadeh.digikala.view.activity
 
-import android.content.res.ColorStateList
-import android.graphics.Color
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -108,19 +107,22 @@ class ProductActivity : AppCompatActivity() {
                     format.priceFormat(productConfig.configViewModel.price)
             }
 
-            if(productConfig.configViewModel.color != null){
-                productThirdCardInclude.productColourTextView.text = getString(R.string.productColourTitle)
-                productThirdCardInclude.productColourNumTextView.text = format.colourFormat(productConfig.colors.size)
+            if (productConfig.configViewModel.color != null) {
+                productThirdCardInclude.productColourTextView.text =
+                    getString(R.string.productColourTitle)
+                productThirdCardInclude.productColourNumTextView.text =
+                    format.colourFormat(productConfig.colors.size)
                 val productColourAdapter = ProductColourAdapter(productConfig.colors)
                 val productColourRecyclerView =
                     findViewById<RecyclerView>(R.id.productColourRecyclerView)
                 val horizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
                 productColourRecyclerView.layoutManager = horizontal
                 productColourRecyclerView.adapter = productColourAdapter
-            }
-            else if(productConfig.configViewModel.size != null) {
-                productThirdCardInclude.productColourTextView.text = getString(R.string.productSizeTitle)
-                productThirdCardInclude.productColourNumTextView.text = format.sizeFormat(productConfig.sizes.size)
+            } else if (productConfig.configViewModel.size != null) {
+                productThirdCardInclude.productColourTextView.text =
+                    getString(R.string.productSizeTitle)
+                productThirdCardInclude.productColourNumTextView.text =
+                    format.sizeFormat(productConfig.sizes.size)
                 val productColourAdapter = ProductSizeAdapter(productConfig.sizes)
                 val productColourRecyclerView =
                     findViewById<RecyclerView>(R.id.productColourRecyclerView)
@@ -128,8 +130,8 @@ class ProductActivity : AppCompatActivity() {
                 productColourRecyclerView.layoutManager = horizontal
                 productColourRecyclerView.adapter = productColourAdapter
             } else {
-               productThirdCardInclude.productColourLayout.visibility = View.GONE
-               productThirdCardInclude.productColourRecyclerView.visibility = View.GONE
+                productThirdCardInclude.productColourLayout.visibility = View.GONE
+                productThirdCardInclude.productColourRecyclerView.visibility = View.GONE
             }
 
         })
@@ -188,7 +190,8 @@ class ProductActivity : AppCompatActivity() {
         serviceViewModel.provideProductRate(productId)
         serviceViewModel.productRateLiveData.observe(this, Observer {
             productRate = it.data
-            val productRateAdapter = ProductRateAdapter(productRate.categoryRateInfos[0].rateFactorInfos)
+            val productRateAdapter =
+                ProductRateAdapter(productRate.categoryRateInfos[0].rateFactorInfos)
             val productRateRecyclerView =
                 findViewById<RecyclerView>(R.id.productRateRecyclerView)
             val vertical = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
@@ -199,17 +202,26 @@ class ProductActivity : AppCompatActivity() {
         productFifthCardInclude.productDescriptionMoreButton.setOnClickListener {
             if (productFifthCardInclude.productDescriptionMoreButton.text == getString(R.string.productContinueTitle)) {
                 productFifthCardInclude.productDescriptionTextView.maxLines = 100
-                productFifthCardInclude.productDescriptionMoreButton.text = getString(R.string.productCloseTitle)
+                productFifthCardInclude.productDescriptionMoreButton.text =
+                    getString(R.string.productCloseTitle)
             } else {
                 productFifthCardInclude.productDescriptionTextView.maxLines = 8
-                productFifthCardInclude.productDescriptionMoreButton.text = getString(R.string.productContinueTitle)
+                productFifthCardInclude.productDescriptionMoreButton.text =
+                    getString(R.string.productContinueTitle)
             }
         }
 
         customToolbar.titleTextView.isSelected = true
         productFifthCardInclude.productDescriptionTextView.isSelected = true
-        productSixthCardInclude.productRatingBar.progressTintList =
-            ColorStateList.valueOf(Color.parseColor("#FC344C"))
+
+        productFirstCardInclude.productShareButton.setOnClickListener {
+            val productShareBody = productInfo.faTitle+"\n"+getString(R.string.productShareDeepLink).plus(productId)
+            val productShareIntent = Intent(Intent.ACTION_SEND)
+            productShareIntent.type = "text/plain"
+            productShareIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.productShareSubject))
+            productShareIntent.putExtra(Intent.EXTRA_TEXT, productShareBody)
+            startActivity(Intent.createChooser(productShareIntent, getString(R.string.productShareTitle)))
+        }
 
     }
 

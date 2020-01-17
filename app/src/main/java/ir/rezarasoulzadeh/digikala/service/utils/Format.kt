@@ -50,7 +50,8 @@ class Format(var context: Context) {
     }
 
     fun storeTextFormat(name:String, rate:Int) : String {
-        return "فروش توسط "
+        return context.getString(R.string.productSellWithTitle)
+            .plus(" ")
             .plus(name)
             .plus(" ")
             .plus(context.getString(R.string.characterDividerText))
