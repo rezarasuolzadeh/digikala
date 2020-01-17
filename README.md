@@ -7,7 +7,8 @@ this secton is:
 *  Category Page
 *  Product Page
 
-#### Main Page
+<img src="main.PNG"  width="140" height="280"> <img src="main.PNG"  width="140" height="280"> <img src="main.PNG"  width="140" height="280"> <img src="main.PNG"  width="140" height="280">
+
 
 #### List Page
 
