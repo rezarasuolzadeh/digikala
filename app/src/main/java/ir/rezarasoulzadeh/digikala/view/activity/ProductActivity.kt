@@ -32,6 +32,7 @@ import kotlinx.android.synthetic.main.layout_toolbar.*
 import kotlinx.android.synthetic.main.layout_toolbar.view.*
 
 
+@Suppress("SENSELESS_COMPARISON")
 class ProductActivity : AppCompatActivity() {
 
     private lateinit var serviceViewModel: ServiceViewModel
@@ -56,11 +57,13 @@ class ProductActivity : AppCompatActivity() {
             product = true
         )
 
+        val format = Format(this)
+
         customToolbar.backButton.setOnClickListener {
             super.onBackPressed()
         }
 
-        val productId = intent.getIntExtra("productId", -1)
+        val productId = intent.getIntExtra(getString(R.string.intentProductId), -1)
 
         serviceViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application)
             .create(ServiceViewModel::class.java)
@@ -79,15 +82,15 @@ class ProductActivity : AppCompatActivity() {
         serviceViewModel.productConfigLiveData.observe(this, Observer {
             productConfig = it.data
             productThirdCardInclude.productAllStoreTextView.text =
-                Format().storeFormat(productConfig.configNum)
+                format.storeFormat(productConfig.configNum)
             productThirdCardInclude.productWarrantyTextView.text =
                 productConfig.configViewModel.warranty.title
 
             if (productConfig.configViewModel.seller.fullName == "دیجی\u200Cکالا") {
-                productThirdCardInclude.productStoreTextView.text = Format().digikalaTextFormat()
+                productThirdCardInclude.productStoreTextView.text = format.digikalaTextFormat()
                 productThirdCardInclude.productStoreImageView.setImageResource(R.drawable.dk)
             } else {
-                productThirdCardInclude.productStoreTextView.text = Format().storeTextFormat(
+                productThirdCardInclude.productStoreTextView.text = format.storeTextFormat(
                     productConfig.configViewModel.seller.fullName,
                     productConfig.configViewModel.sellerRating
                 )
@@ -96,18 +99,18 @@ class ProductActivity : AppCompatActivity() {
 
             if (productConfig.configViewModel.discount == 0) {
                 productThirdCardInclude.productMinPriceTextView.text =
-                    Format().priceFormat(productConfig.configViewModel.price)
+                    format.priceFormat(productConfig.configViewModel.price)
             } else {
                 productThirdCardInclude.productMaxPriceTextView.visibility = View.VISIBLE
                 productThirdCardInclude.productMinPriceTextView.text =
-                    Format().priceFormat(productConfig.configViewModel.price - productConfig.configViewModel.discount)
+                    format.priceFormat(productConfig.configViewModel.price - productConfig.configViewModel.discount)
                 productThirdCardInclude.productMaxPriceTextView.text =
-                    Format().priceFormat(productConfig.configViewModel.price)
+                    format.priceFormat(productConfig.configViewModel.price)
             }
 
             if(productConfig.configViewModel.color != null){
                 productThirdCardInclude.productColourTextView.text = getString(R.string.productColourTitle)
-                productThirdCardInclude.productColourNumTextView.text = Format().colourFormat(productConfig.colors.size)
+                productThirdCardInclude.productColourNumTextView.text = format.colourFormat(productConfig.colors.size)
                 val productColourAdapter = ProductColourAdapter(productConfig.colors)
                 val productColourRecyclerView =
                     findViewById<RecyclerView>(R.id.productColourRecyclerView)
@@ -117,7 +120,7 @@ class ProductActivity : AppCompatActivity() {
             }
             else if(productConfig.configViewModel.size != null) {
                 productThirdCardInclude.productColourTextView.text = getString(R.string.productSizeTitle)
-                productThirdCardInclude.productColourNumTextView.text = Format().sizeFormat(productConfig.sizes.size)
+                productThirdCardInclude.productColourNumTextView.text = format.sizeFormat(productConfig.sizes.size)
                 val productColourAdapter = ProductSizeAdapter(productConfig.sizes)
                 val productColourRecyclerView =
                     findViewById<RecyclerView>(R.id.productColourRecyclerView)
@@ -139,11 +142,11 @@ class ProductActivity : AppCompatActivity() {
             customToolbar.titleTextView.text = productInfo.faTitle
             productFifthCardInclude.productDescriptionTextView.text = productInfo.description
             productSixthCardInclude.productRatingBar.rating =
-                Format().rateFormatFloat(productInfo.rate.toFloat())
+                format.rateFormatFloat(productInfo.rate.toFloat())
             productSixthCardInclude.productRateFiveTextView.text =
-                Format().rateFormatString(productInfo.rate.toFloat())
+                format.rateFormatString(productInfo.rate.toFloat())
             productSixthCardInclude.productVoteTextView.text =
-                Format().voteFormat(productInfo.rateCounter)
+                format.voteFormat(productInfo.rateCounter)
 
             val productCategoryAdapter = ProductCategoryAdapter(productInfo.navigationSource)
             val productCategoryRecyclerView =

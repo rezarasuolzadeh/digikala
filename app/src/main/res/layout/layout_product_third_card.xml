@@ -255,6 +255,7 @@
                 android:layout_weight="1"
                 android:layoutDirection="ltr"
                 android:padding="@dimen/padding11"
+                android:layout_gravity="center"
                 android:src="@drawable/ic_store"
                 android:tint="@color/grayEight" />
 
@@ -268,7 +269,7 @@
                 android:gravity="center"
                 android:lines="1"
                 android:textColor="@color/blue"
-                android:textSize="@dimen/font13"
+                android:textSize="@dimen/font12"
                 android:textStyle="normal"
                 tools:text="۶ فروشنده و گارانتی برای این کالا وجود دارد" />
 
@@ -278,6 +279,7 @@
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
+                android:layout_gravity="center"
                 android:foreground="?android:attr/selectableItemBackgroundBorderless"
                 android:layoutDirection="ltr"
                 android:padding="@dimen/padding13"

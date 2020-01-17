@@ -63,4 +63,17 @@
     <string name="productShopSatisfyTitle">رضایت خرید: </string>
     <string name="productShopWithDigikalaTitle">فروش توسط دیجیکالا</string>
 
+    <!-- Intent Strings -->
+    <string name="intentMostSellTitle">پر فروش ترین ها</string>
+    <string name="intentMostSellSortTitle">پر فروش ترین</string>
+    <string name="intentOfferTitle">پیشنهاد ویژه دیجیکالا</string>
+    <string name="intentOfferSortTitle">پر بازدید ترین</string>
+    <string name="intentMostViewTitle">پر بازدید ترین ها</string>
+    <string name="intentMostViewSortTitle">پر بازدید ترین</string>
+    <string name="intentNewsTitle">جدید ترین ها</string>
+    <string name="intentNewsSortTitle">جدید ترین</string>
+    <string name="intentTitle">title</string>
+    <string name="intentSortTitle">sortTitle</string>
+    <string name="intentProductId">productId</string>
+
 </resources>

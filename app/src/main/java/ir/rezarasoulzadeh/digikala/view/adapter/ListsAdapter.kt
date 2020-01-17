@@ -53,7 +53,7 @@ class ListsAdapter(private val lists: ListsHits, private val arrange: Int) :
 
     inner class ListOfferViewHolder(itemView: View, var parent: ViewGroup) : RecyclerView.ViewHolder(itemView) {
         fun bind(list: ListsHit) {
-            val format = Format()
+            val format = Format(itemView.context)
             when(arrange) {
                 0 -> {
                     itemView.listFirstMaxPriceTextView.visibility=View.INVISIBLE
@@ -111,7 +111,7 @@ class ListsAdapter(private val lists: ListsHits, private val arrange: Int) :
             }
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, ProductActivity::class.java)
-                intent.putExtra("productId", list.id)
+                intent.putExtra(itemView.context.getString(R.string.intentProductId), list.id)
                 itemView.context.startActivity(intent)
             }
         }

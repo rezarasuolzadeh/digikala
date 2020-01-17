@@ -30,13 +30,13 @@ class MostSellAdapter(private val mostSell: List<Responses>) : RecyclerView.Adap
 
     inner class MosetSellViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(mostSell: Hit) {
-            val format = Format()
+            val format = Format(itemView.context)
             itemView.mostSellImage.setImageURI(Uri.parse(mostSell.source.imagePath))
             itemView.mostSellTitle.text = mostSell.source.faTitle
             itemView.mostSellPrice.text = format.priceFormat(mostSell.source.minPrice)
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, ProductActivity::class.java)
-                intent.putExtra("productId", mostSell.id)
+                intent.putExtra(itemView.context.getString(R.string.intentProductId), mostSell.id)
                 itemView.context.startActivity(intent)
             }
         }

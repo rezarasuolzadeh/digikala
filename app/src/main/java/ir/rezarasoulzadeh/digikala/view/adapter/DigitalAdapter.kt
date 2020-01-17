@@ -29,13 +29,13 @@ class DigitalAdapter(private val digital: List<Responses>) : RecyclerView.Adapte
 
     inner class DigitalViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(digital: Source) {
-            val format = Format()
+            val format = Format(itemView.context)
             itemView.mostSellImage.setImageURI(Uri.parse(digital.imagePath))
             itemView.mostSellTitle.text = digital.faTitle
             itemView.mostSellPrice.text = format.priceFormat(digital.minPrice)
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, ProductActivity::class.java)
-                intent.putExtra("productId", digital.id)
+                intent.putExtra(itemView.context.getString(R.string.intentProductId), digital.id)
                 itemView.context.startActivity(intent)
             }
         }

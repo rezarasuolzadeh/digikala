@@ -221,34 +221,42 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.menuMostSell -> {
                 val intent = Intent(this, ListsActivity::class.java)
-                intent.putExtra("title", "پر فروش ترین ها")
-                intent.putExtra("sortTitle", "پر فروش ترین")
+                intent.putExtra(getString(R.string.intentTitle), getString(R.string.intentMostSellTitle))
+                intent.putExtra(getString(R.string.intentSortTitle), getString(R.string.intentMostSellSortTitle))
                 startActivity(intent)
                 drawerLayout.closeDrawer(GravityCompat.END)
             }
             R.id.menuOffer -> {
                 val intent = Intent(this, ListsActivity::class.java)
-                intent.putExtra("title", "پیشنهاد ویژه دیجیکالا")
-                intent.putExtra("sortTitle", "پر بازدید ترین")
+                intent.putExtra(getString(R.string.intentTitle), getString(R.string.intentOfferTitle))
+                intent.putExtra(getString(R.string.intentSortTitle), getString(R.string.intentOfferSortTitle))
                 startActivity(intent)
                 drawerLayout.closeDrawer(GravityCompat.END)
             }
             R.id.menuMostView -> {
                 val intent = Intent(this, ListsActivity::class.java)
-                intent.putExtra("title", "پر بازدید ترین ها")
-                intent.putExtra("sortTitle", "پر بازدید ترین")
+                intent.putExtra(getString(R.string.intentTitle), getString(R.string.intentMostViewTitle))
+                intent.putExtra(getString(R.string.intentSortTitle), getString(R.string.intentMostViewSortTitle))
                 startActivity(intent)
                 drawerLayout.closeDrawer(GravityCompat.END)
             }
             R.id.menuNews -> {
                 val intent = Intent(this, ListsActivity::class.java)
-                intent.putExtra("title", "جدید ترین ها")
-                intent.putExtra("sortTitle", "جدید ترین")
+                intent.putExtra(getString(R.string.intentTitle), getString(R.string.intentNewsTitle))
+                intent.putExtra(getString(R.string.intentSortTitle), getString(R.string.intentNewsSortTitle))
                 startActivity(intent)
                 drawerLayout.closeDrawer(GravityCompat.END)
             }
         }
         return false
+    }
+
+    override fun onBackPressed() {
+        if(drawerLayout.isDrawerOpen(this.drawerView)) {
+            drawerLayout.closeDrawer(GravityCompat.END)
+        } else {
+            super.onBackPressed()
+        }
     }
 
 }

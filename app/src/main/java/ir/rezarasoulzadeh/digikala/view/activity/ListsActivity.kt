@@ -44,8 +44,8 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
             product = false
         )
 
-        customToolbar.titleTextView.text = intent.getStringExtra("title")
-        sortTitle.text = intent.getStringExtra("sortTitle")
+        customToolbar.titleTextView.text = intent.getStringExtra(getString(R.string.intentTitle))
+        sortTitle.text = intent.getStringExtra(getString(R.string.intentSortTitle))
 
         searchViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application)
             .create(SearchViewModel::class.java)
@@ -95,19 +95,19 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
 
             val sortAlertDialog = sortViewBuilder.show()
 
-            if (sortTitle.text == "پر بازدید ترین")
+            if (sortTitle.text == getString(R.string.sortFirstTypeTitle))
                 sortView.mostViewRadioButton.isChecked = true
-            if (sortTitle.text == "پر فروش ترین")
+            if (sortTitle.text == getString(R.string.sortSecondTypeTitle))
                 sortView.mostSellRadioButton.isChecked = true
-            if (sortTitle.text == "قیمت از زیاد به کم")
+            if (sortTitle.text == getString(R.string.sortThirdTypeTitle))
                 sortView.maxPriceRadioButton.isChecked = true
-            if (sortTitle.text == "قیمت از کم به زیاد")
+            if (sortTitle.text == getString(R.string.sortFourthTypeTitle))
                 sortView.minPriceRadioButton.isChecked = true
-            if (sortTitle.text == "جدید ترین")
+            if (sortTitle.text == getString(R.string.sortFifthTypeTitle))
                 sortView.newsRadioButton.isChecked = true
 
             sortView.mostViewRadioButton.setOnClickListener {
-                sortTitle.text = "پر بازدید ترین"
+                sortTitle.text = getString(R.string.sortFirstTypeTitle)
                 sort = 4
                 searchViewModel.provideLists(sort, 0)
                 arrange = 0
@@ -117,7 +117,7 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
             }
 
             sortView.mostSellRadioButton.setOnClickListener {
-                sortTitle.text = "پر فروش ترین"
+                sortTitle.text = getString(R.string.sortSecondTypeTitle)
                 sort = 7
                 searchViewModel.provideLists(sort, 0)
                 arrange = 0
@@ -127,7 +127,7 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
             }
 
             sortView.maxPriceRadioButton.setOnClickListener {
-                sortTitle.text = "قیمت از زیاد به کم"
+                sortTitle.text = getString(R.string.sortThirdTypeTitle)
                 sort = 10
                 searchViewModel.provideLists(sort, 1)
                 searchViewModel.listsLiveData.observe(this, this)
@@ -136,7 +136,7 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
             }
 
             sortView.minPriceRadioButton.setOnClickListener {
-                sortTitle.text = "قیمت از کم به زیاد"
+                sortTitle.text = getString(R.string.sortFourthTypeTitle)
                 sort = 10
                 searchViewModel.provideLists(sort, 1)
                 arrange = 0
@@ -146,7 +146,7 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
             }
 
             sortView.newsRadioButton.setOnClickListener {
-                sortTitle.text = "جدید ترین"
+                sortTitle.text = getString(R.string.sortFifthTypeTitle)
                 sort = 1
                 searchViewModel.provideLists(sort, 0)
                 arrange = 0
