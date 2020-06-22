@@ -129,7 +129,7 @@ class ListsActivity : AppCompatActivity(), Observer<Lists> {
             sortView.maxPriceRadioButton.setOnClickListener {
                 sortTitle.text = getString(R.string.sortThirdTypeTitle)
                 sort = 10
-                searchViewModel.provideLists(sort, 1)
+                searchViewModel.provideLists(sort, 0)
                 searchViewModel.listsLiveData.observe(this, this)
                 arrangeImage.setImageResource(R.drawable.ic_arrange_first)
                 sortAlertDialog.dismiss()
