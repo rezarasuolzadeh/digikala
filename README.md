@@ -7,6 +7,12 @@ this secton is:
 *  Category Page
 *  Product Page
 
+# Download APK
+Download the file from here [Digikala](https://bit.ly/2VoSUsl)
+
+
+
+# Screenshots & descriptions
 <img src="main.PNG"  width="140" height="280"> <img src="list.PNG"  width="140" height="280"> <img src="category.PNG"  width="140" height="280"> <img src="product.PNG"  width="140" height="280">
 
 #### Main Page :smiley:
